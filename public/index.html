@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creador de Personajes - D&D 2024</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo-container">
+      <span class="logo-badge">D&D 2024</span>
+      <div>
+        <h1 class="logo-title">HERRAMIENTAS D&D</h1>
+        <p class="logo-subtitle">Manual del Jugador & Manual de Monstruos (5ª Edición Revisada)</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" id="btn-nav-characters" onclick="window.app.openCharactersList()">🛡️ Mis Personajes (<span id="saved-count">0</span>)</button>
+      <button class="btn btn-primary" id="btn-nav-creator" onclick="window.app.startNewCharacter()">✨ + Forjar Personaje</button>
+      <button class="btn btn-primary" id="btn-nav-dm" style="background-color: var(--danger-color); color: white;" onclick="window.app.openDMModule()">🐉 Dungeon Master</button>
+    </div>
+  </header>
+
+  <nav class="stepper-container" id="creator-stepper-container">
+    <ul class="stepper" id="stepper"></ul>
+  </nav>
+
+  <main class="main-layout" id="main-layout">
+    <section class="content-panel" id="step-content"></section>
+    <aside class="summary-sidebar" id="summary-sidebar"></aside>
+  </main>
+
+  <div id="modal-container"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

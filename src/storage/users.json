@@ -1,0 +1,29 @@
+[
+  {
+    "username": "jorgelot",
+    "hash": "c9225cd7610c07626c6b6d419c9d4c492dc590f7e578f32c839ff9e7ba14d57a48a667543e938945bfb9154c5fa7862992de2d22f6c300fd607af3c3a3f9e145",
+    "salt": "d03d7e305504535518533c3d4a20c84a",
+    "role": "admin",
+    "id": "id_mu7k1c1m_0k8xt",
+    "createdAt": "2026-09-18T22:53:18.010Z",
+    "updatedAt": "2026-09-18T22:53:18.010Z"
+  },
+  {
+    "username": "DungeonMaster",
+    "hash": "ae24ed01df1aeebf4a1e25a7da8d8b74b1af6428eef272be2ad1b996834ee212d2d182c11bea568b377ec5f6b83a4e266e1f6dc6a01e76f34187467236a6d96b",
+    "salt": "264054b87e12fd1c051c2a0717917537",
+    "role": "player",
+    "id": "id_mu7kj10g_nb84g",
+    "createdAt": "2026-09-18T23:07:03.520Z",
+    "updatedAt": "2026-09-18T23:07:03.520Z"
+  },
+  {
+    "username": "duende69",
+    "hash": "adee255cc7ec8779d3bb0dffaa63a4edfbc2de2d345f99dbf2ffeef74253e628f445f085f9be1a17e8cb4bf3e53c543522ac4fc2c5e7d3f87a07d0e6bda193f4",
+    "salt": "34afe2ec77679ea8d6bc63192cd22a53",
+    "role": "player",
+    "id": "id_mu7labbg_4i6qs",
+    "createdAt": "2026-09-18T23:28:16.588Z",
+    "updatedAt": "2026-09-18T23:28:16.588Z"
+  }
+]

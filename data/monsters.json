@@ -1,0 +1,364 @@
+[
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "source": "D&D 2024 Manual de monstruos",
+    "basicInfo": {
+      "size": "Pequeño",
+      "type": "Humanoide",
+      "alignment": "Típicamente neutral malvado",
+      "cr": "1/4",
+      "xp": 50
+    },
+    "stats": {
+      "str": 8, "dex": 14, "con": 10, "int": 10, "wis": 8, "cha": 8
+    },
+    "defenses": {
+      "ac": { "value": 15, "desc": "Armadura de cuero, escudo" },
+      "hp": { "average": 7, "formula": "2d6" },
+      "immunities": [],
+      "conditionImmunities": [],
+      "resistances": [],
+      "vulnerabilities": []
+    },
+    "movement": {
+      "walk": 30
+    },
+    "proficiencies": {
+      "saves": [],
+      "skills": [
+        { "name": "Sigilo", "mod": 6 }
+      ]
+    },
+    "senses": {
+      "darkvision": 60,
+      "passivePerception": 9
+    },
+    "languages": ["Común", "Goblin"],
+    "traits": [
+      {
+        "name": "Escabullirse ágil (Nimble Escape)",
+        "desc": "El goblin puede usar la acción Destrabarse (Disengage) o Esconderse (Hide) como una acción adicional en cada uno de sus turnos."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Cimitarra",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 4,
+        "reach": 5,
+        "damage": [
+          { "formula": "1d6 + 2", "average": 5, "type": "Cortante" }
+        ]
+      },
+      {
+        "name": "Arco corto",
+        "type": "Ataque con arma a distancia",
+        "hit": 4,
+        "reach": "80/320",
+        "damage": [
+          { "formula": "1d6 + 2", "average": 5, "type": "Perforante" }
+        ]
+      }
+    ],
+    "bonusActions": [],
+    "reactions": []
+  },
+  {
+    "id": "ogro",
+    "name": "Ogro",
+    "source": "D&D 2024 Manual de monstruos",
+    "basicInfo": {
+      "size": "Grande",
+      "type": "Gigante",
+      "alignment": "Típicamente caótico malvado",
+      "cr": "2",
+      "xp": 450
+    },
+    "stats": {
+      "str": 19, "dex": 8, "con": 16, "int": 5, "wis": 7, "cha": 7
+    },
+    "defenses": {
+      "ac": { "value": 11, "desc": "Armadura de pieles" },
+      "hp": { "average": 59, "formula": "7d10 + 21" },
+      "immunities": [],
+      "conditionImmunities": [],
+      "resistances": [],
+      "vulnerabilities": []
+    },
+    "movement": {
+      "walk": 40
+    },
+    "proficiencies": {
+      "saves": [],
+      "skills": []
+    },
+    "senses": {
+      "darkvision": 60,
+      "passivePerception": 8
+    },
+    "languages": ["Común", "Gigante"],
+    "traits": [],
+    "actions": [
+      {
+        "name": "Garrote",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 6,
+        "reach": 5,
+        "damage": [
+          { "formula": "2d8 + 4", "average": 13, "type": "Contundente" }
+        ]
+      },
+      {
+        "name": "Jabalina",
+        "type": "Ataque con arma a distancia",
+        "hit": 6,
+        "reach": "30/120",
+        "damage": [
+          { "formula": "2d6 + 4", "average": 11, "type": "Perforante" }
+        ]
+      }
+    ],
+    "bonusActions": [],
+    "reactions": []
+  },
+  {
+    "id": "zombi",
+    "name": "Zombi",
+    "source": "D&D 2024 Manual de monstruos",
+    "basicInfo": {
+      "size": "Mediano",
+      "type": "No muerto",
+      "alignment": "Típicamente neutral malvado",
+      "cr": "1/4",
+      "xp": 50
+    },
+    "stats": {
+      "str": 13, "dex": 6, "con": 16, "int": 3, "wis": 6, "cha": 5
+    },
+    "defenses": {
+      "ac": { "value": 8, "desc": "Armadura natural" },
+      "hp": { "average": 22, "formula": "3d8 + 9" },
+      "immunities": ["Veneno"],
+      "conditionImmunities": ["Envenenado"],
+      "resistances": [],
+      "vulnerabilities": []
+    },
+    "movement": {
+      "walk": 20
+    },
+    "proficiencies": {
+      "saves": [
+        { "name": "SAB", "mod": 0 }
+      ],
+      "skills": []
+    },
+    "senses": {
+      "darkvision": 60,
+      "passivePerception": 8
+    },
+    "languages": ["Entiende los idiomas que conocía en vida pero no habla"],
+    "traits": [
+      {
+        "name": "Fortaleza de no muerto",
+        "desc": "Si el daño reduce al zombi a 0 puntos de golpe, debe hacer una tirada de salvación de Constitución con una CD de 5 + el daño recibido, a menos que el daño sea radiante o de un golpe crítico. Si tiene éxito, baja a 1 punto de golpe en lugar de 0."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Golpetazo",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 3,
+        "reach": 5,
+        "damage": [
+          { "formula": "1d6 + 1", "average": 4, "type": "Contundente" }
+        ]
+      }
+    ],
+    "bonusActions": [],
+    "reactions": []
+  },
+  {
+    "id": "dragon_rojo_adulto",
+    "name": "Dragón Rojo Adulto",
+    "source": "D&D 2024 Manual de monstruos",
+    "basicInfo": {
+      "size": "Enorme",
+      "type": "Dragón",
+      "alignment": "Típicamente caótico malvado",
+      "cr": "17",
+      "xp": 18000
+    },
+    "stats": {
+      "str": 27, "dex": 10, "con": 25, "int": 16, "wis": 13, "cha": 21
+    },
+    "defenses": {
+      "ac": { "value": 19, "desc": "Armadura natural" },
+      "hp": { "average": 256, "formula": "19d12 + 133" },
+      "immunities": ["Fuego"],
+      "conditionImmunities": [],
+      "resistances": [],
+      "vulnerabilities": []
+    },
+    "movement": {
+      "walk": 40,
+      "climb": 40,
+      "fly": 80
+    },
+    "proficiencies": {
+      "saves": [
+        { "name": "DES", "mod": 6 },
+        { "name": "CON", "mod": 13 },
+        { "name": "SAB", "mod": 7 },
+        { "name": "CAR", "mod": 11 }
+      ],
+      "skills": [
+        { "name": "Percepción", "mod": 13 },
+        { "name": "Sigilo", "mod": 6 }
+      ]
+    },
+    "senses": {
+      "blindsight": 60,
+      "darkvision": 120,
+      "passivePerception": 23
+    },
+    "languages": ["Común", "Dracónico"],
+    "traits": [
+      {
+        "name": "Resistencia Legendaria (3/Día)",
+        "desc": "Si el dragón falla una tirada de salvación, puede decidir tener éxito en su lugar."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ataque múltiple",
+        "type": "Acción",
+        "desc": "El dragón puede usar su Presencia Aterradora. Luego hace tres ataques: uno con su mordisco y dos con sus garras."
+      },
+      {
+        "name": "Mordisco",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 14,
+        "reach": 10,
+        "damage": [
+          { "formula": "2d10 + 8", "average": 19, "type": "Perforante" },
+          { "formula": "2d6", "average": 7, "type": "Fuego" }
+        ]
+      },
+      {
+        "name": "Garra",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 14,
+        "reach": 5,
+        "damage": [
+          { "formula": "2d6 + 8", "average": 15, "type": "Cortante" }
+        ]
+      },
+      {
+        "name": "Aliento de fuego (Recarga 5-6)",
+        "type": "Acción",
+        "desc": "El dragón exhala fuego en un cono de 60 pies. Cada criatura en el área debe hacer una tirada de salvación de Destreza CD 21, recibiendo 63 (18d6) de daño de fuego si falla, o la mitad si tiene éxito."
+      }
+    ],
+    "bonusActions": [],
+    "reactions": [],
+    "legendaryActions": [
+      {
+        "name": "Ataque de cola",
+        "desc": "El dragón hace un ataque de cola.",
+        "cost": 1
+      },
+      {
+        "name": "Ataque de alas",
+        "desc": "El dragón bate sus alas. Cada criatura a 10 pies debe superar una salvación de Destreza CD 22 o sufrir 15 (2d6 + 8) de daño contundente y quedar derribada. Luego, el dragón puede volar hasta la mitad de su velocidad.",
+        "cost": 2
+      }
+    ]
+  },
+  {
+    "id": "vampiro",
+    "name": "Vampiro",
+    "source": "D&D 2024 Manual de monstruos",
+    "basicInfo": {
+      "size": "Mediano",
+      "type": "No muerto (cambiaformas)",
+      "alignment": "Típicamente legal malvado",
+      "cr": "13",
+      "xp": 10000
+    },
+    "stats": {
+      "str": 18, "dex": 18, "con": 18, "int": 17, "wis": 15, "cha": 18
+    },
+    "defenses": {
+      "ac": { "value": 16, "desc": "Armadura natural" },
+      "hp": { "average": 144, "formula": "17d8 + 68" },
+      "immunities": [],
+      "conditionImmunities": [],
+      "resistances": ["Necrótico", "Contundente, perforante y cortante de ataques no mágicos"],
+      "vulnerabilities": []
+    },
+    "movement": {
+      "walk": 30,
+      "climb": 30
+    },
+    "proficiencies": {
+      "saves": [
+        { "name": "DES", "mod": 9 },
+        { "name": "SAB", "mod": 7 },
+        { "name": "CAR", "mod": 9 }
+      ],
+      "skills": [
+        { "name": "Percepción", "mod": 7 },
+        { "name": "Sigilo", "mod": 9 }
+      ]
+    },
+    "senses": {
+      "darkvision": 120,
+      "passivePerception": 17
+    },
+    "languages": ["Común", "y los idiomas que conocía en vida"],
+    "traits": [
+      {
+        "name": "Regeneración",
+        "desc": "El vampiro recupera 20 puntos de golpe al inicio de su turno si tiene al menos 1 punto de golpe y no está bajo la luz del sol o en agua corriente."
+      },
+      {
+        "name": "Trepar como una araña",
+        "desc": "El vampiro puede trepar por superficies difíciles, incluyendo techos, sin necesidad de hacer una prueba de característica."
+      },
+      {
+        "name": "Hipersensibilidad a la luz solar",
+        "desc": "El vampiro recibe 20 de daño radiante cuando comienza su turno bajo la luz del sol."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ataque múltiple",
+        "type": "Acción",
+        "desc": "El vampiro hace dos ataques, solo uno de los cuales puede ser un Mordisco."
+      },
+      {
+        "name": "Ataque desarmado (Forma de vampiro)",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 9,
+        "reach": 5,
+        "damage": [
+          { "formula": "1d8 + 4", "average": 8, "type": "Contundente" }
+        ]
+      },
+      {
+        "name": "Mordisco",
+        "type": "Ataque con arma cuerpo a cuerpo",
+        "hit": 9,
+        "reach": 5,
+        "damage": [
+          { "formula": "1d6 + 4", "average": 7, "type": "Perforante" },
+          { "formula": "3d6", "average": 10, "type": "Necrótico" }
+        ]
+      }
+    ],
+    "bonusActions": [],
+    "reactions": [],
+    "legendaryActions": []
+  }
+]

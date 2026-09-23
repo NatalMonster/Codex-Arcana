@@ -1,0 +1,428 @@
+[
+  {
+    "id": "aasimar",
+    "name": "Aasimar",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano",
+      "Pequeño"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 18,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad",
+        "desc": "Puedes ver en luz tenue a 18 m como si fuera luz brillante y en la oscuridad como luz tenue."
+      },
+      {
+        "name": "Manos sanadoras",
+        "desc": "Como acción mágica, tocas a una criatura e invocas magia curativa. La criatura recupera un número de PG igual a una tirada de tantos d4 como tu bonificador por competencia. Una vez usado, descanso largo."
+      },
+      {
+        "name": "Portador de luz",
+        "desc": "Conoces el truco Luz. Carisma, Inteligencia o Sabiduría es tu aptitud mágica para él."
+      },
+      {
+        "name": "Revelación celestial",
+        "desc": "Al alcanzar el nivel 3, puedes transformarte como acción adicional durante 1 minuto."
+      }
+    ],
+    "hasLineages": false,
+    "lineages": []
+  },
+  {
+    "id": "draconido",
+    "name": "Dracónido",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 18,
+    "traits": [
+      {
+        "name": "Ataque de aliento",
+        "desc": "Al realizar la acción de Atacar, puedes sustituir un ataque por una exhalación de energía mágica en un cono de 4,5 m o línea de 9 m por 1,5 m. Daño: 1d10 del tipo de tu ancestro."
+      },
+      {
+        "name": "Resistencia al daño",
+        "desc": "Tienes resistencia al tipo de daño asociado a tu ancestro dracónico."
+      },
+      {
+        "name": "Visión en la oscuridad",
+        "desc": "Visión en la oscuridad de 18 m."
+      }
+    ],
+    "hasLineages": true,
+    "lineageTitle": "Ancestro Dracónico",
+    "lineages": [
+      {
+        "id": "negro",
+        "name": "Negro",
+        "damageType": "Ácido",
+        "area": "Línea de 9 m"
+      },
+      {
+        "id": "cobre",
+        "name": "Cobre",
+        "damageType": "Ácido",
+        "area": "Línea de 9 m"
+      },
+      {
+        "id": "azul",
+        "name": "Azul",
+        "damageType": "Relámpago",
+        "area": "Línea de 9 m"
+      },
+      {
+        "id": "bronce",
+        "name": "Bronce",
+        "damageType": "Relámpago",
+        "area": "Línea de 9 m"
+      },
+      {
+        "id": "laton",
+        "name": "Latón",
+        "damageType": "Fuego",
+        "area": "Línea de 9 m"
+      },
+      {
+        "id": "oro",
+        "name": "Oro",
+        "damageType": "Fuego",
+        "area": "Cono de 4,5 m"
+      },
+      {
+        "id": "rojo",
+        "name": "Rojo",
+        "damageType": "Fuego",
+        "area": "Cono de 4,5 m"
+      },
+      {
+        "id": "verde",
+        "name": "Verde",
+        "damageType": "Veneno",
+        "area": "Cono de 4,5 m"
+      },
+      {
+        "id": "blanco",
+        "name": "Blanco",
+        "damageType": "Frío",
+        "area": "Cono de 4,5 m"
+      },
+      {
+        "id": "plata",
+        "name": "Plata",
+        "damageType": "Frío",
+        "area": "Cono de 4,5 m"
+      }
+    ]
+  },
+  {
+    "id": "elfo",
+    "name": "Elfo",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 18,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad",
+        "desc": "Visión en la oscuridad de 18 m (36 m para Drow)."
+      },
+      {
+        "name": "Linaje feérico",
+        "desc": "Tienes ventaja en las tiradas de salvación que hagas para evitar o finalizar el estado de hechizado."
+      },
+      {
+        "name": "Sentidos agudos",
+        "desc": "Tienes competencia en la habilidad Percepción."
+      },
+      {
+        "name": "Trance",
+        "desc": "No necesitas dormir y la magia no te puede dormir. Puedes completar un descanso largo en 4 horas meditando."
+      }
+    ],
+    "fixedSkills": [
+      "percepcion"
+    ],
+    "hasLineages": true,
+    "lineageTitle": "Linaje Élfico",
+    "lineages": [
+      {
+        "id": "alto_elfo",
+        "name": "Alto elfo",
+        "desc": "Conoces el truco Descarga de fuego (o truco de mago a elegir). Puedes cambiarlo tras un descanso largo. A nivel 3 conjuro Paso brumoso."
+      },
+      {
+        "id": "elfo_bosques",
+        "name": "Elfo de los bosques",
+        "desc": "Tu velocidad base aumenta a 10,5 m. Conoces el truco Artificio druídico. A nivel 3 conjuro Zancada prodigiosa."
+      },
+      {
+        "id": "drow",
+        "name": "Drow",
+        "desc": "El alcance de tu visión en la oscuridad aumenta a 36 m. Conoces el truco Luces danzantes. A nivel 3 Fuego feérico."
+      }
+    ]
+  },
+  {
+    "id": "enano",
+    "name": "Enano",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 36,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad superior",
+        "desc": "Tienes visión en la oscuridad con un alcance de 36 m."
+      },
+      {
+        "name": "Resistencia enana",
+        "desc": "Tienes resistencia al daño por veneno y ventaja en tiradas de salvación para evitar o finalizar el estado de envenenado."
+      },
+      {
+        "name": "Firmeza enana",
+        "desc": "Tus puntos de golpe máximos aumentan en 1 y aumentan en 1 cada vez que subas de nivel."
+      },
+      {
+        "name": "Afinidad con la piedra",
+        "desc": "Como acción adicional, mientras estés en contacto con piedra, obtienes sentido sísmico (visión temblorosa) de 18 m durante 10 minutos."
+      }
+    ],
+    "hpBonusPerLevel": 1,
+    "hasLineages": false,
+    "lineages": []
+  },
+  {
+    "id": "gnomo",
+    "name": "Gnomo",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Pequeño"
+    ],
+    "defaultSize": "Pequeño",
+    "speed": 9,
+    "darkvision": 18,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad",
+        "desc": "Visión en la oscuridad de 18 m."
+      },
+      {
+        "name": "Astucia gnómica",
+        "desc": "Tienes ventaja en todas las tiradas de salvación de Inteligencia, Sabiduría y Carisma."
+      }
+    ],
+    "hasLineages": true,
+    "lineageTitle": "Linaje Gnómico",
+    "lineages": [
+      {
+        "id": "gnomo_bosques",
+        "name": "Gnomo de los bosques",
+        "desc": "Conoces el truco Ilusión menor. Puedes lanzar Hablar con los animales una cantidad de veces igual a tu modificador por competencia sin espacios."
+      },
+      {
+        "id": "gnomo_rocas",
+        "name": "Gnomo de las rocas",
+        "desc": "Conoces los trucos Prestidigitación y Remendar. Puedes crear ingenios de cuerda mecánicos."
+      }
+    ]
+  },
+  {
+    "id": "goliat",
+    "name": "Goliat",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 10.5,
+    "darkvision": 0,
+    "traits": [
+      {
+        "name": "Gran corpulencia",
+        "desc": "Cuentas como un tamaño superior para determinar tu capacidad de carga y el peso que puedes empujar, arrastrar o levantar."
+      },
+      {
+        "name": "Fuerte como una roca",
+        "desc": "Al alcanzar el nivel 5, puedes cambiar mágicamente de tamaño a Grande durante 10 minutos."
+      }
+    ],
+    "hasLineages": true,
+    "lineageTitle": "Ascendencia de Gigante",
+    "lineages": [
+      {
+        "id": "nube",
+        "name": "Gigante de las nubes",
+        "desc": "Teletransporte sutil: como acción adicional puedes teletransportarte mágicamente hasta 9 m a un espacio desocupado que veas."
+      },
+      {
+        "id": "fuego",
+        "name": "Gigante de fuego",
+        "desc": "Al impactar a un objetivo con un ataque, infliges 1d10 puntos de daño por fuego adicionales."
+      },
+      {
+        "id": "escarcha",
+        "name": "Gigante de escarcha",
+        "desc": "Al impactar a un objetivo, infliges 1d6 puntos de daño por frío adicionales y reduces su velocidad en 3 m."
+      },
+      {
+        "id": "colina",
+        "name": "Gigante de las colinas",
+        "desc": "Al impactar a una criatura Grande o menor, puedes derribarla y dejarla tumbada."
+      },
+      {
+        "id": "piedra",
+        "name": "Gigante de piedra",
+        "desc": "Como reacción al recibir daño, reduces el daño sufrido en 1d12 + tu modificador de Constitución."
+      },
+      {
+        "id": "tormenta",
+        "name": "Gigante de la tormenta",
+        "desc": "Como reacción al sufrir daño de una criatura a 18 m, infliges 1d8 puntos de daño por relámpago a esa criatura."
+      }
+    ]
+  },
+  {
+    "id": "humano",
+    "name": "Humano",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano",
+      "Pequeño"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 0,
+    "traits": [
+      {
+        "name": "Ingenioso",
+        "desc": "Obtienes Inspiración heroica cada vez que finalizas un descanso largo."
+      },
+      {
+        "name": "Habilidoso",
+        "desc": "Obtienes competencia en una habilidad de tu elección."
+      },
+      {
+        "name": "Versátil",
+        "desc": "Obtienes una dote de origen adicional de tu elección de entre las dotes del capítulo 5."
+      }
+    ],
+    "bonusSkillsCount": 1,
+    "bonusOriginFeatCount": 1,
+    "hasLineages": false,
+    "lineages": []
+  },
+  {
+    "id": "mediano",
+    "name": "Mediano",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Pequeño"
+    ],
+    "defaultSize": "Pequeño",
+    "speed": 9,
+    "darkvision": 0,
+    "traits": [
+      {
+        "name": "Valiente",
+        "desc": "Tienes ventaja en las tiradas de salvación que hagas para evitar o finalizar el estado de asustado."
+      },
+      {
+        "name": "Escurridizo",
+        "desc": "Puedes moverte a través del espacio de cualquier criatura que sea de un tamaño superior al tuyo."
+      },
+      {
+        "name": "Suerte",
+        "desc": "Cuando obtengas un 1 en una tirada de d20 para una prueba, ataque o salvación, puedes volver a tirar el dado y debes usar el nuevo resultado."
+      },
+      {
+        "name": "Sigilo natural",
+        "desc": "Puedes intentar esconderte incluso cuando solo estés oculto tras una criatura que sea al menos un tamaño superior al tuyo."
+      }
+    ],
+    "hasLineages": false,
+    "lineages": []
+  },
+  {
+    "id": "orco",
+    "name": "Orco",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 36,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad superior",
+        "desc": "Tienes visión en la oscuridad con un alcance de 36 m."
+      },
+      {
+        "name": "Adrenalina",
+        "desc": "Puedes usar la acción de Correr como acción adicional. Al hacerlo, obtienes una cantidad de puntos de golpe temporales igual a tu bonificador por competencia. Usos = bonificador por competencia/descanso corto o largo."
+      },
+      {
+        "name": "Resistencia incansable",
+        "desc": "Cuando tus puntos de golpe se reduzcan a 0 pero no mueras directamente, puedes quedarte a 1 punto de golpe en su lugar (1 vez por descanso largo)."
+      }
+    ],
+    "hasLineages": false,
+    "lineages": []
+  },
+  {
+    "id": "tiefling",
+    "name": "Tiefling",
+    "creatureType": "Humanoide",
+    "sizeOptions": [
+      "Mediano",
+      "Pequeño"
+    ],
+    "defaultSize": "Mediano",
+    "speed": 9,
+    "darkvision": 18,
+    "traits": [
+      {
+        "name": "Visión en la oscuridad",
+        "desc": "Visión en la oscuridad de 18 m."
+      },
+      {
+        "name": "Otro mundo",
+        "desc": "Conoces el truco Taumaturgia (o el truco correspondiente a tu legado)."
+      }
+    ],
+    "hasLineages": true,
+    "lineageTitle": "Legado Infernal",
+    "lineages": [
+      {
+        "id": "abisal",
+        "name": "Abisal",
+        "resistance": "Veneno",
+        "desc": "Resistencia al daño por veneno. Conoces el truco Rociada de veneno. A nivel 3 Rayo de enfermedad."
+      },
+      {
+        "id": "ctonica",
+        "name": "Ctónico",
+        "resistance": "Necrótico",
+        "desc": "Resistencia al daño necrótico. Conoces el truco Toque helado. A nivel 3 Infligir heridas."
+      },
+      {
+        "id": "infernal",
+        "name": "Infernal",
+        "resistance": "Fuego",
+        "desc": "Resistencia al daño por fuego. Conoces el truco Ignición. A nivel 3 Reprensión infernal."
+      }
+    ]
+  }
+]

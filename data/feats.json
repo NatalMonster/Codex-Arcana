@@ -1,0 +1,135 @@
+[
+  {
+    "id": "afortunado",
+    "name": "Afortunado",
+    "category": "Origen",
+    "desc": "Obtienes puntos de suerte iguales a tu bonificador por competencia para otorgarte ventaja o imponer desventaja al atacarte. Se recuperan con un descanso largo."
+  },
+  {
+    "id": "alerta",
+    "name": "Alerta",
+    "category": "Origen",
+    "desc": "Sumas tu bonificador por competencia a tus tiradas de iniciativa. Tras tirar iniciativa, puedes intercambiarla con un aliado dispuesto."
+  },
+  {
+    "id": "atacante_salvaje",
+    "name": "Atacante salvaje",
+    "category": "Origen",
+    "desc": "Una vez por turno, cuando impactes a un objetivo con un arma, puedes tirar el daño del arma dos veces y quedarte con el resultado mayor."
+  },
+  {
+    "id": "duro",
+    "name": "Duro",
+    "category": "Origen",
+    "desc": "Tus puntos de golpe máximos aumentan en una cantidad igual a 2 veces tu nivel de personaje cuando obtienes esta dote (+2 PG por nivel)."
+  },
+  {
+    "id": "fabricante",
+    "name": "Fabricante",
+    "category": "Origen",
+    "desc": "Obtienes competencia con tres tipos de herramientas de artesano a tu elección. Descuento del 20% al comprar equipo no mágico y fabricación rápida."
+  },
+  {
+    "id": "habilidoso",
+    "name": "Habilidoso",
+    "category": "Origen",
+    "repeatable": true,
+    "desc": "Obtienes competencia en tres habilidades o herramientas cualesquiera de tu elección. Puedes elegir esta dote más de una vez."
+  },
+  {
+    "id": "iniciado_magia_clerigo",
+    "name": "Iniciado en la magia (Clérigo)",
+    "category": "Origen",
+    "desc": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de clérigo. Puedes lanzar el conjuro de nivel 1 una vez sin gastar espacio por descanso largo. Sabiduría es tu aptitud mágica.",
+    "spellList": "clerigo",
+    "cantripsCount": 2,
+    "spellsCount": 1,
+    "ability": "sabiduria"
+  },
+  {
+    "id": "iniciado_magia_druida",
+    "name": "Iniciado en la magia (Druida)",
+    "category": "Origen",
+    "desc": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de druida. Puedes lanzar el conjuro de nivel 1 una vez sin gastar espacio por descanso largo. Sabiduría es tu aptitud mágica.",
+    "spellList": "druida",
+    "cantripsCount": 2,
+    "spellsCount": 1,
+    "ability": "sabiduria"
+  },
+  {
+    "id": "iniciado_magia_mago",
+    "name": "Iniciado en la magia (Mago)",
+    "category": "Origen",
+    "desc": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de mago. Puedes lanzar el conjuro de nivel 1 una vez sin gastar espacio por descanso largo. Inteligencia es tu aptitud mágica.",
+    "spellList": "mago",
+    "cantripsCount": 2,
+    "spellsCount": 1,
+    "ability": "inteligencia"
+  },
+  {
+    "id": "maton_taberna",
+    "name": "Matón de taberna",
+    "category": "Origen",
+    "desc": "Tus ataques sin armas infligen 1d4 + mod FUE. Al impactar con ataque sin armas puedes empujar 1,5 m. Puedes volver a tirar los 1s en tiradas de daño sin armas."
+  },
+  {
+    "id": "musico",
+    "name": "Músico",
+    "category": "Origen",
+    "desc": "Al finalizar un descanso corto o largo, tocas un instrumento musical para conceder Inspiración heroica a un número de aliados igual a tu bonificador por competencia."
+  },
+  {
+    "id": "sanador",
+    "name": "Sanador",
+    "category": "Origen",
+    "desc": "Puedes usar útiles de sanador como acción mágica para gastar un dado de golpe de una criatura y curarla. Además, vuelves a tirar cualquier 1 en dados de curación que lances."
+  },
+  {
+    "id": "estilo_defensa",
+    "name": "Estilo de combate: Defensa",
+    "category": "Estilo de combate",
+    "desc": "Mientras lleves puesta una armadura ligera, media o pesada, obtienes un bonificador de +1 a tu Clase de Armadura."
+  },
+  {
+    "id": "estilo_duelo",
+    "name": "Estilo de combate: Duelo",
+    "category": "Estilo de combate",
+    "desc": "Cuando empuñes un arma cuerpo a cuerpo en una mano y ninguna otra arma, obtienes un bonificador de +2 a las tiradas de daño con esa arma."
+  },
+  {
+    "id": "estilo_dos_armas",
+    "name": "Estilo de combate: Combate con dos armas",
+    "category": "Estilo de combate",
+    "desc": "Cuando realices un ataque adicional de combate con dos armas, puedes sumar tu modificador de característica al daño de ese ataque."
+  },
+  {
+    "id": "estilo_gran_arma",
+    "name": "Estilo de combate: Combate con arma a dos manos",
+    "category": "Estilo de combate",
+    "desc": "Cuando saques un 1 o un 2 en un dado de daño de un ataque con un arma cuerpo a cuerpo a dos manos o versátil empuñada a dos manos, puedes volver a tirar el dado."
+  },
+  {
+    "id": "estilo_tiro_arco",
+    "name": "Estilo de combate: Tiro con arco",
+    "category": "Estilo de combate",
+    "desc": "Obtienes un bonificador de +2 a las tiradas de ataque que realices con armas a distancia."
+  },
+  {
+    "id": "estilo_proteccion",
+    "name": "Estilo de combate: Protección",
+    "category": "Estilo de combate",
+    "desc": "Cuando una criatura a 1,5 m de ti que puedas ver ataque a un objetivo que no seas tú, puedes usar tu reacción para imponer desventaja a la tirada si portas un escudo."
+  },
+  {
+    "id": "estilo_intercepcion",
+    "name": "Estilo de combate: Intercepción",
+    "category": "Estilo de combate",
+    "desc": "Cuando una criatura a 1,5 m sufra daño de un ataque, puedes usar tu reacción para reducir el daño en 1d10 + bonificador por competencia (empuñando escudo o arma marcial)."
+  },
+  {
+    "id": "estilo_lucha_ciegas",
+    "name": "Estilo de combate: Lucha a ciegas",
+    "category": "Estilo de combate",
+    "desc": "Obtienes Vista ciega con un radio de 3 m. Puedes ver a criaturas invisibles y dentro de oscuridad mágica."
+  }
+]

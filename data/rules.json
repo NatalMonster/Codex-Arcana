@@ -1,0 +1,252 @@
+{
+  "abilities": [
+    {
+      "id": "fuerza",
+      "name": "Fuerza",
+      "abbr": "FUE"
+    },
+    {
+      "id": "destreza",
+      "name": "Destreza",
+      "abbr": "DES"
+    },
+    {
+      "id": "constitucion",
+      "name": "Constitución",
+      "abbr": "CON"
+    },
+    {
+      "id": "inteligencia",
+      "name": "Inteligencia",
+      "abbr": "INT"
+    },
+    {
+      "id": "sabiduria",
+      "name": "Sabiduría",
+      "abbr": "SAB"
+    },
+    {
+      "id": "carisma",
+      "name": "Carisma",
+      "abbr": "CAR"
+    }
+  ],
+  "skills": [
+    {
+      "id": "acrobacias",
+      "name": "Acrobacias",
+      "ability": "destreza",
+      "desc": "Mantener el equilibrio sobre superficies estrechas o resbaladizas, realizar piruetas, saltos acrobáticos y mantenerse en pie."
+    },
+    {
+      "id": "atletismo",
+      "name": "Atletismo",
+      "ability": "fuerza",
+      "desc": "Escalar superficies empinadas, saltar distancias o alturas inusuales y nadar en aguas o corrientes turbulentas."
+    },
+    {
+      "id": "conocimiento_arcano",
+      "name": "Conocimiento arcano",
+      "ability": "inteligencia",
+      "desc": "Recordar datos sobre conjuros, objetos mágicos, símbolos esotéricos, tradiciones arcanas y los planos de existencia."
+    },
+    {
+      "id": "engano",
+      "name": "Engaño",
+      "ability": "carisma",
+      "desc": "Ocultar la verdad mediante disimulo verbal o físico, contar mentiras creíbles y fingir intenciones o identidades."
+    },
+    {
+      "id": "historia",
+      "name": "Historia",
+      "ability": "inteligencia",
+      "desc": "Recordar acontecimientos históricos, imperios y reyes legendarios, guerras pasadas y civilizaciones antiguas."
+    },
+    {
+      "id": "interpretacion",
+      "name": "Interpretación",
+      "ability": "carisma",
+      "desc": "Deleitar o conmover a un público mediante música, danza, actuación teatral, narración de historias u otras artes escénicas."
+    },
+    {
+      "id": "intimidacion",
+      "name": "Intimidación",
+      "ability": "carisma",
+      "desc": "Influir en otros mediante amenazas de violencia, posturas amenazadoras, coerción verbal o presencia sobrecogedora."
+    },
+    {
+      "id": "investigacion",
+      "name": "Investigación",
+      "ability": "inteligencia",
+      "desc": "Deducir la ubicación de objetos o pasadizos ocultos, analizar pruebas forenses y descifrar pistas o mecanismos."
+    },
+    {
+      "id": "juego_de_manos",
+      "name": "Juego de manos",
+      "ability": "destreza",
+      "desc": "Ocultar objetos pequeños en tu cuerpo, robar bolsillos, forzar cerraduras o manipular objetos sutilmente sin ser visto."
+    },
+    {
+      "id": "medicina",
+      "name": "Medicina",
+      "ability": "sabiduria",
+      "desc": "Estabilizar a compañeros moribundos, diagnosticar enfermedades, identificar venenos y tratar heridas o dolencias."
+    },
+    {
+      "id": "naturaleza",
+      "name": "Naturaleza",
+      "ability": "inteligencia",
+      "desc": "Conocimiento sobre el terreno, flora, fauna, ciclos climáticos, estaciones del año y peligros del entorno natural."
+    },
+    {
+      "id": "percepcion",
+      "name": "Percepción",
+      "ability": "sabiduria",
+      "desc": "Detectar, oír, oler o vislumbrar cosas que no son obvias; agudizar los sentidos para prevenir emboscadas o escuchar tras puertas."
+    },
+    {
+      "id": "perspicacia",
+      "name": "Perspicacia",
+      "ability": "sabiduria",
+      "desc": "Determinar las verdaderas intenciones de una criatura, intuir si miente o si está actuando bajo engaño o coacción mágica."
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasión",
+      "ability": "carisma",
+      "desc": "Influir en personas o grupos con tacto, diplomacia, cortesía, elocuencia, buena voluntad o argumentos razonados."
+    },
+    {
+      "id": "religion",
+      "name": "Religión",
+      "ability": "inteligencia",
+      "desc": "Recordar preceptos de deidades, ritos, cultos, plegarias sagradas, jerarquías de clero y artefactos o mitos religiosos."
+    },
+    {
+      "id": "sigilo",
+      "name": "Sigilo",
+      "ability": "destreza",
+      "desc": "Ocultarse entre las sombras o coberturas, deslizarse en silencio y evitar llamar la atención de guardias o criaturas."
+    },
+    {
+      "id": "supervivencia",
+      "name": "Supervivencia",
+      "ability": "sabiduria",
+      "desc": "Seguir rastros y huellas, cazar alimentos en la espesura, orientarse en la naturaleza y evitar peligros naturales."
+    },
+    {
+      "id": "trato_con_animales",
+      "name": "Trato con animales",
+      "ability": "sabiduria",
+      "desc": "Calmar a bestias alteradas, domesticar monturas, intuir el comportamiento animal y guiar animales en situaciones de estrés."
+    }
+  ],
+  "alignments": [
+    {
+      "id": "LB",
+      "name": "Legal bueno",
+      "desc": "Se esfuerzan por hacer lo correcto según lo que espera la sociedad."
+    },
+    {
+      "id": "NB",
+      "name": "Neutral bueno",
+      "desc": "Hacen lo que pueden respetando las reglas, pero sin sentirse sometidos a ellas."
+    },
+    {
+      "id": "CB",
+      "name": "Caótico bueno",
+      "desc": "Actúan siguiendo los dictados de sus conciencias, sin preocuparles lo que otros esperan."
+    },
+    {
+      "id": "LN",
+      "name": "Legal neutral",
+      "desc": "Se comportan de acuerdo con la ley, la tradición o sus códigos de conducta personales."
+    },
+    {
+      "id": "N",
+      "name": "Neutral",
+      "desc": "Prefieren evitar las cuestiones éticas, no toman partido y hacen lo que les parece mejor en cada momento."
+    },
+    {
+      "id": "CN",
+      "name": "Caótico neutral",
+      "desc": "Persiguen sus caprichos y valoran su libertad personal por encima de todo."
+    },
+    {
+      "id": "LM",
+      "name": "Legal malvado",
+      "desc": "Toman lo que les viene en gana, dentro de los límites que marcan la tradición, el orden o la lealtad."
+    },
+    {
+      "id": "NM",
+      "name": "Neutral malvado",
+      "desc": "Les resulta indiferente causar daño mientras persiguen sus deseos."
+    },
+    {
+      "id": "CM",
+      "name": "Caótico malvado",
+      "desc": "Recurren a la violencia arbitrariamente, movidas por el odio o el ansia de sangre."
+    }
+  ],
+  "pointBuyCosts": {
+    "8": 0,
+    "9": 1,
+    "10": 2,
+    "11": 3,
+    "12": 4,
+    "13": 5,
+    "14": 7,
+    "15": 9
+  },
+  "pointBuyBudget": 27,
+  "standardArray": [
+    15,
+    14,
+    13,
+    12,
+    10,
+    8
+  ],
+  "masteryProperties": [
+    {
+      "id": "debilitar",
+      "name": "Debilitar",
+      "desc": "Si impactas a una criatura, tiene desventaja en su siguiente tirada de ataque antes del comienzo de tu siguiente turno."
+    },
+    {
+      "id": "derribar",
+      "name": "Derribar",
+      "desc": "Si impactas a una criatura, debe superar una tirada de salvación de Constitución (CD 8 + mod característca ataque + competencia) o caer tumbada."
+    },
+    {
+      "id": "empujar",
+      "name": "Empujar",
+      "desc": "Si impactas a una criatura, puedes empujarla hasta 3 m en línea recta lejos de ti si es Grande o menor."
+    },
+    {
+      "id": "hender",
+      "name": "Hender",
+      "desc": "Una vez por turno al impactar cuerpo a cuerpo, puedes realizar un ataque adicional contra otra criatura a 1,5 m de ti que esté adyacente a la primera."
+    },
+    {
+      "id": "mellar",
+      "name": "Mellar",
+      "desc": "Al hacer el ataque adicional del combate con dos armas, puedes hacerlo como parte de la acción de Atacar en vez de gastar una acción adicional."
+    },
+    {
+      "id": "molestar",
+      "name": "Molestar",
+      "desc": "Si impactas a una criatura y le infliges daño, tienes ventaja en tu siguiente tirada de ataque contra ella antes del final de tu siguiente turno."
+    },
+    {
+      "id": "ralentizar",
+      "name": "Ralentizar",
+      "desc": "Si impactas a una criatura y le causas daño, su velocidad se reduce en 3 m hasta el comienzo de tu siguiente turno."
+    },
+    {
+      "id": "rozar",
+      "name": "Rozar",
+      "desc": "Si fallas una tirada de ataque, infliges un daño igual al modificador de la característica utilizada para el ataque."
+    }
+  ]
+}

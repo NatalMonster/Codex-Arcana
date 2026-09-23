@@ -1,0 +1,101 @@
+{
+  "standard": [
+    {
+      "id": "comun",
+      "name": "Común",
+      "origin": "Sigil"
+    },
+    {
+      "id": "draconico",
+      "name": "Dracónico",
+      "origin": "Dragones"
+    },
+    {
+      "id": "elfo",
+      "name": "Elfo",
+      "origin": "Elfos"
+    },
+    {
+      "id": "enano",
+      "name": "Enano",
+      "origin": "Enanos"
+    },
+    {
+      "id": "gigante",
+      "name": "Gigante",
+      "origin": "Gigantes"
+    },
+    {
+      "id": "gnomo",
+      "name": "Gnomo",
+      "origin": "Gnomos"
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "origin": "Trasgos"
+    },
+    {
+      "id": "lenguaje_signos_comun",
+      "name": "Lenguaje de signos común",
+      "origin": "Sigil"
+    },
+    {
+      "id": "mediano",
+      "name": "Mediano",
+      "origin": "Medianos"
+    },
+    {
+      "id": "orco",
+      "name": "Orco",
+      "origin": "Orcos"
+    }
+  ],
+  "unusual": [
+    {
+      "id": "abisal",
+      "name": "Abisal",
+      "origin": "Demonios del Abismo"
+    },
+    {
+      "id": "celestial",
+      "name": "Celestial",
+      "origin": "Celestiales"
+    },
+    {
+      "id": "druidico",
+      "name": "Druídico",
+      "origin": "Círculos druídicos"
+    },
+    {
+      "id": "habla_profundidades",
+      "name": "Habla de las profundidades",
+      "origin": "Aberraciones"
+    },
+    {
+      "id": "infernal",
+      "name": "Infernal",
+      "origin": "Diablos de los Nueve Infiernos"
+    },
+    {
+      "id": "infracomun",
+      "name": "Infracomún",
+      "origin": "La Infraoscuridad"
+    },
+    {
+      "id": "jerga_ladrones",
+      "name": "Jerga de ladrones",
+      "origin": "Gremios criminales"
+    },
+    {
+      "id": "primordial",
+      "name": "Primordial",
+      "origin": "Elementales"
+    },
+    {
+      "id": "silvano",
+      "name": "Silvano",
+      "origin": "Los Parajes Feéricos"
+    }
+  ]
+}

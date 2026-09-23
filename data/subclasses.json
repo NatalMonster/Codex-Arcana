@@ -1,0 +1,1910 @@
+[
+  {
+    "id": "senda_arbol_mundo",
+    "classId": "barbaro",
+    "name": "Senda del Árbol del Mundo",
+    "unlockLevel": 3,
+    "desc": "Canaliza la vitalidad cósmica y las ramas del gran fresno cósmico Yggdrasil, que interconecta los Planos Exteriores y el Plano Material.",
+    "role": "Soporte vital, redistribución de PG temporales y control posicional mediante teletransporte dimensional.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Vitalidad del árbol",
+        "desc": "Al enfurecerte, obtienes puntos de golpe temporales iguales a tu nivel de bárbaro. Además, al inicio de cada uno de tus turnos mientras dure la furia, puedes conceder a un aliado a 3 m o menos una cantidad de PG temporales igual a tu bonificador de daño por furia en d6 (ej. 2d6 a nivel 3)."
+      },
+      {
+        "level": 6,
+        "name": "Ramas del árbol",
+        "desc": "Cuando una criatura visible comience su turno a 9 m o menos de ti mientras estás en furia, puedes usar tu reacción para que deba superar una salvación de Fuerza (CD 8 + mod FUE + bonif. competencia) o será teletransportada a un espacio a 1,5 m de ti y su velocidad se reducirá a 0 hasta el final del turno."
+      },
+      {
+        "level": 10,
+        "name": "Raíces apaleadoras",
+        "desc": "Tu alcance aumenta en 3 m en tu turno con armas pesadas o versátiles gracias a zarcillos astrales. Al acertar un golpe, puedes activar la propiedad de maestría de Derribar o Empujar además de la maestría propia del arma."
+      },
+      {
+        "level": 14,
+        "name": "Viajar por el árbol",
+        "desc": "Al entrar en furia y como acción adicional en tus turnos enfurecido, puedes teletransportarte hasta 18 m. Una vez por furia, puedes ampliar el alcance a 45 m y teletransportar contigo hasta 6 aliados voluntarios a tu alrededor."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "senda_berserker",
+    "classId": "barbaro",
+    "name": "Senda del berserker",
+    "unlockLevel": 3,
+    "desc": "Desata una violencia volcánica, pura y despiadada en el combate cuerpo a cuerpo, transformando el frenesí en daño demoledor.",
+    "role": "Daño físico masivo cuerpo a cuerpo y resistencia psicológica total contra efectos mentales.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Frenesí",
+        "desc": "Si utilizas Ataque temerario mientras estás enfurecido, infliges daño adicional al primer objetivo que impactes en tu turno con un ataque basado en Fuerza. El daño extra es igual a una cantidad de d6 equivalente a tu bonificador de daño por furia (2d6 a nivel 3, 3d6 a nivel 9, 4d6 a nivel 16)."
+      },
+      {
+        "level": 6,
+        "name": "Furia irracional",
+        "desc": "Inmunidad total a los estados de hechizado y asustado mientras dura tu furia. Si ya te encuentras bajo uno de estos efectos al iniciar la furia, el efecto finaliza inmediatamente."
+      },
+      {
+        "level": 10,
+        "name": "Represalia",
+        "desc": "Cuando recibas daño de una criatura que esté a 1,5 m o menos de ti, puedes usar tu reacción para ejecutar de inmediato un ataque cuerpo a cuerpo contra ella usando un arma o ataque sin armas."
+      },
+      {
+        "level": 14,
+        "name": "Presencia intimidante",
+        "desc": "Como acción adicional, puedes desatar un rugido aterrador. Cada criatura a tu elección en un radio de 9 m debe superar una tirada de salvación de Sabiduría (CD 8 + mod FUE + bonif. competencia) o quedará asustada de ti hasta el final de tu siguiente turno."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "senda_corazon_salvaje",
+    "classId": "barbaro",
+    "name": "Senda del corazón salvaje",
+    "unlockLevel": 3,
+    "desc": "Sintoniza tu espíritu con las bestias de la naturaleza, adoptando los tótems y dones del oso, el águila y el lobo en combate.",
+    "role": "Adaptabilidad táctica: resistencia universal, ventajas ofensivas grupales o alta movilidad.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Furia de lo salvaje",
+        "desc": "Cada vez que entras en furia, eliges un espíritu animal: Oso (resistencia a todos los tipos de daño excepto psíquico y de fuerza), Águila (puedes Correr y Destrabarte como acción adicional), o Lobo (tus aliados tienen ventaja en tiradas de ataque cuerpo a cuerpo contra enemigos a 1,5 m de ti)."
+      },
+      {
+        "level": 3,
+        "name": "Portavoz de los animales",
+        "desc": "Puedes lanzar los conjuros 'Hablar con los animales' y 'Sentido de las bestias' como rituales sin gastar espacios de conjuro."
+      },
+      {
+        "level": 6,
+        "name": "Aspecto de lo salvaje",
+        "desc": "Obtienes un don pasivo permanente: Elefante (aumenta tu capacidad de carga y ventaja en pruebas de Fuerza para empujar), Búho (visión en la oscuridad 18 m y ventaja en Percepción), o Pantera (velocidad de escalada igual a tu velocidad a pie)."
+      },
+      {
+        "level": 10,
+        "name": "Hablante de la naturaleza",
+        "desc": "Puedes lanzar el conjuro 'Comunión con la naturaleza' como ritual, consultando a los espíritus del entorno sobre terrenos, criaturas y amenazas."
+      },
+      {
+        "level": 14,
+        "name": "Poder de lo salvaje",
+        "desc": "Mejora tus dones en furia: Carnero (derribas al objetivo tras moverte y golpear), León (los enemigos cercanos tienen desventaja al atacar a objetivos que no seas tú) o Halcón (obtienes velocidad de vuelo igual a tu velocidad mientras estés enfurecido)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "senda_fanatico",
+    "classId": "barbaro",
+    "name": "Senda del fanático",
+    "unlockLevel": 3,
+    "desc": "Imbuye tu furia combativa con la energía radiante o necrótica de los dioses de la guerra y la batalla.",
+    "role": "Daño sagrado adicional en cada asalto, tenacidad inquebrantable e inspiración marcial a los aliados.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Furia divina",
+        "desc": "El primer objetivo al que golpees con un arma en cada uno de tus turnos durante la furia recibe 1d6 + la mitad de tu nivel de bárbaro de daño radiante o necrótico adicional (a tu elección al elegir la senda)."
+      },
+      {
+        "level": 3,
+        "name": "Guerrero de los dioses",
+        "desc": "Los conjuros que te devuelven a la vida (como revivir o alzar a los muertos) no consumen los componentes materiales de diamante cuando se lanzan sobre ti."
+      },
+      {
+        "level": 6,
+        "name": "Foco fanático",
+        "desc": "La primera vez que falles una tirada de salvación mientras estás enfurecido en un turno, puedes repetir la tirada con una bonificación de +1d4 y debes usar el nuevo resultado."
+      },
+      {
+        "level": 10,
+        "name": "Presencia ferviente",
+        "desc": "Como acción adicional, lanzas un grito de guerra inspirador. Hasta 10 criaturas aliadas a 18 m o menos obtienen ventaja en tiradas de ataque y tiradas de salvación hasta el principio de tu siguiente turno (1 uso por descanso largo o gastando 1 uso de furia)."
+      },
+      {
+        "level": 14,
+        "name": "Furia de los dioses",
+        "desc": "Tu furia te protege del umbral de la muerte. Estar a 0 puntos de golpe no te deja inconsciente ni te incapacita; sigues luchando y haciendo salvaciones contra la muerte con normalidad hasta que termine la furia."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "colegio_danza",
+    "classId": "bardo",
+    "name": "Colegio de la danza",
+    "unlockLevel": 3,
+    "desc": "Practicantes del arte cinético que convierten el movimiento ágil, la acrobacia y la cadencia rítmica en un arma letal.",
+    "role": "Combate sin armadura, ataques sin armas rítmicos, defensa ágil y movimiento evasivo para ti y tus aliados.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Danza deslumbrante",
+        "desc": "Mientras no lleves armadura ni escudo, tu CA es igual a 10 + mod DES + mod CAR. Además, tus ataques sin armas pueden usar Destreza y causan daño contundente igual a tu dado de Inspiración bárdica (1d6, 1d8...)."
+      },
+      {
+        "level": 3,
+        "name": "Movimiento ágil",
+        "desc": "Cuando gastes un uso de Inspiración bárdica, puedes moverte hasta la mitad de tu velocidad como parte de la misma acción sin provocar ataques de oportunidad."
+      },
+      {
+        "level": 6,
+        "name": "Virtuoso inspirador",
+        "desc": "Cuando tú o un aliado visible a 1,5 m de ti recibáis daño, puedes usar tu reacción y gastar un dado de Inspiración bárdica para reducir el daño sufrido en la tirada del dado + tu modificador por Carisma."
+      },
+      {
+        "level": 6,
+        "name": "Ataque adicional tándem",
+        "desc": "Puedes atacar dos veces en lugar de una siempre que lleves a cabo la acción de Atacar en tu turno."
+      },
+      {
+        "level": 14,
+        "name": "Danza libre",
+        "desc": "Estar bajo efectos de inmovilización, parálisis o reducción de movimiento no te afecta mientras estés consciente. Puedes escapar de presas automáticamente usando 1,5 m de movimiento."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "colegio_conocimiento",
+    "classId": "bardo",
+    "name": "Colegio del conocimiento",
+    "unlockLevel": 3,
+    "desc": "Coleccionistas incansables de secretos arcanos, conocimientos perdidos y folclore antiguo procedentes de todos los confines del multiverso.",
+    "role": "Máxima versatilidad en habilidades, interrupción de tiradas enemigas y acceso temprano a conjuros de cualquier clase.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Competencias adicionales",
+        "desc": "Obtienes competencia en tres habilidades adicionales a tu elección de toda la lista de habilidades."
+      },
+      {
+        "level": 3,
+        "name": "Palabras cortantes",
+        "desc": "Como reacción cuando una criatura a 18 m haga una tirada de ataque, prueba de característica o tirada de daño, puedes gastar un dado de Inspiración bárdica y restar el resultado a su tirada."
+      },
+      {
+        "level": 6,
+        "name": "Secretos mágicos adicionales",
+        "desc": "Aprendes dos conjuros de cualquier clase (mago, clérigo, druida, etc.) de un nivel para el que tengas espacios de conjuro. Cuentan como conjuros de bardo para ti."
+      },
+      {
+        "level": 14,
+        "name": "Habilidad sin parangón",
+        "desc": "Cuando hagas una prueba de característica o tirada de ataque y falles, puedes tirar un dado de Inspiración bárdica y sumarlo al total. El dado de inspiración solo se gasta si la tirada acaba teniendo éxito."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "colegio_glamour",
+    "classId": "bardo",
+    "name": "Colegio del glamour",
+    "unlockLevel": 3,
+    "desc": "Herederos de la magia cautivadora, hipnótica y temible de las cortes de los Parajes Feéricos.",
+    "role": "Control mental, fascinación en masa, reubicación táctica de aliados con PG temporales y órdenes irresistibles.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Manto de inspiración",
+        "desc": "Como acción adicional, gastas un dado de Inspiración bárdica para bendecir a un número de aliados igual a tu mod CAR a 18 m. Cada uno obtiene 5 PG temporales (aumenta con el nivel) y puede usar de inmediato su reacción para moverse hasta su velocidad sin provocar ataques de oportunidad."
+      },
+      {
+        "level": 3,
+        "name": "Presencia fascinante",
+        "desc": "Tras actuar durante 1 minuto, puedes intentar hechizar a los espectadores. Hasta tu mod CAR de criaturas deben superar una salvación de Sabiduría o quedarán hechizadas por ti durante 1 hora."
+      },
+      {
+        "level": 6,
+        "name": "Manto de majestad",
+        "desc": "Como acción adicional, adoptas una presencia feérica durante 1 minuto. Durante este tiempo, puedes lanzar 'Orden imperiosa' como acción adicional en cada uno de tus turnos sin gastar espacios de conjuro."
+      },
+      {
+        "level": 14,
+        "name": "Majestad inquebrantable",
+        "desc": "Adoptas una presencia de soberano feérico. Cualquier criatura que intente atacarte por primera vez en su turno debe superar una salvación de Carisma frente a tu CD de conjuro o su ataque fallará y deberá elegir otro objetivo."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "colegio_valor",
+    "classId": "bardo",
+    "name": "Colegio del valor",
+    "unlockLevel": 3,
+    "desc": "Cantores marciales que entonan hazañas heroicas en la primera línea de combate blandiendo espadas y escudos.",
+    "role": "Híbrido de combate marcial y apoyo táctico: armaduras medias, escudos, armas marciales y aumento del daño de aliados.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Competencias marciales",
+        "desc": "Obtienes competencia con armaduras medias, escudos y todas las armas marciales."
+      },
+      {
+        "level": 3,
+        "name": "Inspiración combativa",
+        "desc": "Las criaturas con tu Inspiración bárdica pueden usarla para sumar el dado al daño de un ataque con arma, o como reacción para sumar el dado a su CA contra un ataque que las impacte."
+      },
+      {
+        "level": 6,
+        "name": "Ataque adicional",
+        "desc": "Puedes atacar dos veces al realizar la acción de Atacar en tu turno. Además, puedes sustituir uno de esos ataques por el lanzamiento de un truco que tenga tiempo de lanzamiento de 1 acción."
+      },
+      {
+        "level": 14,
+        "name": "Magia de batalla",
+        "desc": "Cuando utilices tu acción para lanzar un conjuro de nivel 1 o superior, puedes realizar un ataque con arma como acción adicional."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "patron_celestial",
+    "classId": "brujo",
+    "name": "Patrón celestial",
+    "unlockLevel": 3,
+    "desc": "Pacto forjado con un ser supremo de los Planos Superiores: un querubín, solar, empíreo o unicornio benevolente.",
+    "role": "Curación a distancia sin gastar ranuras de pacto, daño radiante e ígneo y resurrección defensiva.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de patrón celestial",
+        "desc": "Tienes siempre preparados conjuros sagrados adicionales: Nivel 3 (Curar heridas, Fuego feérico, Llama sagrada, Rayo de luna, Esfera de llamas), Nivel 5 (Revivir, Luz del día), Nivel 7 (Guardián de la fe, Muro de fuego), Nivel 9 (Restauración mayor, Golpe flamígero)."
+      },
+      {
+        "level": 3,
+        "name": "Luz sanadora",
+        "desc": "Posees una reserva de dados d6 igual a 1 + tu nivel de brujo. Como acción adicional, puedes curar a una criatura visible a 18 m gastando hasta tu modificador de Carisma en d6 de la reserva (se recuperan en descanso largo)."
+      },
+      {
+        "level": 6,
+        "name": "Resplandor celestial",
+        "desc": "Cuando lances un conjuro que inflija daño radiante o de fuego, sumas tu modificador por Carisma a una tirada de daño del conjuro. Además, obtienes resistencia al daño radiante."
+      },
+      {
+        "level": 10,
+        "name": "Resiliencia celestial",
+        "desc": "Al completar un descanso corto o largo, tú obtienes PG temporales iguales a tu nivel de brujo + tu mod CAR, y hasta 5 aliados obtienen la mitad de esa cantidad."
+      },
+      {
+        "level": 14,
+        "name": "Vindicación abrasadora",
+        "desc": "Cuando vayas a hacer una tirada de salvación contra la muerte, puedes alzarte con la mitad de tus PG máximos en una explosión de luz que causa 2d8 + mod CAR de daño radiante y ciega a los enemigos adyacentes."
+      }
+    ],
+    "spells": [
+      "Curar heridas",
+      "Fuego feérico",
+      "Rayo de luna",
+      "Esfera de llamas",
+      "Revivir",
+      "Luz del día",
+      "Guardián de la fe",
+      "Muro de fuego",
+      "Restauración mayor",
+      "Golpe flamígero"
+    ]
+  },
+  {
+    "id": "patron_feerico",
+    "classId": "brujo",
+    "name": "Patrón feérico",
+    "unlockLevel": 3,
+    "desc": "Pacto forjado con un señor o dama noble de los Parajes Feéricos, gobernantes del engaño, la ilusión y los bosques encantados.",
+    "role": "Teletransporte constante mediante Paso brumoso, efectos añadidos de hechizo/ceguera y evasión ilusoria.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de patrón feérico",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Fuego feérico, Dormir, Calmar emociones, Fuerza fantasmal, Paso brumoso), Nivel 5 (Llevar, Patrón hipnótico), Nivel 7 (Dominar bestia, Invisibilidad mayor), Nivel 9 (Dominar persona, Parecer engañoso)."
+      },
+      {
+        "level": 3,
+        "name": "Paso brumoso feérico",
+        "desc": "Tienes siempre preparado Paso brumoso y no cuenta contra tu límite. Puedes lanzarlo gratis tantas veces como tu bonificador de competencia por descanso largo, y al hacerlo puedes desencadenar un efecto feérico (provocar pánico o encanto en criaturas adyacentes)."
+      },
+      {
+        "level": 6,
+        "name": "Fuga taumatúrgica",
+        "desc": "Como reacción al sufrir daño, puedes volverte invisible y teletransportarte de inmediato hasta 18 m a un espacio desocupado que puedas ver. La invisibilidad dura hasta el final de tu siguiente turno."
+      },
+      {
+        "level": 10,
+        "name": "Defensa embaucadora",
+        "desc": "Inmunidad a quedar hechizado. Si una criatura intenta hechizarte, puedes usar tu reacción para redirigir el hechizo e intentar hechizarla a ella durante 1 minuto."
+      },
+      {
+        "level": 14,
+        "name": "Delirio sombrío",
+        "desc": "Como acción, sumerges a una criatura en un reino ilusorio feérico durante 1 minuto. El objetivo queda incapacitado, asustado o hechizado mientras contempla un paisaje onírico aterrador o sublime."
+      }
+    ],
+    "spells": [
+      "Fuego feérico",
+      "Dormir",
+      "Calmar emociones",
+      "Fuerza fantasmal",
+      "Paso brumoso",
+      "Patrón hipnótico",
+      "Dominar bestia",
+      "Invisibilidad mayor",
+      "Dominar persona",
+      "Parecer engañoso"
+    ]
+  },
+  {
+    "id": "patron_infernal",
+    "classId": "brujo",
+    "name": "Patrón infernal",
+    "unlockLevel": 3,
+    "desc": "Pacto pactado con los archidemonios de los Nueve Infiernos o los señores del Abismo.",
+    "role": "Absorción de vitalidad al matar enemigos, alteración de la suerte con dados extra y daño masivo de fuego del averno.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de patrón infernal",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Manos ardientes, Orden imperiosa, Ceguera/Sordera, Rayo abrasador), Nivel 5 (Bola de fuego, Apestar), Nivel 7 (Muro de fuego, Escudo de fuego), Nivel 9 (Columna de llamas, Imprecación)."
+      },
+      {
+        "level": 3,
+        "name": "Bendición del Oscuro",
+        "desc": "Cuando reduces a un enemigo a 0 puntos de golpe, obtienes una cantidad de PG temporales igual a tu modificador por Carisma + tu nivel de brujo."
+      },
+      {
+        "level": 6,
+        "name": "Propia suerte del Oscuro",
+        "desc": "Cuando hagas una prueba de característica o tirada de salvación, puedes invocar la suerte de los Nueve Infiernos para sumar 1d10 a tu resultado (1 uso por descanso corto o largo)."
+      },
+      {
+        "level": 10,
+        "name": "Resistencia infernal",
+        "desc": "Al finalizar un descanso corto o largo, eliges un tipo de daño (ácido, frío, fuego, rayo, etc.). Obtienes resistencia a ese tipo de daño hasta que elijas otro."
+      },
+      {
+        "level": 14,
+        "name": "Lanzar al infierno",
+        "desc": "Al impactar a una criatura con un ataque, la transportas instantáneamente a través de los Nueve Infiernos durante un asalto. Cuando regresa al inicio de tu siguiente turno, sufre 10d10 de daño psíquico por el tormento."
+      }
+    ],
+    "spells": [
+      "Manos ardientes",
+      "Orden imperiosa",
+      "Ceguera/Sordera",
+      "Rayo abrasador",
+      "Bola de fuego",
+      "Apestar",
+      "Muro de fuego",
+      "Escudo de fuego",
+      "Golpe flamígero",
+      "Imprecación"
+    ]
+  },
+  {
+    "id": "patron_primigenio",
+    "classId": "brujo",
+    "name": "Patrón primigenio",
+    "unlockLevel": 3,
+    "desc": "Pacto con entidades inescrutables de más allá de la realidad: Grandes Antiguos del Reino Lejano como Cthulhu o Hadar.",
+    "role": "Guerra psicológica, daño psíquico irresistible, telepatía bilateral y control mental permanente.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de patrón primigenio",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Susurros disonantes, Risa horrible de Tasha, Detectar pensamientos, Corona de locura), Nivel 5 (Clarividencia, Hambre de Hadar), Nivel 7 (Tentáculos negros de Evard, Dominar bestia), Nivel 9 (Dominar persona, Telequinesis)."
+      },
+      {
+        "level": 3,
+        "name": "Mente despierta",
+        "desc": "Puedes comunicarte telepáticamente con cualquier criatura visible a 9 m o menos en un idioma que ella entienda, sin necesidad de compartir lenguaje."
+      },
+      {
+        "level": 6,
+        "name": "Escudo psíquico",
+        "desc": "Tus pensamientos no pueden leerse mediante telepatía y obtienes resistencia al daño psíquico. Cuando una criatura te cause daño psíquico, sufre la misma cantidad de daño reflejado."
+      },
+      {
+        "level": 10,
+        "name": "Vórtice mental",
+        "desc": "Como acción, creas un desgarro del Reino Lejano. Las criaturas en un radio de 6 m sufren daño psíquico y quedan desorientadas."
+      },
+      {
+        "level": 14,
+        "name": "Esclavo mental",
+        "desc": "Puedes tocar a un humanoide incapacitado para doblegar su psique; queda hechizado por ti indefinidamente y bajo tu control telepático continuo hasta que se lance 'Restablecimiento mayor'."
+      }
+    ],
+    "spells": [
+      "Susurros disonantes",
+      "Risa horrible de Tasha",
+      "Detectar pensamientos",
+      "Corona de locura",
+      "Clarividencia",
+      "Hambre de Hadar",
+      "Tentáculos negros de Evard",
+      "Dominar bestia",
+      "Dominar persona",
+      "Telequinesis"
+    ]
+  },
+  {
+    "id": "dominio_guerra",
+    "classId": "clerigo",
+    "name": "Dominio de la guerra",
+    "unlockLevel": 3,
+    "desc": "Clérigos de deidades de la victoria, el honor y la batalla (como Tempus o Tyr), convertidos en paladines de la fe armada.",
+    "role": "Combate en primera línea, ataques adicionales con armas pesadas y bonificación masiva de +10 a tiradas de ataque.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de dominio de guerra",
+        "desc": "Conjuros de dominio siempre preparados: Nivel 3 (Escudo de la fe, Foco de heroísmo, Flecha espiritual, Arma espiritual), Nivel 5 (Manto de cruzado, Guardianes espirituales), Nivel 7 (Piel de piedra, Libertad de movimiento), Nivel 9 (Columna de llamas, Inmovilizar monstruo)."
+      },
+      {
+        "level": 3,
+        "name": "Sacerdote de la guerra",
+        "desc": "Obtienes competencia con armas marciales y armaduras pesadas. Cuando usas la acción de Atacar, puedes realizar un ataque con arma adicional como acción adicional (usos iguales a tu mod Sabiduría por descanso largo)."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Golpe guiado",
+        "desc": "Cuando tú o una criatura a 9 m hagáis una tirada de ataque, puedes usar tu reacción y Canalizar divinidad para otorgar una bonificación de +10 al resultado."
+      },
+      {
+        "level": 6,
+        "name": "Bendición del dios de la guerra",
+        "desc": "Puedes otorgar el beneficio de Golpe guiado (+10) a aliados cercanos para asegurar impactos decisivos contra jefes o enemigos con CA elevada."
+      },
+      {
+        "level": 17,
+        "name": "Avatar de la batalla",
+        "desc": "Obtienes resistencia permanente al daño contundente, perforante y cortante de ataques no mágicos."
+      }
+    ],
+    "spells": [
+      "Escudo de la fe",
+      "Favor divino",
+      "Arma espiritual",
+      "Arma mágica",
+      "Manto de cruzado",
+      "Guardianes espirituales",
+      "Piel pétrea",
+      "Libertad de movimiento",
+      "Golpe flamígero",
+      "Inmovilizar monstruo"
+    ]
+  },
+  {
+    "id": "dominio_luz",
+    "classId": "clerigo",
+    "name": "Dominio de la luz",
+    "unlockLevel": 3,
+    "desc": "Seguidores de dioses del sol, la verdad y el fuego purificador (como Lathander, Helios o Apolo).",
+    "role": "Daño radiante y de fuego a gran escala, destellos cegadores defensivos e iluminación de ilusiones y tinieblas.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de dominio de la luz",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Manos ardientes, Fuego feérico, Esfera de llamas, Rayo abrasador), Nivel 5 (Luz del día, Bola de fuego), Nivel 7 (Guardián de la fe, Muro de fuego), Nivel 9 (Golpe flamígero, Escudriñar)."
+      },
+      {
+        "level": 3,
+        "name": "Destello protector",
+        "desc": "Como reacción cuando una criatura a 9 m te ataque, puedes interponer un destello de luz sagrada para imponerle desventaja en su tirada de ataque."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Resplandor del amanecer",
+        "desc": "Como acción, disipas toda oscuridad mágica a 9 m y obligas a los enemigos a hacer salvación de Constitución: sufren 2d10 + nivel de clérigo de daño radiante (la mitad si superan)."
+      },
+      {
+        "level": 6,
+        "name": "Destello protector mejorado",
+        "desc": "Puedes usar tu Destello protector cuando una criatura visible ataque a un aliado a 9 m de ti, no solo a ti."
+      },
+      {
+        "level": 17,
+        "name": "Corona de luz",
+        "desc": "Puedes activar un aura solar de 18 m de luz brillante. Los enemigos tienen desventaja en salvaciones contra tus conjuros que inflijan daño radiante o de fuego."
+      }
+    ],
+    "spells": [
+      "Manos ardientes",
+      "Fuego feérico",
+      "Esfera de llamas",
+      "Rayo abrasador",
+      "Luz del día",
+      "Bola de fuego",
+      "Guardián de la fe",
+      "Muro de fuego",
+      "Golpe flamígero",
+      "Escudriñar"
+    ]
+  },
+  {
+    "id": "dominio_vida",
+    "classId": "clerigo",
+    "name": "Dominio de la vida",
+    "unlockLevel": 3,
+    "desc": "Devotos de deidades de la curación, la salud y la vitalidad del cosmos (como Ilmáter, Selûne o Chauntea).",
+    "role": "El sanador definitivo: maximización de puntos de vida curados, curación en área y autocuración refleja.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de dominio de la vida",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Bendecir, Curar heridas, Palabra de curación, Restablecimiento menor, Auxilio divino), Nivel 5 (Faro de esperanza, Revivir), Nivel 7 (Protección contra la muerte, Guardián de la fe), Nivel 9 (Curar heridas en masa, Alzar a los muertos)."
+      },
+      {
+        "level": 3,
+        "name": "Discípulo de la vida",
+        "desc": "Cada vez que lanzas un conjuro de nivel 1 o superior para restaurar PG, el objetivo recupera PG adicionales iguales a 2 + el nivel del conjuro."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Preservar la vida",
+        "desc": "Como acción, restauras una cantidad de PG igual a 5 veces tu nivel de clérigo, repartidos entre las criaturas heridas a 9 m (hasta la mitad de sus PG máximos)."
+      },
+      {
+        "level": 6,
+        "name": "Sanador bendito",
+        "desc": "Cuando lanzas un conjuro de curación sobre otra criatura, tú también recuperas PG iguales a 2 + el nivel del conjuro."
+      },
+      {
+        "level": 17,
+        "name": "Curación suprema",
+        "desc": "En lugar de tirar dados para determinar los PG curados por tus conjuros, usas automáticamente el resultado máximo posible en cada dado."
+      }
+    ],
+    "spells": [
+      "Bendición",
+      "Curar heridas",
+      "Palabra de curación",
+      "Restablecimiento menor",
+      "Auxilio divino",
+      "Faro de esperanza",
+      "Revivir",
+      "Protección contra la muerte",
+      "Curar heridas en masa",
+      "Alzar a los muertos"
+    ]
+  },
+  {
+    "id": "dominio_engano",
+    "classId": "clerigo",
+    "name": "Dominio del engaño",
+    "unlockLevel": 3,
+    "desc": "Agentes sagrados del sigilo, el caos y la astucia celestial u oscura (como Loki, Máscara o Leira).",
+    "role": "Infiltración divina, creación de duplicados ilusorios para lanzar conjuros a distancia y teletransporte.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de dominio del engaño",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Disfrazarse, Encantar persona, Reflejos, Paso brumoso), Nivel 5 (Intermitencia, Disipar magia), Nivel 7 (Puerta dimensional, Polimorfar), Nivel 9 (Dominar persona, Modificar memoria)."
+      },
+      {
+        "level": 3,
+        "name": "Bendición del embaucador",
+        "desc": "Como acción, tocas a una criatura voluntaria (que no seas tú) para otorgarle ventaja en todas las pruebas de Destreza (Sigilo) durante 1 hora."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Invocar duplicado",
+        "desc": "Como acción adicional, creas una ilusión perfecta de ti a 9 m. Puedes moverla, lanzar conjuros a través de ella como si estuvieras en su espacio y obtener ventaja al atacar a criaturas adyacentes a ambos."
+      },
+      {
+        "level": 6,
+        "name": "Manto de sombras",
+        "desc": "Como acción, puedes volverte invisible hasta el final de tu siguiente turno o hasta que ataques o lances un conjuro."
+      },
+      {
+        "level": 17,
+        "name": "Duplicado mejorado",
+        "desc": "Puedes crear hasta cuatro duplicados ilusorios simultáneos con tu Canalizar divinidad y moverlos libremente para confundir al enemigo."
+      }
+    ],
+    "spells": [
+      "Disfrazarse",
+      "Hechizar persona",
+      "Reflejos",
+      "Paso brumoso",
+      "Intermitencia",
+      "Disipar magia",
+      "Puerta dimensional",
+      "Polimorfar",
+      "Dominar persona",
+      "Modificar memoria"
+    ]
+  },
+  {
+    "id": "circulo_luna",
+    "classId": "druida",
+    "name": "Círculo de la luna",
+    "unlockLevel": 3,
+    "desc": "Guardianes feroces de la naturaleza que perfeccionan la Forma salvaje para convertirse en bestias letales e imparables.",
+    "role": "Tanque primigenio cuerpo a cuerpo con abundante reserva de vida en forma animal y ataques mágicos.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Forma salvaje de combate",
+        "desc": "Puedes transformar tu cuerpo en bestia como acción adicional. Mientras estás transformado, obtienes PG temporales iguales a tres veces tu nivel de druida y tu CA es igual a 13 + mod SAB de bestia."
+      },
+      {
+        "level": 3,
+        "name": "Formas de círculo",
+        "desc": "Puedes transformarte en bestias de un valor de desafío (VD) mucho mayor (hasta VD 1 a nivel 3, VD 2 a nivel 6, VD 3 a nivel 9...)."
+      },
+      {
+        "level": 6,
+        "name": "Golpes primigenios",
+        "desc": "Tus ataques en forma de bestia cuentan como mágicos e infligen daño radiante adicional a tu elección."
+      },
+      {
+        "level": 10,
+        "name": "Formas elementales",
+        "desc": "Puedes gastar dos usos de Forma salvaje a la vez para transformarte en un elemental de aire, tierra, fuego o agua."
+      },
+      {
+        "level": 14,
+        "name": "Golpe lunar radiante",
+        "desc": "Mientras estás en forma salvaje, tus ataques causan 2d10 de daño radiante adicional y puedes teletransportarte 9 m tras atacar."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "circulo_tierra",
+    "classId": "druida",
+    "name": "Círculo de la tierra",
+    "unlockLevel": 3,
+    "desc": "Místicos vinculados a los ecosistemas del mundo (costas, desiertos, bosques, montañas, pantanos, llanuras o tundra).",
+    "role": "Lanzador de conjuros puro: recuperación de espacios durante descansos cortos y amplio repertorio ambiental.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Recuperación natural",
+        "desc": "Durante un descanso corto, puedes recuperar espacios de conjuro gastados con un nivel combinado igual a la mitad de tu nivel de druida."
+      },
+      {
+        "level": 3,
+        "name": "Conjuros de la tierra",
+        "desc": "Sintonizas con un bioma tras cada descanso largo (Ártico, Costa, Desierto, Bosque, Montaña, Pantano o Pradera), obteniendo siempre preparados conjuros temáticos de ese terreno."
+      },
+      {
+        "level": 6,
+        "name": "Zancada de la tierra",
+        "desc": "Moverte por terreno difícil no mágico no te cuesta movimiento adicional y pasas a través de plantas sin sufrir daño de espinas."
+      },
+      {
+        "level": 10,
+        "name": "Santuario de la naturaleza",
+        "desc": "Inmunidad a venenos y enfermedades. Las criaturas del tipo planta o bestia deben superar una salvación de Sabiduría para poder atacarte."
+      },
+      {
+        "level": 14,
+        "name": "Santuario de la tierra",
+        "desc": "Puedes invocar el poder protector del bioma para conceder a tus aliados resistencia al daño del elemento sintonizado."
+      }
+    ],
+    "spells": [
+      "Paso brumoso",
+      "Ladrido",
+      "Llamar al rayo",
+      "Crecimiento de espinas",
+      "Muro de viento",
+      "Piel pétrea",
+      "Tormenta de hielo",
+      "Plaga de insectos",
+      "Muro de piedra"
+    ]
+  },
+  {
+    "id": "circulo_estrellas",
+    "classId": "druida",
+    "name": "Círculo de las estrellas",
+    "unlockLevel": 3,
+    "desc": "Astrólogos que trazan los secretos del cosmos y canalizan el brillo de las constelaciones en su propia forma.",
+    "role": "Versatilidad estelar: forma de Arqueiro (daño radiante a distancia), Cáliz (curación multiplicada) o Dragón (concentración imbatible).",
+    "features": [
+      {
+        "level": 3,
+        "name": "Mapa estelar",
+        "desc": "Tienes siempre preparado el truco 'Guía' y puedes lanzar 'Saeta guía' gratis tantas veces como tu bonificador de competencia por descanso largo."
+      },
+      {
+        "level": 3,
+        "name": "Forma estrellada",
+        "desc": "Al usar Forma salvaje, te transformas en una constelación viva: Arquero (ataque a distancia de 1d8 + mod SAB de daño radiante como acción adicional), Cáliz (cada vez que cures, curas 1d8 + mod SAB extra a otro objetivo), o Dragón (en pruebas de INT, SAB o salvaciones de concentración, cualquier resultado de 9 o menos en el d20 cuenta como un 10)."
+      },
+      {
+        "level": 6,
+        "name": "Presagio cósmico",
+        "desc": "Tras cada descanso largo tiras un dado: Si sale par (Felicidad), usas tu reacción para sumar 1d6 a la tirada de un aliado; si es impar (Desgracia), restas 1d6 a un enemigo."
+      },
+      {
+        "level": 10,
+        "name": "Constelaciones titilantes",
+        "desc": "El dado de tu Forma estrellada aumenta a 2d8 y puedes cambiar de constelación al inicio de cada uno de tus turnos sin gastar otro uso."
+      },
+      {
+        "level": 14,
+        "name": "Cuerpo luminoso",
+        "desc": "En forma estrellada obtienes resistencia permanente al daño contundente, perforante y cortante, y velocidad de vuelo de 6 m flotando."
+      }
+    ],
+    "spells": [
+      "Guía",
+      "Saeta guía"
+    ]
+  },
+  {
+    "id": "circulo_mar",
+    "classId": "druida",
+    "name": "Círculo del mar",
+    "unlockLevel": 3,
+    "desc": "Invocadores de las mareas oceánicas, los tsunamis y las tempestades tempestuosas del lecho marino.",
+    "role": "Daño de frío/relámpago en área, empuje de enemigos, respiración acuática y vuelo tempestuoso.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Cólera del mar",
+        "desc": "Como acción adicional gastando Forma salvaje, te rodeas de un aura de agua y tormenta de 3 m. Al activarla y en turnos posteriores, golpeas a un enemigo con relámpagos que causan daño de frío/rayo y lo empujan 4,5 m."
+      },
+      {
+        "level": 3,
+        "name": "Conjuros del océano",
+        "desc": "Conjuros siempre preparados: Rayo de escarcha, Niebla, Ola atronadora, Ráfaga de viento, Respirar bajo el agua, Tormenta de aguanieve, Tormenta de hielo."
+      },
+      {
+        "level": 6,
+        "name": "Afinidad con las profundidades",
+        "desc": "Obtienes velocidad de nado igual a tu velocidad, respiración bajo el agua y resistencia al daño por frío."
+      },
+      {
+        "level": 10,
+        "name": "Mareas tempestuosas",
+        "desc": "Tu aura de Cólera del mar te otorga velocidad de vuelo igual a tu velocidad a pie y puedes compartir la resistencia al frío con aliados adyacentes."
+      },
+      {
+        "level": 14,
+        "name": "Avatar del océano",
+        "desc": "Tu aura causa desventaja en ataques enemigos contra ti, y el daño de tus relámpagos marinos aumenta sustancialmente."
+      }
+    ],
+    "spells": [
+      "Rayo de escarcha",
+      "Nube de niebla",
+      "Ola atronadora",
+      "Ráfaga de viento",
+      "Respirar bajo el agua",
+      "Tormenta de aguanieve",
+      "Tormenta de hielo"
+    ]
+  },
+  {
+    "id": "acechador_penumbra",
+    "classId": "explorador",
+    "name": "Acechador en la penumbra",
+    "unlockLevel": 3,
+    "desc": "Maestros del combate subterráneo y las profundidades de la Infraoscuridad que cazan emboscando desde la negrura absoluta.",
+    "role": "Ataques devastadores en el primer turno, invisibilidad total a la visión en la oscuridad y defensa mental.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Emboscador temible",
+        "desc": "Sumas tu modificador de Sabiduría a tus tiradas de iniciativa. Al principio de cada combate, tu velocidad aumenta 3 m y, al atacar en ese primer asalto, realizas un ataque extra que causa 1d8 de daño adicional."
+      },
+      {
+        "level": 3,
+        "name": "Vista sombría",
+        "desc": "Obtienes visión en la oscuridad de 18 m (o +9 m si ya la tenías). Eres completamente invisible para cualquier criatura que confíe en la visión en la oscuridad para verte en la penumbra o la oscuridad."
+      },
+      {
+        "level": 7,
+        "name": "Mente de hierro",
+        "desc": "Obtienes competencia en tiradas de salvación de Sabiduría (o Inteligencia/Carisma si ya la posees)."
+      },
+      {
+        "level": 11,
+        "name": "Ráfaga del acechador",
+        "desc": "Una vez por turno, cuando falles una tirada de ataque con arma, puedes realizar de inmediato otro ataque con arma como parte de la misma acción."
+      },
+      {
+        "level": 15,
+        "name": "Esquiva sombría",
+        "desc": "Como reacción cuando una criatura te ataque sin tener ventaja, puedes imponerle desventaja en esa tirada de ataque."
+      }
+    ],
+    "spells": [
+      "Disfrazarse",
+      "Truco de cuerda",
+      "Miedo",
+      "Invisibilidad mayor",
+      "Modificar memoria"
+    ]
+  },
+  {
+    "id": "cazador",
+    "classId": "explorador",
+    "name": "Cazador",
+    "unlockLevel": 3,
+    "desc": "Especialistas marciales que perfeccionan técnicas específicas para abatir hordas de enemigos o derribar colosos titánicos.",
+    "role": "Daño consistente contra objetivos heridos (Coloso), contragolpe a grupos (Horda) y defensas reactivas superiores.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Presa del cazador",
+        "desc": "Eliges una especialización táctica: Asesino de colosos (1d8 de daño extra una vez por turno a un enemigo que no tenga todos sus PG), Rompehordas (un ataque extra contra otra criatura a 1,5 m de tu objetivo), o Matagigantes (reacción para atacar a criaturas Grandes o mayores que te ataquen)."
+      },
+      {
+        "level": 6,
+        "name": "Maestría del cazador",
+        "desc": "Puedes estudiar a una criatura con Marca del cazador para conocer de inmediato sus inmunidades, resistencias y vulnerabilidades al daño."
+      },
+      {
+        "level": 11,
+        "name": "Tácticas defensivas",
+        "desc": "Eliges: Escapar de la horda (ataques de oportunidad contra ti tienen desventaja), Defensa contra ataques múltiples (+4 a la CA contra ataques subsiguientes del mismo enemigo) o Voluntad de hierro (ventaja contra miedo)."
+      },
+      {
+        "level": 15,
+        "name": "Defensa superior del cazador",
+        "desc": "Obtienes Evasión (al superar salvación de Destreza no sufres nada de daño, y la mitad si fallas) o Oposición al ataque (desviar ataques fallidos hacia otros enemigos)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "errante_feerico",
+    "classId": "explorador",
+    "name": "Errante feérico",
+    "unlockLevel": 3,
+    "desc": "Cazadores bendecidos con la magia cautivadora, alegre y terrorífica de las cortes del Feywild.",
+    "role": "Híbrido de daño psíquico, alta elocuencia social (suma Sabiduría a Carisma) y convocación de aliados feéricos.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Golpes pavorosos",
+        "desc": "Tus armas se imbuyen de magia feérica. El primer impacto que asestes a cada criatura diferente en tu turno causa 1d4 de daño psíquico adicional (aumenta a 1d6 a nivel 11)."
+      },
+      {
+        "level": 3,
+        "name": "Glamur sobrenatural",
+        "desc": "Ganas competencia en Engaño, Interpretación o Persuasión. Además, sumas tu modificador de Sabiduría a todas tus pruebas de Carisma."
+      },
+      {
+        "level": 7,
+        "name": "Giro desconcertante",
+        "desc": "Ventaja en salvaciones contra quedar hechizado o asustado. Cuando tú o un aliado a 36 m tengáis éxito en una salvación contra esos estados, puedes usar tu reacción para obligar a un enemigo a superar salvación de Sabiduría o quedará asustado o hechizado por ti."
+      },
+      {
+        "level": 11,
+        "name": "Refuerzos feéricos",
+        "desc": "Puedes lanzar 'Convocar seres feéricos' sin componentes materiales y sin requerir concentración."
+      },
+      {
+        "level": 15,
+        "name": "Paso nebuloso",
+        "desc": "Puedes lanzar Paso brumoso sin gastar espacios de conjuro tantas veces como tu mod SAB, pudiendo llevarte a un aliado voluntario adyacente contigo."
+      }
+    ],
+    "spells": [
+      "Hechizar persona",
+      "Paso brumoso",
+      "Disipar magia",
+      "Puerta dimensional",
+      "Engaño"
+    ]
+  },
+  {
+    "id": "senor_bestias",
+    "classId": "explorador",
+    "name": "Señor de las bestias",
+    "unlockLevel": 3,
+    "desc": "Forja un vínculo espiritual inquebrantable con una bestia primigenia que lucha y se coordina en perfecta armonía contigo.",
+    "role": "Presencia dual en combate: compañero animal versátil (terrestre, aéreo o acuático) que ataca, flanquea y absorbe daño.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Compañero primigenio",
+        "desc": "Invocas una bestia mágica (Bestia de la tierra, Bestia del mar o Bestia del cielo) que obedece tus órdenes en combate, utiliza tu bonificador de competencia y actúa en tu turno. Puedes ordenarle atacar como parte de tu propia acción de Atacar."
+      },
+      {
+        "level": 7,
+        "name": "Entrenamiento excepcional",
+        "desc": "En cualquier turno en que tu compañero no ataque, puedes ordenarle como acción adicional realizar la acción de Correr, Destrabarse o Esquivar."
+      },
+      {
+        "level": 11,
+        "name": "Golpes de bestia",
+        "desc": "Tu bestia primigenia puede atacar dos veces al recibir la orden de atacar. Además, sus ataques causan daño mágico de fuerza."
+      },
+      {
+        "level": 15,
+        "name": "Compartir conjuros",
+        "desc": "Cuando lances un conjuro que te tenga como objetivo a ti mismo, el conjuro también afecta simultáneamente a tu bestia primigenia si está a 9 m o menos de ti."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "caballero_arcano",
+    "classId": "guerrero",
+    "name": "Caballero arcano",
+    "unlockLevel": 3,
+    "desc": "Guerreros que combinan el dominio técnico de las armas marciales con la magia de abjuración y evocación de los magos.",
+    "role": "Combatiente de primera línea de altísima CA defensiva ('Escudo'), daño elemental y sustitución de ataques por conjuros.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Lanzamiento de conjuros",
+        "desc": "Aprendes trucos y conjuros de la lista de mago utilizando Inteligencia como característica de lanzamiento. Cuentas con espacios de conjuro según la tabla de lanzador tercio."
+      },
+      {
+        "level": 3,
+        "name": "Vínculo con el arma",
+        "desc": "Realizas un ritual con hasta dos armas: no puedes ser desarmado de ellas y, si están en el mismo plano, puedes teletransportarlas instantáneamente a tu mano como acción adicional."
+      },
+      {
+        "level": 7,
+        "name": "Magia de guerra",
+        "desc": "Cuando utilizas la acción de Atacar en tu turno, puedes sustituir uno de tus ataques por el lanzamiento de un truco de mago."
+      },
+      {
+        "level": 10,
+        "name": "Golpe arcano",
+        "desc": "Cuando impactas a una criatura con un arma, esa criatura tiene desventaja en la siguiente tirada de salvación que haga contra uno de tus conjuros antes del final de tu siguiente turno."
+      },
+      {
+        "level": 15,
+        "name": "Carga teletransportadora",
+        "desc": "Al usar tu Oleada de acción, puedes teletransportarte mágicamente hasta 9 m a un espacio desocupado antes o después del ataque adicional."
+      },
+      {
+        "level": 18,
+        "name": "Magia de guerra mejorada",
+        "desc": "Puedes sustituir dos de tus ataques en la acción de Atacar por el lanzamiento de un conjuro de mago de nivel 1 o 2."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "campeon",
+    "classId": "guerrero",
+    "name": "Campeón",
+    "unlockLevel": 3,
+    "desc": "La cúspide de la destreza física, la potencia pura y la determinación atlética sin artificios mágicos.",
+    "role": "Críticos duplicados (19-20), Inspiración Heroica constante, dotes adicionales y regeneración pasiva continua.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Crítico mejorado",
+        "desc": "Tus tiradas de ataque con armas consiguen un impacto crítico con un resultado de 19 o 20 en el d20."
+      },
+      {
+        "level": 3,
+        "name": "Atleta sobresaliente",
+        "desc": "Tu distancia de salto aumenta y tienes ventaja en tiradas de iniciativa y pruebas de Fuerza (Atletismo)."
+      },
+      {
+        "level": 7,
+        "name": "Estilo de combate adicional",
+        "desc": "Puedes elegir un segundo Estilo de Combate de la lista oficial de dotes de estilo."
+      },
+      {
+        "level": 10,
+        "name": "Crítico heroico",
+        "desc": "Cada vez que consigas un impacto crítico en combate, ganas de inmediato Inspiración Heroica."
+      },
+      {
+        "level": 15,
+        "name": "Sobreviviente",
+        "desc": "Ventaja en tiradas de salvación contra la muerte. Además, al principio de cada uno de tus turnos, si tienes menos de la mitad de tus PG máximos y más de 0 PG, recuperas PG iguales a 5 + mod CON."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "guerrero_psionico",
+    "classId": "guerrero",
+    "name": "Guerrero psiónico",
+    "unlockLevel": 3,
+    "desc": "Especialistas marciales que canalizan el poder latente de su propia mente para potenciar sus armas y crear escudos telequinéticos.",
+    "role": "Mitigación de daño con dados psiónicos, daño de fuerza extra, telequinesis para mover aliados/enemigos y salto mental.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Poder psiónico",
+        "desc": "Obtienes una reserva de Dados de Energía Psiónica (d6 a nivel 3, aumentando a d8/d10/d12) igual al doble de tu bonificador de competencia. Puedes usarlos para: Golpe telequinético (daño de fuerza extra en un ataque), Campo protector (reacción para reducir el daño a ti o a un aliado) o Movimiento telequinético (mover objetos o criaturas aliadas hasta 9 m)."
+      },
+      {
+        "level": 7,
+        "name": "Mente protegida",
+        "desc": "Resistencia permanente al daño psíquico. Si comienzas tu turno bajo los estados de hechizado o asustado, puedes gastar un dado psiónico para liberarte inmediatamente."
+      },
+      {
+        "level": 10,
+        "name": "Salto telequinético",
+        "desc": "Como acción adicional, obtienes velocidad de vuelo igual al doble de tu velocidad hasta el final del turno."
+      },
+      {
+        "level": 15,
+        "name": "Baluarte psiónico",
+        "desc": "Puedes proporcionar cobertura media (+2 a la CA y salvaciones de Destreza) a ti y a tus aliados cercanos mediante un escudo mental invisible."
+      },
+      {
+        "level": 18,
+        "name": "Mente armada",
+        "desc": "Puedes lanzar 'Telequinesis' utilizando tu Inteligencia sin componentes verbales ni somáticos."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "maestro_combate",
+    "classId": "guerrero",
+    "name": "Maestro del combate",
+    "unlockLevel": 3,
+    "desc": "Estrategas del campo de batalla que emplean maniobras tácticas perfeccionadas mediante el estudio marcial y la disciplina militar.",
+    "role": "Máximo control táctico: derribos, desarmes, empujes, ataques de distracción y maniobras de mando para el grupo.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Supremacía en combate y maniobras",
+        "desc": "Aprendes tres maniobras de tu elección (como Derribo, Desarme, Finta, Ataque de distracción, Empuje o Maniobra evasiva) y obtienes cuatro Dados de Superioridad (d8), que se recuperan en descanso corto o largo."
+      },
+      {
+        "level": 3,
+        "name": "Estudioso de la guerra",
+        "desc": "Obtienes competencia con un juego de herramientas de artesano a tu elección y en una habilidad entre Historia, Perspicacia o Medicina."
+      },
+      {
+        "level": 7,
+        "name": "Conocer al enemigo",
+        "desc": "Tras observar o interactuar con una criatura durante 1 minuto, aprendes si es superior, igual o inferior a ti en características clave, CA o PG actuales."
+      },
+      {
+        "level": 10,
+        "name": "Dado de maestría mejorado",
+        "desc": "Tus dados de superioridad se convierten en d10 (y en d12 a nivel 18)."
+      },
+      {
+        "level": 15,
+        "name": "Incansable",
+        "desc": "Cuando tires iniciativa y no te quede ningún dado de superioridad, recuperas uno de inmediato."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "hechiceria_aberrante",
+    "classId": "hechicero",
+    "name": "Hechicería aberrante",
+    "unlockLevel": 3,
+    "desc": "Una mancha psiónica alienígena o contacto con un azotamentes despertó en ti una magia mental aterradora y maleable.",
+    "role": "Lanzamiento sutil sin componentes verbales/somáticos usando puntos de hechicería, telepatía y daño psíquico.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros psiónicos",
+        "desc": "Aprendes conjuros psiónicos adicionales que no cuentan contra tu límite: Brazos de Hadar, Susurros disonantes, Mente en blanco, Detectar pensamientos, etc. Puedes sustituirlos por conjuros de adivinación o encantamiento de hechicero o brujo."
+      },
+      {
+        "level": 3,
+        "name": "Habla telepática",
+        "desc": "Como acción adicional, estableces un enlace telepático con una criatura a 9 m durante minutos iguales a tu nivel de hechicero."
+      },
+      {
+        "level": 6,
+        "name": "Hechicería psiónica",
+        "desc": "Al lanzar un conjuro de tu lista psiónica, puedes gastar puntos de hechicería iguales a su nivel en lugar de una ranura. Si lo haces, el conjuro no requiere componentes verbales, somáticos ni materiales no costosos."
+      },
+      {
+        "level": 6,
+        "name": "Defensa psíquica",
+        "desc": "Obtienes resistencia al daño psíquico y ventaja en salvaciones contra quedar hechizado o asustado."
+      },
+      {
+        "level": 14,
+        "name": "Forma de revelación",
+        "desc": "Como acción adicional gastando 1 o más puntos de hechicería, transformas tu cuerpo: nadas como pez, levitas, te vuelves viscoso para pasar por rendijas de 2 cm o ves lo invisible."
+      }
+    ],
+    "spells": [
+      "Brazos de Hadar",
+      "Susurros disonantes",
+      "Calmar emociones",
+      "Detectar pensamientos",
+      "Hambre de Hadar",
+      "Tentáculos negros de Evard",
+      "Telequinesis"
+    ]
+  },
+  {
+    "id": "hechiceria_magia_salvaje",
+    "classId": "hechicero",
+    "name": "Hechicería de magia salvaje",
+    "unlockLevel": 3,
+    "desc": "Portador de la pura entropía mágica del multiverso, donde cada conjuro puede desencadenar efectos impredecibles e hilarantes.",
+    "role": "Ventaja a voluntad ('Mareas del caos'), manipulación probabilística de dados y detonaciones mágicas aleatorias.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Mareas del caos",
+        "desc": "Puedes obtener ventaja en una tirada de ataque, prueba de característica o tirada de salvación a tu elección (1 uso por descanso largo, o recuperado inmediatamente cuando el DM active una Oleada de magia salvaje)."
+      },
+      {
+        "level": 3,
+        "name": "Sobrecarga de magia salvaje",
+        "desc": "Cada vez que lances un conjuro de nivel 1 o superior, tiras en la tabla oficial de magia salvaje (1d100) para desatar efectos asombrosos: teletransportes, bolas de fuego sobre ti, curación en área o cambios de apariencia."
+      },
+      {
+        "level": 6,
+        "name": "Doblar la suerte",
+        "desc": "Como reacción cuando otra criatura haga una tirada de ataque, prueba o salvación, puedes gastar 2 puntos de hechicería para tirar 1d4 y sumar o restar el resultado a su tirada."
+      },
+      {
+        "level": 14,
+        "name": "Caos controlado",
+        "desc": "Cada vez que tires en la tabla de Sobrecarga de magia salvaje, tiras dos veces en el d100 y eliges cuál de los dos resultados prefieres aplicar."
+      },
+      {
+        "level": 18,
+        "name": "Bombardeo salvaje",
+        "desc": "Al tirar daño para un conjuro y obtener el resultado máximo en uno de los dados, tiras un dado extra de ese tipo y lo sumas al daño."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "hechiceria_draconica",
+    "classId": "hechicero",
+    "name": "Hechicería dracónica",
+    "unlockLevel": 3,
+    "desc": "La sangre de los antiguos dragones cromáticos o metálicos corre por tus venas, dotándote de escamas y aliento elemental.",
+    "role": "Mayor resistencia física (CA base 13 + DES y +1 PG por nivel), alas de dragón y daño elemental potenciado.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros dracónicos",
+        "desc": "Aprendes conjuros temáticos según tu ancestro dragón (rojo/oro: fuego, blanco/plata: frío, azul/bronce: relámpago, negro/cobre: ácido, verde: veneno)."
+      },
+      {
+        "level": 3,
+        "name": "Resiliencia dracónica",
+        "desc": "Tus puntos de golpe máximos aumentan en 1 por cada nivel de hechicero. Además, partes de tu piel se cubren de escamas: cuando no llevas armadura, tu CA base es igual a 13 + tu modificador de Destreza."
+      },
+      {
+        "level": 6,
+        "name": "Afinidad elemental",
+        "desc": "Cuando lances un conjuro que inflija el tipo de daño asociado a tu ancestro dracónico, sumas tu modificador de Carisma a una tirada de daño. Además, puedes gastar 1 punto de hechicería para obtener resistencia a ese daño durante 1 hora."
+      },
+      {
+        "level": 14,
+        "name": "Alas de dragón",
+        "desc": "Como acción adicional, brotan alas de dragón de tu espalda que te otorgan una velocidad de vuelo igual a tu velocidad a pie actual."
+      },
+      {
+        "level": 18,
+        "name": "Presencia dracónica",
+        "desc": "Como acción gastando 5 puntos de hechicería, desatas un aura aterradora o fascinante de 18 m: las criaturas deben superar una salvación de Sabiduría o quedarán asustadas o hechizadas durante 1 minuto."
+      }
+    ],
+    "spells": [
+      "Manos ardientes",
+      "Orbe cromático",
+      "Rayo abrasador",
+      "Bola de fuego",
+      "Muro de fuego",
+      "Invocar dragón"
+    ]
+  },
+  {
+    "id": "hechiceria_mecanica",
+    "classId": "hechicero",
+    "name": "Hechicería mecánica",
+    "unlockLevel": 3,
+    "desc": "Conectado al plano del orden absoluto, Mechanus, canalizas la precisión matemática del gran reloj cósmico.",
+    "role": "Neutralización de ventajas/desventajas enemigas, escudo protector de puntos de hechicería y anulación de extremos de azar.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros mecánicos",
+        "desc": "Conjuros de orden siempre preparados: Alarma, Armadura de Agathys, Ayuda, Restablecimiento menor, Disipar magia, Protección contra la muerte, etc."
+      },
+      {
+        "level": 3,
+        "name": "Restablecer equilibrio",
+        "desc": "Como reacción cuando una criatura a 18 m vaya a tirar con ventaja o desventaja, puedes anular esa ventaja o desventaja para que tire un único d20 estándar (usos iguales a tu bonificador de competencia por descanso largo)."
+      },
+      {
+        "level": 6,
+        "name": "Baluarte de la ley",
+        "desc": "Puedes gastar de 1 a 5 puntos de hechicería para crear una barrera de energía protectora en ti o en un aliado que absorbe daño igual a una cantidad de d8 equivalente a los puntos gastados."
+      },
+      {
+        "level": 14,
+        "name": "Trance del orden",
+        "desc": "Como acción adicional durante 1 minuto, en ninguna de tus tiradas de ataque, pruebas o salvaciones puedes obtener un resultado inferior a 10 en el d20."
+      },
+      {
+        "level": 18,
+        "name": "Cavalcade de mecanismos",
+        "desc": "Invocas espíritus mecánicos que restauran hasta 100 PG entre criaturas heridas y reparan todos los objetos dañados a tu alrededor."
+      }
+    ],
+    "spells": [
+      "Alarma",
+      "Armadura de Agathys",
+      "Auxilio divino",
+      "Restablecimiento menor",
+      "Disipar magia",
+      "Protección contra la muerte",
+      "Muro de fuerza"
+    ]
+  },
+  {
+    "id": "abjurador",
+    "classId": "mago",
+    "name": "Abjurador",
+    "unlockLevel": 3,
+    "desc": "Especialistas supremos en magia protectora, barreras místicas, contrahechizos y anulación de magia hostil.",
+    "role": "Escudo de absorción de daño transferible a aliados, defensa mágica superior y contrahechizos infallibles.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Experto en abjuración",
+        "desc": "Copiar conjuros de la escuela de abjuración en tu libro de conjuros cuesta la mitad de tiempo y oro. Tienes siempre preparados dos conjuros de abjuración adicionales."
+      },
+      {
+        "level": 3,
+        "name": "Salvaguarda arcana",
+        "desc": "Al lanzar un conjuro de abjuración de nivel 1 o superior, creas una barrera mágica a tu alrededor con PG iguales al doble de tu nivel de mago + tu mod INT. Cada vez que recibas daño, la salvaguarda lo absorbe primero."
+      },
+      {
+        "level": 6,
+        "name": "Salvaguarda proyectada",
+        "desc": "Cuando un aliado visible a 9 m reciba daño, puedes usar tu reacción para que tu Salvaguarda arcana absorba ese daño en su lugar."
+      },
+      {
+        "level": 10,
+        "name": "Abjuración mejorada",
+        "desc": "Al lanzar conjuros como 'Disipar magia' o 'Contrahechizo' que requieran una prueba de característica, sumas tu bonificador de competencia a la prueba."
+      },
+      {
+        "level": 14,
+        "name": "Resistencia mágica",
+        "desc": "Ventaja permanente en todas las tiradas de salvación contra conjuros y otros efectos mágicos, y resistencia al daño causado por conjuros."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "adivino",
+    "classId": "mago",
+    "name": "Adivino",
+    "unlockLevel": 3,
+    "desc": "Sabios que contemplan el flujo del tiempo y el destino, manipulando el porvenir antes de que ocurra.",
+    "role": "Control del azar absoluto: sustitución de tiradas con dados de Presagio pre-lanzados y visión de lo invisible.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Experto en adivinación",
+        "desc": "Copiar conjuros de adivinación cuesta la mitad de oro y tiempo. Tienes siempre preparados conjuros de adivinación adicionales."
+      },
+      {
+        "level": 3,
+        "name": "Presagio",
+        "desc": "Al finalizar cada descanso largo, tiras dos d20 y anotas sus resultados. Puedes sustituir cualquier tirada de ataque, salvación o prueba tuya o de una criatura visible por uno de esos valores predeterminados antes de tirar."
+      },
+      {
+        "level": 6,
+        "name": "Adivinación experta",
+        "desc": "Lanzar conjuros de adivinación es energéticamente eficiente: cada vez que lances uno de nivel 2 o superior, recuperas un espacio de conjuro de nivel inferior."
+      },
+      {
+        "level": 10,
+        "name": "El tercer ojo",
+        "desc": "Como acción, obtienes una visión especial: visión en la oscuridad 18 m, visión en el plano etéreo, comprensión de todos los idiomas escritos o visión de lo invisible."
+      },
+      {
+        "level": 14,
+        "name": "Presagio mayor",
+        "desc": "Tu visión del futuro se amplía: tiras tres dados d20 para tu rasgo Presagio tras cada descanso largo en lugar de dos."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "evocador",
+    "classId": "mago",
+    "name": "Evocador",
+    "unlockLevel": 3,
+    "desc": "Canalizadores del poder destructivo elemental: fuego purificador, rayos gélidos y relámpagos devastadores.",
+    "role": "Daño masivo en área sin herir aliados ('Esculpir conjuros'), trucos infalibles y daño maximizado.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Experto en evocación",
+        "desc": "Copiar conjuros de evocación en tu libro cuesta la mitad de oro y tiempo."
+      },
+      {
+        "level": 3,
+        "name": "Truco potente",
+        "desc": "Tus trucos dañinos nunca fallan del todo: cuando una criatura supera la salvación contra uno de tus trucos, sufre la mitad del daño de todas formas."
+      },
+      {
+        "level": 6,
+        "name": "Esculpir conjuros",
+        "desc": "Al lanzar un conjuro de evocación de área (como Bola de fuego), puedes elegir hasta 1 + el nivel del conjuro de criaturas aliadas: superan automáticamente su salvación y no sufren ningún daño del conjuro."
+      },
+      {
+        "level": 10,
+        "name": "Evocación potenciada",
+        "desc": "Sumas tu modificador de Inteligencia a una tirada de daño de cualquier conjuro de evocación que lances."
+      },
+      {
+        "level": 14,
+        "name": "Sobrecarga de conjuros",
+        "desc": "Puedes maximizar el daño de un conjuro de evocación de nivel 1 a 5, infligiendo el máximo daño posible en cada dado (usarlo repetidas veces causa daño necrótico a tu propio cuerpo)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "ilusionista",
+    "classId": "mago",
+    "name": "Ilusionista",
+    "unlockLevel": 3,
+    "desc": "Artífices del engaño visual y sensorial capaces de alterar la percepción del entorno hasta hacer realidad sus espejismos.",
+    "role": "Confusión sensorial, lanzamiento de Ilusión menor como acción adicional, señuelos de evasión y solidificación de ilusiones.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Experto en ilusionismo",
+        "desc": "Copiar conjuros de ilusión cuesta la mitad de oro y tiempo. Aprendes el truco 'Ilusión menor' (no cuenta en tu límite) y puedes crearlo con sonido e imagen a la vez."
+      },
+      {
+        "level": 3,
+        "name": "Ilusiones mejoradas",
+        "desc": "Puedes lanzar 'Ilusión menor' como acción adicional en lugar de una acción."
+      },
+      {
+        "level": 6,
+        "name": "Ilusiones maleables",
+        "desc": "Cuando hayas lanzado un conjuro de ilusión que tenga duración de 1 minuto o más, puedes usar tu acción para cambiar completamente la naturaleza de la ilusión mientras persista."
+      },
+      {
+        "level": 10,
+        "name": "Yo ilusorio",
+        "desc": "Como reacción cuando una criatura te impacte con una tirada de ataque, puedes interponer una copia ilusoria instantánea que hace que el ataque falle automáticamente (1 uso por descanso corto o largo)."
+      },
+      {
+        "level": 14,
+        "name": "Realidad ilusoria",
+        "desc": "Como acción adicional en tu turno, puedes hacer que un objeto inanimado no mágico creado por una de tus ilusiones se vuelva completamente real y físico durante 1 minuto."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "mano_abierta",
+    "classId": "monje",
+    "name": "Guerrero de la mano abierta",
+    "unlockLevel": 3,
+    "desc": "Mestros del control absoluto del flujo de energía corporal y del derribo técnico en combate cuerpo a cuerpo.",
+    "role": "Control del adversario: derribar enemigos, empujarlos 4,5 m o anular sus reacciones con la Ráfaga de golpes.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Técnica de la mano abierta",
+        "desc": "Cada vez que impactes a un enemigo con los ataques de tu Ráfaga de golpes, puedes imponerle uno de estos efectos: Derribarlo boca abajo (salvación de Destreza), Empujarlo hasta 4,5 m (salvación de Fuerza) o Impedirle realizar reacciones hasta el final de tu siguiente turno."
+      },
+      {
+        "level": 6,
+        "name": "Plenitud del cuerpo",
+        "desc": "Como acción adicional, puedes sanar tu propio cuerpo recuperando puntos de golpe iguales a tres veces tu nivel de monje (1 uso por descanso largo)."
+      },
+      {
+        "level": 11,
+        "name": "Trance de pies ligeros",
+        "desc": "Al inicio de cada combate obtienes los beneficios del conjuro 'Santuario', haciendo que los enemigos deban superar salvación de Sabiduría para atacarte antes de que tú ataques."
+      },
+      {
+        "level": 17,
+        "name": "Golpe de la palma temblorosa",
+        "desc": "Al golpear con un ataque sin armas gastando 3 puntos de Disciplina (Ki), introduces vibraciones letales en el cuerpo de la criatura. En cualquier momento posterior como acción, detienes las vibraciones: el objetivo debe superar salvación de Constitución o sus PG se reducen a 0 (sufre 10d10 de daño si la supera)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "misericordia",
+    "classId": "monje",
+    "name": "Guerrero de la misericordia",
+    "unlockLevel": 3,
+    "desc": "Sanadores y verdugos enmascarados que manipulan la fuerza vital para aliviar el sufrimiento o administrar una muerte piadosa.",
+    "role": "Sanación cuerpo a cuerpo sin magia, envenenamiento y daño necrótico en ráfagas de combate.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Mano de curación",
+        "desc": "Como acción gastando 1 punto de Disciplina (o sustituyendo un golpe de tu Ráfaga de golpes), tocas a una criatura para restaurarle PG iguales a un dado de Artes Marciales + tu modificador de Sabiduría."
+      },
+      {
+        "level": 3,
+        "name": "Mano de aflicción",
+        "desc": "Al impactar a una criatura con un ataque sin armas, puedes gastar 1 punto de Disciplina para infligirle daño necrótico adicional igual a tu dado de Artes Marciales + tu mod SAB."
+      },
+      {
+        "level": 6,
+        "name": "Toque médico",
+        "desc": "Tu Mano de curación también puede curar estados de ceguera, sordera, parálisis, envenenamiento o aturdimiento. Tu Mano de aflicción envenena al objetivo hasta el final de tu siguiente turno."
+      },
+      {
+        "level": 11,
+        "name": "Ráfaga de sanación",
+        "desc": "Puedes usar tu Mano de curación varias veces seguidas dentro de tu Ráfaga de golpes sin coste adicional de puntos de disciplina."
+      },
+      {
+        "level": 17,
+        "name": "Mano de la resurrección",
+        "desc": "Como acción tocando a una criatura que haya muerto en las últimas 24 horas y gastando 5 puntos de disciplina, puedes devolverla a la vida con todos sus PG restaurados (1 uso por descanso largo)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "sombra",
+    "classId": "monje",
+    "name": "Guerrero de la sombra",
+    "unlockLevel": 3,
+    "desc": "Infiltradores y asesinos sigilosos que se funden con la penumbra y ejecutan emboscadas letales desde la oscuridad.",
+    "role": "Invocación de oscuridad mágica, teletransporte entre sombras como acción adicional e invisibilidad en la penumbra.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Artes sombrías",
+        "desc": "Puedes gastar 1 punto de Disciplina para lanzar 'Oscuridad' y moverte libremente dentro de ella sin que te ciegue, o lanzar 'Visión en la oscuridad', 'Pasar sin rastro' o 'Silencio'."
+      },
+      {
+        "level": 6,
+        "name": "Paso de las sombras",
+        "desc": "Cuando estés en penumbra u oscuridad, puedes teletransportarte como acción adicional hasta 18 m a otro espacio desocupado en penumbra u oscuridad. Tu siguiente ataque cuerpo a cuerpo antes del final del turno tiene ventaja."
+      },
+      {
+        "level": 11,
+        "name": "Capa de sombras",
+        "desc": "En penumbra u oscuridad, puedes usar tu acción para volverte completamente invisible hasta que ataques, lances un conjuro o entres en luz brillante."
+      },
+      {
+        "level": 17,
+        "name": "Oportunista de las sombras",
+        "desc": "Cuando una criatura a 1,5 m reciba daño de otra persona que no seas tú, puedes usar tu reacción para ejecutar de inmediato un ataque cuerpo a cuerpo contra ella."
+      }
+    ],
+    "spells": [
+      "Oscuridad",
+      "Pasar sin rastro",
+      "Silencio",
+      "Visión en la oscuridad"
+    ]
+  },
+  {
+    "id": "elementos",
+    "classId": "monje",
+    "name": "Guerrero de los elementos",
+    "unlockLevel": 3,
+    "desc": "Canalizadores de los cuatro elementos primigenios que proyectan ráfagas de fuego, viento, tierra y agua con sus golpes.",
+    "role": "Alcance extendido (3 m), daño elemental intercambiable (fuego, frío, ácido, rayo), empujes a distancia y vuelo.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Armonía con los elementos",
+        "desc": "Como acción adicional gastando 1 punto de Disciplina durante 10 minutos: el alcance de tus ataques sin armas aumenta en 3 m y puedes elegir que su daño sea de ácido, frío, fuego o rayo. Al impactar, puedes empujar o tirar del objetivo 3 m."
+      },
+      {
+        "level": 3,
+        "name": "Manipular los elementos",
+        "desc": "Aprendes el truco 'Elementalismo' para manipular fuego, agua, tierra y viento a voluntad."
+      },
+      {
+        "level": 6,
+        "name": "Zancada elemental",
+        "desc": "Mientras estés en Armonía con los elementos, obtienes velocidad de vuelo y nado iguales a tu velocidad a pie."
+      },
+      {
+        "level": 11,
+        "name": "Explosión ambiental",
+        "desc": "Como acción gastando 2 puntos de disciplina, desatas una esfera elemental de 6 m de radio que inflige daño igual a tres dados de Artes Marciales (frío, fuego, ácido o rayo)."
+      },
+      {
+        "level": 17,
+        "name": "Avatar elemental",
+        "desc": "Obtienes resistencia al daño de ácido, frío, fuego y rayo mientras estés en Armonía elemental, y tus golpes infligen un dado extra de daño."
+      }
+    ],
+    "spells": [
+      "Elementalismo"
+    ]
+  },
+  {
+    "id": "entrega",
+    "classId": "paladin",
+    "name": "Juramento de entrega",
+    "unlockLevel": 3,
+    "desc": "El ideal clásico del caballero de honor brillante, la justicia inquebrantable y la protección de los inocentes.",
+    "role": "Aura de inmunidad al hechizo, armas sagradas con bonificador de Carisma al ataque y luz cegadora.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de juramento de entrega",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Protección contra el bien y el mal, Santuario), Nivel 5 (Arma menor, Silencio), Nivel 9 (Faro de esperanza, Disipar magia), Nivel 13 (Libertad de movimiento, Guardián de la fe), Nivel 17 (Comunión, Golpe flamígero)."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Arma sagrada",
+        "desc": "Como acción adicional, imbutes tu arma con energía celestial durante 1 minuto: sumas tu modificador de Carisma a todas las tiradas de ataque y el arma emite luz brillante e inflige daño radiante."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Repeler a los impíos",
+        "desc": "Como acción, obligas a cada infernal y no muerto a 9 m a superar una salvación de Sabiduría o quedará expulsado huyendo de ti."
+      },
+      {
+        "level": 7,
+        "name": "Aura de devoción",
+        "desc": "Tú y tus aliados a 3 m (aumenta a 9 m a nivel 18) no podéis ser hechizados mientras estés consciente."
+      },
+      {
+        "level": 15,
+        "name": "Castigo purificador",
+        "desc": "Cada vez que uses Castigo divino, puedes disipar un efecto mágico nocivo en ti o en un aliado adyacente."
+      },
+      {
+        "level": 20,
+        "name": "Halo sagrado",
+        "desc": "Como acción durante 1 minuto, emites un halo de luz solar que inflige 10 de daño radiante por turno a los enemigos cercanos y te da ventaja en salvaciones contra conjuros."
+      }
+    ],
+    "spells": [
+      "Protección contra el bien y el mal",
+      "Santuario",
+      "Arma mágica",
+      "Silencio",
+      "Faro de esperanza",
+      "Disipar magia",
+      "Libertad de movimiento",
+      "Guardián de la fe",
+      "Comunión",
+      "Golpe flamígero"
+    ]
+  },
+  {
+    "id": "gloria",
+    "classId": "paladin",
+    "name": "Juramento de gloria",
+    "unlockLevel": 3,
+    "desc": "Héroes legendarios impulsados por la búsqueda de hazañas épicas, renombre inmortal y hazañas físicas sobrehumanas.",
+    "role": "Movilidad acelerada grupal (+3 m de aura), PG temporales masivos tras castigos y proezas atléticas.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de juramento de gloria",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Foco de heroísmo, Salto), Nivel 5 (Potenciar característica, Ráfaga de viento), Nivel 9 (Celeridad, Protección contra energía), Nivel 13 (Compulsión, Libertad de movimiento), Nivel 17 (Comunión, Golpe flamígero)."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Atleta sin parangón",
+        "desc": "Como acción adicional durante 10 minutos, obtienes ventaja en todas las pruebas de Fuerza (Atletismo) y Destreza (Acrobacias), y tu distancia de salto aumenta 3 m."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Castigo inspirador",
+        "desc": "Tras impactar con Castigo divino, otorgas PG temporales iguales a 2d8 + tu nivel de paladín repartidos a tu elección entre tú y aliados a 9 m."
+      },
+      {
+        "level": 7,
+        "name": "Aura de celeridad",
+        "desc": "Tu velocidad y la de todos tus aliados que comiencen su turno a 3 m de ti aumenta en 3 m."
+      },
+      {
+        "level": 15,
+        "name": "Defensa gloriosa",
+        "desc": "Como reacción cuando tú o un aliado seáis atacados, sumas tu mod CAR a la CA contra ese ataque y, si falla, puedes contraatacar de inmediato."
+      },
+      {
+        "level": 20,
+        "name": "Leyenda viviente",
+        "desc": "Durante 1 minuto, tienes ventaja en todas las pruebas de Carisma, puedes convertir un ataque fallido en impacto una vez por turno y puedes repetir salvaciones fallidas."
+      }
+    ],
+    "spells": [
+      "Heroísmo",
+      "Salto",
+      "Mejora de característica",
+      "Ráfaga de viento",
+      "Celeridad",
+      "Protección contra energía",
+      "Compulsión",
+      "Libertad de movimiento",
+      "Comunión",
+      "Golpe flamígero"
+    ]
+  },
+  {
+    "id": "antiguos",
+    "classId": "paladin",
+    "name": "Juramento de los antiguos",
+    "unlockLevel": 3,
+    "desc": "Caballeros verdes y custodios de la luz de la creación que protegen la belleza, la vida natural y la alegría del mundo.",
+    "role": "Resistencia a conjuros mágicos, inmovilización con zarcillos de la naturaleza e inmunidad al envejecimiento.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de juramento de los antiguos",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Fuego feérico, Hablar con los animales), Nivel 5 (Rayo de luna, Paso brumoso), Nivel 9 (Crecimiento vegetal, Protección contra energía), Nivel 13 (Piel pétrea, Tormenta de hielo), Nivel 17 (Comunión con la naturaleza, Paso arbóreo)."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Ira de la naturaleza",
+        "desc": "Como acción adicional, haces brotar enredaderas espectrales que apresan a una criatura a 9 m si falla una salvación de Fuerza o Destreza."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Repeler a los infieles",
+        "desc": "Como acción, expulsas a infernales y seres feéricos a 9 m que fallen una salvación de Sabiduría."
+      },
+      {
+        "level": 7,
+        "name": "Aura de custodia",
+        "desc": "Tú y tus aliados a 3 m tenéis resistencia a todo el daño causado por conjuros."
+      },
+      {
+        "level": 15,
+        "name": "Centinela inmortal",
+        "desc": "Cuando caigas a 0 PG y no mueras en el acto, puedes elegir quedar a 1 PG en su lugar (1 uso por descanso largo). Además, no sufres penalizaciones por envejecimiento."
+      },
+      {
+        "level": 20,
+        "name": "Campeón anciano",
+        "desc": "Te conviertes en una fuerza de la naturaleza durante 1 minuto: recuperas 10 PG al inicio de cada turno, lanzas conjuros de paladín como acción adicional y los enemigos cercanos tienen desventaja contra tus conjuros."
+      }
+    ],
+    "spells": [
+      "Fuego feérico",
+      "Hablar con los animales",
+      "Rayo de luna",
+      "Paso brumoso",
+      "Crecimiento vegetal",
+      "Protección contra energía",
+      "Piel pétrea",
+      "Tormenta de hielo",
+      "Comunión con la naturaleza",
+      "Paso arbóreo"
+    ]
+  },
+  {
+    "id": "venganza",
+    "classId": "paladin",
+    "name": "Juramento de venganza",
+    "unlockLevel": 3,
+    "desc": "Castigadores implacables que renuncian a su propia pureza para erradicar el mal mayor sin dar cuartel ni piedad.",
+    "role": "Ventaja absoluta continua contra el jefe ('Voto de enemistad'), persecución implacable sin provocar ataques y daño brutal.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Conjuros de juramento de venganza",
+        "desc": "Conjuros siempre preparados: Nivel 3 (Foco de perdición, Marca del cazador), Nivel 5 (Inmovilizar persona, Paso brumoso), Nivel 9 (Celeridad, Protección contra energía), Nivel 13 (Destierro, Puerta dimensional), Nivel 17 (Escudriñar, Inmovilizar monstruo)."
+      },
+      {
+        "level": 3,
+        "name": "Canalizar divinidad: Voto de enemistad",
+        "desc": "Como acción adicional, señalas a una criatura a 9 m: obtienes ventaja en todas tus tiradas de ataque contra ella durante 1 minuto o hasta que caiga a 0 PG."
+      },
+      {
+        "level": 7,
+        "name": "Vengador implacable",
+        "desc": "Cuando impactes a una criatura con un ataque de oportunidad, puedes moverte hasta la mitad de tu velocidad como parte de la misma reacción sin provocar ataques de oportunidad."
+      },
+      {
+        "level": 15,
+        "name": "Alma de venganza",
+        "desc": "Cuando la criatura bajo tu Voto de enemistad realice un ataque, puedes usar tu reacción para hacer de inmediato un ataque cuerpo a cuerpo con arma contra ella."
+      },
+      {
+        "level": 20,
+        "name": "Ángel vengador",
+        "desc": "Durante 1 hora te transformas en un heraldo alado de la venganza: obtienes velocidad de vuelo de 18 m y un aura de terror de 9 m que paraliza a los enemigos."
+      }
+    ],
+    "spells": [
+      "Perdición",
+      "Marca del cazador",
+      "Inmovilizar persona",
+      "Paso brumoso",
+      "Celeridad",
+      "Protección contra energía",
+      "Destierro",
+      "Puerta dimensional",
+      "Escudriñar",
+      "Inmovilizar monstruo"
+    ]
+  },
+  {
+    "id": "asesino",
+    "classId": "picaro",
+    "name": "Asesino",
+    "unlockLevel": 3,
+    "desc": "Maestros del veneno, el disfraz perfecto y el ataque fulminante por sorpresa antes de que el adversario pueda reaccionar.",
+    "role": "Iniciativa con ventaja, impactos críticos automáticos contra objetivos sorprendidos e infiltración impecable.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Herramientas de asesino",
+        "desc": "Obtienes competencia con los útiles de envenenador y el kit de disfraz."
+      },
+      {
+        "level": 3,
+        "name": "Asesinar",
+        "desc": "Tienes ventaja en tiradas de ataque contra cualquier criatura que aún no haya actuado en el combate. Además, en el primer asalto, cualquier impacto que asestes contra un objetivo sorprendido se convierte automáticamente en un impacto crítico."
+      },
+      {
+        "level": 3,
+        "name": "Iniciativa letal",
+        "desc": "Tienes ventaja permanente en todas tus tiradas de iniciativa al comenzar un combate."
+      },
+      {
+        "level": 9,
+        "name": "Infiltración experta",
+        "desc": "Puedes adoptar identidades falsas impecables, imitar escrituras y fingir acentos con total naturalidad sin levantar sospechas."
+      },
+      {
+        "level": 13,
+        "name": "Impostor",
+        "desc": "Puedes duplicar el comportamiento, voz y gestos de otra persona tras estudiarla durante solo tres horas."
+      },
+      {
+        "level": 17,
+        "name": "Golpe de muerte",
+        "desc": "Cuando ataques y sorprendas a una criatura, esta debe superar una salvación de Constitución (CD 8 + mod DES + bonif. competencia) o el daño de tu ataque se duplica por completo."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "embaucador_arcano",
+    "classId": "picaro",
+    "name": "Embaucador arcano",
+    "unlockLevel": 3,
+    "desc": "Pícaros que complementan su astucia y juego de manos con magia de ilusión y encantamiento de la escuela de magos.",
+    "role": "Mano de mago invisible para robar a distancia, conjuros de sigilo ('Invisibilidad') y robo de conjuros enemigos.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Lanzamiento de conjuros",
+        "desc": "Aprendes trucos y conjuros de la lista de mago (principalmente de ilusión y encantamiento) usando Inteligencia como característica mágica."
+      },
+      {
+        "level": 3,
+        "name": "Destreza con mano de mago",
+        "desc": "Aprendes el truco 'Mano de mago'. Puedes volver la mano espectral invisible y usarla como acción adicional para desarmar trampas, abrir cerraduras o robar bolsillos a 9 m."
+      },
+      {
+        "level": 9,
+        "name": "Emboscada mágica",
+        "desc": "Si estás oculto cuando lanzas un conjuro sobre una criatura, esta tiene desventaja en la tirada de salvación contra el conjuro durante ese turno."
+      },
+      {
+        "level": 13,
+        "name": "Distracción versátil",
+        "desc": "Puedes usar tu Mano de mago para distraer a un enemigo a 1,5 m de ella, otorgándote ventaja en ataques contra él y activando tu Ataque furtivo."
+      },
+      {
+        "level": 17,
+        "name": "Ladrón de conjuros",
+        "desc": "Como reacción cuando una criatura lance un conjuro que te tenga como objetivo, puedes forzarla a hacer una salvación de INT: si falla, el conjuro queda anulado y tú lo aprendes temporalmente para lanzarlo."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "ladron",
+    "classId": "picaro",
+    "name": "Ladrón",
+    "unlockLevel": 3,
+    "desc": "Especialistas clásicos del allanamiento, el hurto acrobático y la utilización prodigiosa de cualquier artefacto mágico.",
+    "role": "Uso de objetos como acción adicional, escalada a velocidad completa y empleo de objetos mágicos de cualquier clase.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Manos rápidas",
+        "desc": "Puedes usar la acción adicional otorgada por tu Acción astuta para realizar una prueba de Destreza (Juego de manos), usar tus herramientas de ladrón para desactivar una trampa o abrir una cerradura, o llevar a cabo la acción de Usar un objeto."
+      },
+      {
+        "level": 3,
+        "name": "Balconero",
+        "desc": "Trepar ya no te cuesta movimiento adicional y tu distancia de salto en carrera se calcula empleando tu Destreza en lugar de tu Fuerza."
+      },
+      {
+        "level": 9,
+        "name": "Sigilo supremo",
+        "desc": "Tienes ventaja en cualquier prueba de Destreza (Sigilo) si te mueves a no más de la mitad de tu velocidad en ese turno."
+      },
+      {
+        "level": 13,
+        "name": "Usar objeto mágico",
+        "desc": "Ignoras todos los requisitos de clase, especie y nivel para sintonizar y utilizar cualquier objeto mágico del juego. Además, obtienes una ranura de sintonización extra."
+      },
+      {
+        "level": 17,
+        "name": "Reflejos de ladrón",
+        "desc": "Puedes llevar a cabo dos turnos completos durante el primer asalto de cualquier combate (uno en tu iniciativa normal y otro en tu iniciativa - 10)."
+      }
+    ],
+    "spells": []
+  },
+  {
+    "id": "rebanaalmas",
+    "classId": "picaro",
+    "name": "Rebanaalmas",
+    "unlockLevel": 3,
+    "desc": "Asesinos psiónicos que materializan cuchillas de energía psíquica pura que perforan la mente sin dejar marcas físicas.",
+    "role": "Cuchillas psíquicas arrojadizas silenciosas, telepatía de grupo ('Enlace de almas') y teletransporte psiónico.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Poder psiónico y dados de alma",
+        "desc": "Obtienes una reserva de Dados de Energía Psiónica (d6 a nivel 3, d8 a nivel 5, d10 a nivel 11, d12 a nivel 17) igual al doble de tu bonificador de competencia para potenciar tus habilidades."
+      },
+      {
+        "level": 3,
+        "name": "Cuchillas psíquicas",
+        "desc": "Siempre que hagas un ataque, puedes materializar una cuchilla psíquica arrojadiza (alcance 18 m) que inflige 1d6 de daño psíquico con tu mod DES y permite un segundo ataque con acción adicional (1d4). No deja heridas físicas en la víctima."
+      },
+      {
+        "level": 3,
+        "name": "Enlace de almas",
+        "desc": "Puedes conectar las mentes de un grupo de criaturas aliadas a tu elección para mantener una comunicación telepática a kilómetros de distancia."
+      },
+      {
+        "level": 9,
+        "name": "Incursión psíquica",
+        "desc": "Puedes teletransportarte arrojando tu cuchilla psíquica hasta tantos metros como el resultado de tu dado psiónico multiplicado por 3."
+      },
+      {
+        "level": 13,
+        "name": "Velo psíquico",
+        "desc": "Como acción, te vuelves completamente invisible durante 1 hora o hasta que ataques o inflijas daño."
+      },
+      {
+        "level": 17,
+        "name": "Cuchillada desgarradora",
+        "desc": "Al infligir Ataque furtivo con tu cuchilla psíquica, puedes forzar al objetivo a superar una salvación de Sabiduría o quedará aturdido durante 1 minuto."
+      }
+    ],
+    "spells": []
+  }
+]

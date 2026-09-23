@@ -1,0 +1,434 @@
+[
+  {
+    "id": "acolito",
+    "name": "Acólito",
+    "desc": "Dedicabas tu vida al servicio de un templo, realizando ceremonias en honor a una divinidad y canalizando un ápice de poder divino.",
+    "abilities": [
+      "inteligencia",
+      "sabiduria",
+      "carisma"
+    ],
+    "originFeatId": "iniciado_magia_clerigo",
+    "skills": [
+      "perspicacia",
+      "religion"
+    ],
+    "tool": "suministros_caligrafo",
+    "toolName": "Suministros de calígrafo",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Suministros de calígrafo, libro de oraciones, pergamino (10 hojas), símbolo sagrado, túnica y 8 po",
+        "gold": 8
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "animador",
+    "name": "Animador",
+    "desc": "Pasaste tu juventud recorriendo ferias y festivales deleitando a multitudes con música, acrobacias o poesía.",
+    "abilities": [
+      "fuerza",
+      "destreza",
+      "carisma"
+    ],
+    "originFeatId": "musico",
+    "skills": [
+      "acrobacias",
+      "interpretacion"
+    ],
+    "tool": "instrumento_musical_eleccion",
+    "toolName": "Un instrumento musical a tu elección",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Instrumento musical elegido, 2 disfraces, espejo de acero, perfume y 11 po",
+        "gold": 11
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "artesano",
+    "name": "Artesano",
+    "desc": "Comenzaste como aprendiz en un taller gremial, perfeccionando tus habilidades manuales en un oficio tradicional.",
+    "abilities": [
+      "fuerza",
+      "destreza",
+      "inteligencia"
+    ],
+    "originFeatId": "fabricante",
+    "skills": [
+      "investigacion",
+      "persuasion"
+    ],
+    "tool": "herramientas_artesano_eleccion",
+    "toolName": "Un tipo de herramientas de artesano a tu elección",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Herramientas de artesano elegidas, carta de presentación del gremio, ropas de viajero y 15 po",
+        "gold": 15
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "campesino",
+    "name": "Campesino",
+    "desc": "Creciste labrando la tierra y cuidando ganado en aldeas alejadas del bullicio urbano, forjando un vínculo íntimo con la tierra.",
+    "abilities": [
+      "fuerza",
+      "constitucion",
+      "sabiduria"
+    ],
+    "originFeatId": "duro",
+    "skills": [
+      "naturaleza",
+      "trato_con_animales"
+    ],
+    "tool": "herramientas_carpintero",
+    "toolName": "Herramientas de carpintero",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Herramientas de carpintero, pala, olla de hierro, ropas comunes y 15 po",
+        "gold": 15
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatán",
+    "desc": "Vivías engañando y seduciendo con falsas identidades, trucos de manos y promesas imposibles.",
+    "abilities": [
+      "destreza",
+      "constitucion",
+      "carisma"
+    ],
+    "originFeatId": "habilidoso",
+    "skills": [
+      "engano",
+      "juego_de_manos"
+    ],
+    "tool": "utiles_falsificar",
+    "toolName": "Útiles para falsificar",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Útiles para falsificar, disfraz, ropas finas y 15 po",
+        "gold": 15
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "comerciante",
+    "name": "Comerciante",
+    "desc": "Aprendiste las leyes del comercio, el regateo y las rutas marítimas o terrestres para transportar mercancías valiosas.",
+    "abilities": [
+      "constitucion",
+      "inteligencia",
+      "carisma"
+    ],
+    "originFeatId": "afortunado",
+    "skills": [
+      "persuasion",
+      "trato_con_animales"
+    ],
+    "tool": "herramientas_navegante",
+    "toolName": "Herramientas de navegante",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Herramientas de navegante, 2 bolsas, ropas de viajero y 22 po",
+        "gold": 22
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "criminal",
+    "name": "Criminal",
+    "desc": "Operabas al margen de la ley en callejones oscuros, aprendiendo a moverte en silencio y forzar cerraduras.",
+    "abilities": [
+      "destreza",
+      "constitucion",
+      "inteligencia"
+    ],
+    "originFeatId": "alerta",
+    "skills": [
+      "juego_de_manos",
+      "sigilo"
+    ],
+    "tool": "herramientas_ladron",
+    "toolName": "Herramientas de ladrón",
+    "equipmentOptions": {
+      "A": {
+        "desc": "2 dagas, herramientas de ladrón, pata de cabra, 2 saquillos, ropas oscuras y 16 po",
+        "gold": 16
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "ermitano",
+    "name": "Ermitaño",
+    "desc": "Vivías en reclusión en parajes remotos meditando sobre los enigmas del multiverso y la salud del cuerpo y el alma.",
+    "abilities": [
+      "constitucion",
+      "sabiduria",
+      "carisma"
+    ],
+    "originFeatId": "sanador",
+    "skills": [
+      "medicina",
+      "religion"
+    ],
+    "tool": "utiles_herborista",
+    "toolName": "Útiles de herborista",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Bastón, útiles de herborista, aceite (3 frascos), linterna sorda, ropas comunes y 16 po",
+        "gold": 16
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "erudito",
+    "name": "Erudito",
+    "desc": "Te consagraste a los libros, academias y archivos para desentrañar el conocimiento arcano y los secretos de la historia.",
+    "abilities": [
+      "inteligencia",
+      "sabiduria",
+      "carisma"
+    ],
+    "originFeatId": "iniciado_magia_mago",
+    "skills": [
+      "conocimiento_arcano",
+      "historia"
+    ],
+    "tool": "suministros_caligrafo",
+    "toolName": "Suministros de calígrafo",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Suministros de calígrafo, libro de historia, pergamino (8 hojas), bata de erudito y 8 po",
+        "gold": 8
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "escriba",
+    "name": "Escriba",
+    "desc": "Copiabas textos oficiales, cartas y registros para nobles o gremios, agudizando tu vista y tu precisión intelectual.",
+    "abilities": [
+      "destreza",
+      "inteligencia",
+      "sabiduria"
+    ],
+    "originFeatId": "habilidoso",
+    "skills": [
+      "investigacion",
+      "percepcion"
+    ],
+    "tool": "suministros_caligrafo",
+    "toolName": "Suministros de calígrafo",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Suministros de calígrafo, lámpara, frasco de aceite, pergamino (12 hojas), ropas finas y 23 po",
+        "gold": 23
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "guardia",
+    "name": "Guardia",
+    "desc": "Patrullabas murallas, puertas y calles para proteger a la comunidad de ladrones, monstruos y alborotadores.",
+    "abilities": [
+      "fuerza",
+      "inteligencia",
+      "sabiduria"
+    ],
+    "originFeatId": "alerta",
+    "skills": [
+      "atletismo",
+      "percepcion"
+    ],
+    "tool": "juego_eleccion",
+    "toolName": "Un tipo de juego a tu elección",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Lanza, ballesta ligera, 20 virotes, juego elegido, grilletes, ropas de guardia y 12 po",
+        "gold": 12
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "guia",
+    "name": "Guía",
+    "desc": "Guiabas a viajeros y caravanas a través de bosques, desiertos y montañas peligrosas gracias a tu orientación instintiva.",
+    "abilities": [
+      "destreza",
+      "constitucion",
+      "sabiduria"
+    ],
+    "originFeatId": "iniciado_magia_druida",
+    "skills": [
+      "sigilo",
+      "supervivencia"
+    ],
+    "tool": "herramientas_cartografo",
+    "toolName": "Herramientas de cartógrafo",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Arco corto, 20 flechas, herramientas de cartógrafo, petate, ropas de viajero y 13 po",
+        "gold": 13
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "marinero",
+    "name": "Marinero",
+    "desc": "Navegaste por mares tumultuosos a bordo de navíos mercantes o de guerra, acostumbrado a tormentas y peleas portuarias.",
+    "abilities": [
+      "fuerza",
+      "destreza",
+      "sabiduria"
+    ],
+    "originFeatId": "maton_taberna",
+    "skills": [
+      "acrobacias",
+      "percepcion"
+    ],
+    "tool": "herramientas_navegante",
+    "toolName": "Herramientas de navegante",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Daga, herramientas de navegante, 15 m de cuerda de seda, ropas de viajero y 20 po",
+        "gold": 20
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "desc": "Naciste en el seno de una familia aristocrática rodeado de comodidades, protocolo y juegos de poder palaciegos.",
+    "abilities": [
+      "fuerza",
+      "inteligencia",
+      "carisma"
+    ],
+    "originFeatId": "habilidoso",
+    "skills": [
+      "historia",
+      "persuasion"
+    ],
+    "tool": "juego_eleccion",
+    "toolName": "Un tipo de juego a tu elección",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Juego elegido, perfume, sello señorial, ropas elegantes y 29 po",
+        "gold": 29
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "soldado",
+    "name": "Soldado",
+    "desc": "Serviste en un ejército regular o compañía mercenaria, entrenado en formación, obediencia y combate mortal.",
+    "abilities": [
+      "fuerza",
+      "destreza",
+      "constitucion"
+    ],
+    "originFeatId": "atacante_salvaje",
+    "skills": [
+      "atletismo",
+      "intimidacion"
+    ],
+    "tool": "juego_eleccion",
+    "toolName": "Un tipo de juego a tu elección",
+    "equipmentOptions": {
+      "A": {
+        "desc": "Lanza, arco corto, 20 flechas, aljaba, juego elegido, placa de rango, ropas de viajero y 14 po",
+        "gold": 14
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  },
+  {
+    "id": "vagabundo",
+    "name": "Vagabundo",
+    "desc": "Creciste en las calles de una urbe sin familia ni hogar, sobreviviendo gracias a tu ingenio, reflejos y discreción.",
+    "abilities": [
+      "destreza",
+      "sabiduria",
+      "carisma"
+    ],
+    "originFeatId": "afortunado",
+    "skills": [
+      "perspicacia",
+      "sigilo"
+    ],
+    "tool": "herramientas_ladron",
+    "toolName": "Herramientas de ladrón",
+    "equipmentOptions": {
+      "A": {
+        "desc": "2 dagas, herramientas de ladrón, saquillo, ropas comunes y 18 po",
+        "gold": 18
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50
+      }
+    }
+  }
+]

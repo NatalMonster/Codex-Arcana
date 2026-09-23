@@ -1,0 +1,695 @@
+{
+  "Agarre electrizante": {
+    "name": "Agarre electrizante",
+    "typeLine": "Truco de evocación (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una descarga eléctrica surge de tu mano hacia una criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Si acierta, el objetivo recibirá 1d8 de daño de relámpago y no podrá realizar ataques de oportunidad hasta el principio de su siguiente turno. Mejora de truco. El daño aumenta en 1d8 cuando alcanzas los niveles 5 (2d8), 11 (3d8) y 17 (4d8)."
+  },
+  "Alarma": {
+    "name": "Alarma",
+    "typeLine": "Abjuración de nivel 1 (explorador, mago)",
+    "castingTime": "ó1ó ómóiónóuótóoó óoó óuónó óróiótóuóaóló",
+    "range": "9 m",
+    "components": "V, S, M (una campana e hilo de plata)",
+    "duration": "ó8ó óhóoóróaósó",
+    "desc": "Preparas una alarma contra los intrusos. Elige una puerta, una ventana o una zona dentro del alcance que no sea mayor que un cubo de 6 m de lado. Hasta que el conjuro termine, una alarma te alertará siempre que una criatura toque la zona vigilada o entre en ella. Al lanzar el conjuro, puedes designar qué criaturas no activarán la alarma, que puede ser mental o sonora: Alarma mental. La alarma te avisará con un sonido dentro de tu mente si estás a 1,5 km o menos de la zona vigilada. Si estás durmiendo, te despertará. Alarma sonora. La alarma producirá el sonido de una campanilla durante 10 segundos, que será audible a 18 m o menos de la zona vigilada."
+  },
+  "Amistad": {
+    "name": "Amistad",
+    "typeLine": "Truco de encantamiento (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "3 m",
+    "components": "S, M (un poco de maquillaje)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Emanas mágicamente un sentimiento de amistad hacia una criatura que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Sabiduría o tendrá el estado de hechizado hasta que termine el conjuro. El objetivo la superará automáticamente si no es un humanoide, si estás luchando contra él o si le has lanzado este conjuro en las últimas 24 horas. El conjuro termina antes de tiempo si el objetivo recibe daño o si haces una tirada de ataque, causas daño u obligas a cualquier criatura a hacer una tirada de salvación. Cuando el conjuro termine, el objetivo sabrá que lo hechizaste."
+  },
+  "Armadura de Agathys": {
+    "name": "Armadura de Agathys",
+    "typeLine": "Abjuración de nivel 1 (brujo)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "Lanzador",
+    "components": "V, S, M (un trozo de vidrio azul)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "E LAS PROFUNDIDADES. Una escarcha mágica protectora te rodea y ganas 5 puntos de golpe temporales. Si una criatura te acierta con una tirada de ataque cuerpo a cuerpo antes de que el conjuro termine, dicha criatura sufre 5 de daño de frío. El conjuro termina antes de tiempo si no tienes puntos de golpe temporales. Con un espacio de conjuro de nivel superior. Los puntos de golpe temporales y el daño de frío aumentan en 5 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Armadura de mago": {
+    "name": "Armadura de mago",
+    "typeLine": "Abjuración de nivel 1 (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S, M (un trozo de piel curtida)",
+    "duration": "ó8ó óhóoóróaósó",
+    "desc": "Tocas a una criatura voluntaria que no lleve armadura. Hasta que el conjuro termine, la CA base del objetivo pasa a ser de 13 más su modificador por Destreza. El conjuro termina antes si el objetivo se pone una armadura."
+  },
+  "Bendición": {
+    "name": "Bendición",
+    "typeLine": "Encantamiento de nivel 1 (clérigo, paladín)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S, M (un símbolo sagrado que valga",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Bendices hasta tres criaturas dentro del alcance. Siempre que un objetivo haga una tirada de ataque o de salvación antes de que termine el conjuro, sumará 1d4 al resultado de dicha tirada. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Brazos de Hadar": {
+    "name": "Brazos de Hadar",
+    "typeLine": "Conjuración de nivel 1 (brujo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Invocas a Hadar y unas extremidades surgen de ti. Todas las criaturas en una emanación de 3 m que se origina en ti deben hacer una tirada de salvación de Fuerza. Si la fallan, sufrirán 2d6 de daño necrótico y no podrán llevar a cabo reacciones hasta el principio de su siguiente turno. Si la superan, solamente recibirán la mitad de ese daño. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Buenas bayas": {
+    "name": "Buenas bayas",
+    "typeLine": "Conjuración de nivel 1 (druida, explorador)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S, M (una rama de muérdago)",
+    "duration": "ó2ó4ó óhóoóróaósó",
+    "desc": "En tu mano aparecen diez bayas, que están impregnadas de magia hasta que termine el conjuro. Una criatura puede usar una acción adicional para comerse una, lo que le permite recuperar 1 punto de golpe. Además, la baya proporciona alimento suficiente como para mantener a una criatura durante 1 día. Las bayas que no se consuman desaparecen cuando el conjuro termine."
+  },
+  "Burla dañina": {
+    "name": "Burla dañina",
+    "typeLine": "Truco de encantamiento (bardo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Profieres una sarta de improperios mezclados con encantamientos sutiles hacia una criatura que puedas ver u oír dentro del alcance. El objetivo deberá superar una tirada de salvación de Sabiduría o recibirá 1d6 de daño psíquico y tendrá desventaja en la próxima tirada de ataque que realice antes de que acabe su siguiente turno. Mejora de truco. El daño aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6)."
+  },
+  "Caída de pluma": {
+    "name": "Caída de pluma",
+    "typeLine": "Transmutación de nivel 1 (bardo, hechicero, mago)",
+    "castingTime": "óRóeóaócócóióóónó,ó óqóuóeó ólólóeóvóaósó óaó ócóaóbóoó ócóuóaónódóoó",
+    "range": "18 m",
+    "components": "V, M (una pluma pequeña o un poco",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "UNA BARDO GNOMA USA BURLA DAÑINA PARA LANZARLE INSULTOS MÁGICOS A UN KOBOLO. ¡A Elige hasta cinco criaturas dentro del alcance que estén cayendo. La velocidad de descenso de cada objetivo se reduce a 18 m por asalto hasta que el conjuro termine. Si una criatura aterriza antes de que el conjuro termine, no sufrirá daño de la caída y el conjuro terminará para esa criatura."
+  },
+  "Castigo abrasador": {
+    "name": "Castigo abrasador",
+    "typeLine": "Evocación de nivel 1 (paladín)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló,ó óqóuóeó óróeóaólóiózóaósó ódóeó",
+    "range": "Lanzador",
+    "components": "V",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Al golpear al objetivo, sufre 1d6 de daño de fuego adicional del ataque. Al principio de cada uno de sus turnos hasta que el conjuro termine, el objetivo sufrirá 1d6 de daño de fuego y luego hará una tirada de salvación de Constitución. Si la falla, el conjuro seguirá activo. Si la supera, el conjuro terminará. Con un espacio de conjuro de nivel superior. Todo el daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio. UNA PALADÍN ENANA POTENCIA SU ARMA CON CASTIGO DIVINO Y. DESATA UNA IRA SAGRADA SOBRE VARIOS MELZOLOTHS INFERNALES. Tu golpe resuena con un trueno audible a 90 m de ti y el objetivo sufre 2d6 de daño de trueno adicional del ataque. Además, si el objetivo es una criatura, deberá superar una tirada de salvación de Fuerza o la empujarás 3 m respecto"
+  },
+  "Castigo atronador": {
+    "name": "Castigo atronador",
+    "typeLine": "Evocación de nivel 1 (paladín)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló,ó óqóuóeó óróeóaólóiózóaósó óaótóaóqóuóeó ócóoónótóróaó óéóló ótóeónódóróáónó óvóeónótóaójóaó óyó ónóoó ópóoódóróáó óbóeónóeófóiócóióaórósóeó",
+    "range": "Lanzador aumenta en 1d6 por cada nivel por encima de 2 que tenga",
+    "components": "V el espacio.",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": ""
+  },
+  "Castigo divino": {
+    "name": "Castigo divino",
+    "typeLine": "Evocación de nivel 1 (paladín)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóáóló,ó óqóuóeó óróeóaólóiózóaósó",
+    "range": "Lanzador",
+    "components": "V",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "El objetivo sufre 2d8 de daño radiante adicional del ataque. Este daño aumenta en 1d8 si el objetivo es un infernal o un muerto viviente. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d8 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Castigo furioso": {
+    "name": "Castigo furioso",
+    "typeLine": "Nigromancia de nivel 1 (paladín)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló,ó óqóuóeó óróeóaólóiózóaósó",
+    "range": "Lanzador",
+    "components": "V",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "El objetivo sufrirá 1d6 de daño necrótico adicional del ataque y deberá superar una tirada de salvación de Sabiduría o tendrá el estado de asustado hasta que el conjuro termine. Al final de cada uno de sus turnos, el objetivo asustado repite la tirada de salvación y, si tiene éxito, se librará del conjuro. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Crear llama": {
+    "name": "Crear llama",
+    "typeLine": "Truco de conjuración (druida)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "ó1ó0ó ómóiónóuótóoósó",
+    "desc": "En tu mano aparece una llama titilante, que permanece hasta que termine el conjuro. En tu mano, la llama no genera calor, no puede quemar nada y emite una luz brillante en un radio de 6 m y luz tenue 6 m más allá. El conjuro termina si lo vuelves a lanzar. Hasta que el conjuro termine, puedes usar una acción de magia para arrojar la llama a una criatura u objeto a 18 m o menos de ti. Haz un ataque de conjuro a distancia. Si acierta, el objetivo recibe 148 de daño de fuego. Mejora de truco. El daño aumenta en 1d8 cuando alcanzas los niveles 5 (2d8), 11 (3d8) y 17 (4d8)."
+  },
+  "Crear o destruir agua": {
+    "name": "Crear o destruir agua",
+    "typeLine": "Transmutación de nivel 1 (clérigo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S, M (una mezcla de agua y arena)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Produces uno de estos efectos: Crear agua. Creas hasta 40 1 de agua limpia dentro del alcance en un recipiente abierto. Como alternativa, el agua cae en forma de lluvia en un cubo de 9 m de lado dentro del alcance y apaga las llamas abiertas de la zona. Destruir agua. Destruyes hasta 40 1 de agua dentro del alcance en un recipiente abierto. Como alternativa, puedes destruir niebla en un cubo de 9 m de lado dentro del alcance. Con un espacio de conjuro de nivel superior. Creas o destruyes 40 1 más de agua o el tamaño del cubo aumenta en 1,5 m por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Curar heridas": {
+    "name": "Curar heridas",
+    "typeLine": "Abjuración de nivel 1 (bardo, clérigo, druida, explorador,",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una criatura a la que toques recupera una cantidad de puntos de golpe igual a 2d8 más tu modificador por | aptitud mágica. ] Con un espacio de conjuro de nivel superior. La curación aumenta en 2d8 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Descarga de fuego": {
+    "name": "Descarga de fuego",
+    "typeLine": "Truco de evocación (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "36 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Arrojas una mota de fuego a una criatura u objeto dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si acierta, el objetivo recibe 1d10 de daño de fuego. Los objetos inflamables a los que acierte el conjuro empezarán a arder si nadie los lleva o viste. Mejora de truco. El daño aumenta en 1d10 cuando alcanzas los niveles 5 (210), 11 (3d10) y 17 (4d10)."
+  },
+  "Descarga sobrenatural": {
+    "name": "Descarga sobrenatural",
+    "typeLine": "Truco de evocación (brujo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "36m *",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Lanzas un rayo de energía chisporroteante. Haz un ataque de conjuro a distancia contra una criatura u objeto dentro del alcance. Si acierta, el objetivo recibe 1d10 de daño de fuerza. Mejora de truco. El conjuro crea dos rayos a nivel 5, tres rayos a nivel 11 y cuatro rayos a nivel 17. Puedes dirigir los rayos al mismo objetivo o a objetivos distintos. Realiza una tirada de ataque por separado para cada rayo."
+  },
+  "Detectar el bien y el mal": {
+    "name": "Detectar el bien y el mal",
+    "typeLine": "Adivinación de nivel 1 (clérigo, paladín)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Hasta que el conjuro termine, percibes la ubicación de cualquier aberración, celestial, elemental, feérico, infernal o muerto viviente a 9 m o menos de ti. También percibes si hay un conjuro consagrar activo en el espacio y su ubicación. El conjuro no puede atravesar 30 cm de piedra, tierra o madera, 2,5 cm de metal o una lámina fina de plomo."
+  },
+  "Detectar magia": {
+    "name": "Detectar magia",
+    "typeLine": "Adivinación de nivel 1 (bardo, brujo, clérigo, druida,",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Hasta que el conjuro termine, podrás percibir la presencia de efectos mágicos a 9 m o menos de ti. Si percibes alguno, puedes usar una acción de magia para ver una débil aura alrededor de cualquier objeto o criatura visible dentro de la zona que esté afectada por la magia y, si el efecto lo creó un conjuro, distingues a qué escuela mágica pertenece. El conjuro no puede atravesar 30 cm de piedra, tierra o madera, 2,5 cm de metal o una lámina fina de plomo."
+  },
+  "Detectar venenos y enfermedades": {
+    "name": "Detectar venenos y enfermedades",
+    "typeLine": "Adivinación de nivel 1 (clérigo, druida, explorador, paladín)",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "Lanzador",
+    "components": "V, S, M (una hoja de tejo)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Hasta que el conjuro termine, percibes la ubicación de venenos, criaturas venenosas y enfermedades mágicas a 9 mo menos de ti, e identificas el tipo de veneno, criatura o enfermedad en cada caso. El conjuro no puede atravesar 30 cm de piedra, tierra o madera, 2,5 cm de metal o una lámina fina de plomo."
+  },
+  "Disco flotante de Tenser": {
+    "name": "Disco flotante de Tenser",
+    "typeLine": "Conjuración de nivel 1 (mago)",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "9 m",
+    "components": "V, S, M (una gota de mercurio)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Este conjuro crea un plano de fuerza horizontal de 90 cm de diámetro y 2,5 cm de grosor que flota 90 cm por encima del suelo en un espacio sin ocupar de tu elección que puedas ver dentro del alcance. El disco dura hasta que termina el conjuro y puede soportar un peso de hasta 250 kg. Si se pone más peso sobre él, el conjuro termina y todo lo que hay en el disco cae al suelo. El disco permanecerá inmóvil mientras estés a 6 m o menos de él. Si te alejas a más de 6 m de él, te seguirá para mantenerse a 6 m de ti. Se puede mover por terreno irregular y subir y bajar escaleras, pendientes y similares, pero no puede superar un cambio de elevación de 3 m o más. Por ejemplo, el disco no puede cruzar un pozo de 3 m de profundidad ni salir de él si se crea en el fondo de este. Si te alejas más de 30 m del disco (normalmente, porque no pueda superar un obstáculo para seguirte), el conjuro termina. SE PLEDA UNA MAGA ROJA DE THAY LES ORDENA A SUS SIRVIENTES ESQUELÉTICOS DEPOSITAR RIQUEZAS EN UN DISCO FLOTANTE DE TENSER."
+  },
+  "Disfrazarse": {
+    "name": "Disfrazarse",
+    "typeLine": "Ilusionismo de nivel 1 (bardo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Haces que tu aspecto (incluyendo tu vestimenta, armadura, armas y otras posesiones que lleves contigo) parezca diferente hasta que el conjuro termine. Puedes aparentar tener una altura 30 cm mayor o menor y una complexión más pesada o ligera. Debes adoptar una forma que tenga la misma configuración de miembros que tú. Por lo demás, la ilusión puede modificar todo lo que quieras de tu aspecto. Los cambios realizados por este conjuro pueden descubrirse mediante una inspección física. Por ejemplo, si usas este conjuro para añadir un sombrero a tu vestimenta, los objetos atravesarán el sombrero y cualquiera que lo toque no sentirá nada. Para darse cuenta de que te has disfrazado, una criatura debe emplear la acción de estudiar para inspeccionar tu apariencia y superar una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros."
+  },
+  "Dormir": {
+    "name": "Dormir",
+    "typeLine": "Encantamiento de nivel 1 (bardo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S, M (una pizca de arena o pétalos",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Todas las criaturas de tu elección en una esfera de 1,5 m de radio centrada en un punto dentro del alcance deben superar una tirada de salvación de Sabiduría o tendrán el estado de incapacitadas hasta el final de su siguiente turno, momento en el que deberán repetir la tirada de salvación. Si un objetivo falla la segunda tirada, tendrá el estado de inconsciente hasta que termine el conjuro. El conjuro termina sobre un objetivo si recibe daño o si alguien a 1,5 m o menos de él emplea una acción para zarandearlo y poner fin al efecto del conjuro. Las criaturas que no duermen, como los elfos, o que tengan inmunidad al estado de cansancio superan automáticamente las tiradas de salvación contra este conjuro."
+  },
+  "Elementalismo": {
+    "name": "Elementalismo",
+    "typeLine": "Truco de transmutación (druida, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Controlas los elementos y creas uno de los siguientes efectos dentro del alcance: Esculpir los elementos. Haces que la tierra, arena, fuego, humo, niebla o agua que quepan en un cubo de 30 cm de lado adopten una forma tosca (como la de una criatura) durante 1 hora. Invocar el agua. Creas un rocío de fría niebla que humedece ligeramente a las criaturas y objetos en un cubo de 1,5 m de lado. Como alternativa, creas una taza de agua limpia, ya sea en un recipiente abierto o sobre una superficie, y el agua se evapora al cabo de 1 minuto. Invocar el aire. Creas una brisa lo bastante fuerte como para ondear telas, remover polvo, agitar hojas y cerrar puertas y contraventanas abiertas en un cubo de 1,5 m de lado. Las puertas y contraventanas que algo o alguien mantenga abiertas no se ven afectadas. Invocar el fuego. Creas una fina nube de ascuas inofensivas y un humo de color perfumado en un cubo de 1,5 m de lado. Tú eliges el color y el olor, y las ascuas pueden encender velas, antorchas o lámparas dentro de la zona. El aroma del humo permanece durante 1 minuto. Invocar la tierra. Creas una fina capa de polvo o arena que cubre superficies en una zona de 1,5 m de lado o haces que aparezca una sola palabra escrita con tu letra en una superficie de tierra o arena."
+  },
+  "Encantar animal": {
+    "name": "Encantar animal",
+    "typeLine": "Encantamiento de nivel 1 (bardo, druida, explorador)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S, M (unas migajas de comida)",
+    "duration": "ó2ó4ó óhóoóróaósó",
+    "desc": "Haces objetivo a una bestia que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Sabiduría o tendrá el estado de hechizado hasta que termine el conjuro. Si alguno de tus aliados o tú dañáis al objetivo, el conjuro termina. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una bestia adicional por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Falsa vida": {
+    "name": "Falsa vida",
+    "typeLine": "Nigromancia de nivel 1 (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S, M (una gota de alcohol)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Obtienes 2d4 + 4 puntos de golpe temporales. Con un espacio de conjuro de nivel superior. Obtienes 5 puntos de golpe temporales adicionales por cada nivel por encima de 1 que tenga el espacio. lil EL CONJURO FESTÍN DE HÉROES PREPARA A LOS AVENTUREROS PARA LA GRANDEZA"
+  },
+  "Fragmento mental": {
+    "name": "Fragmento mental",
+    "typeLine": "Truco de encantamiento (brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V",
+    "duration": "ó1ó óaósóaólótóoó",
+    "desc": "Intentas fragmentar de forma temporal la mente de una criatura que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Inteligencia o recibirá 1d6 de daño psíquico y restará 1d4 en la siguiente tirada de salvación que haga antes del final de tu siguiente turno. Mejora de truco. El daño aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6)."
+  },
+  "Fuego feérico": {
+    "name": "Fuego feérico",
+    "typeLine": "Evocación de nivel 1 (bardo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "El conjuro ilumina con luz azul, verde o violeta, a tu elección, el contorno de los objetos en un cubo de 6 m de lado dentro del alcance. También se ilumina el contorno de cualquier criatura dentro del cubo que falle una tirada de salvación de Destreza. Hasta que termine el conjuro, los objetos y criaturas afectados emitirán luz tenue en un radio de 3 m y no podrán beneficiarse del estado de invisibles. Las tiradas de ataque contra las criaturas u objetos afectados tendrán ventaja si el atacante puede verlos."
+  },
+  "Golpe apresador": {
+    "name": "Golpe apresador",
+    "typeLine": "Conjuración de nivel 1 (explorador)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló,ó óqóuóeó óróeóaólóiózóaósó",
+    "range": "Lanzador",
+    "components": "V",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Al acertar al objetivo, unas enredaderas aparecerán sobre él y deberá hacer una tirada de salvación de Fuerza. Las criaturas Grandes o de mayor tamaño tienen ventaja en esta tirada. Si la falla, tendrá el estado de apresado hasta que el conjuro termine. Si la supera, las enredaderas se marchitan y el conjuro termina. Mientras esté apresado, el objetivo sufrirá 1d6 de daño perforante al principio de cada uno de sus turnos. El objetivo o una criatura a su alcance puede emplear una acción para hacer una prueba de Fuerza (Atletismo) contra tu CD de salvación de conjuros. Si la supera, el conjuro termina. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Grasa": {
+    "name": "Grasa",
+    "typeLine": "Conjuración de nivel 1 (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S, M (un poco de piel de cerdo",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Una grasa no inflamable cubre una zona cuadrada del suelo de 3 m de lado centrada en un punto dentro del alcance y que la convierte en terreno difícil hasta que termina el conjuro. Cuando aparezca la grasa, las criaturas que haya en esa zona deberán superar una tirada de salvación de Destreza o tendrán el estado de derribadas. Una criatura que entre en la zona o termine su turno ahí deberá superar esa tirada de salvación o caerá derribada."
+  },
+  "Guardia de cuchillas": {
+    "name": "Guardia de cuchillas",
+    "typeLine": "Truco de abjuración (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Siempre que una criatura haga una tirada de ataque contra ti antes de que el conjuro termine, el atacante restará 1d4 a esa tirada."
+  },
+  "Guía": {
+    "name": "Guía",
+    "typeLine": "Truco de adivinación (clérigo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Tocas a una criatura voluntaria y eliges una habilidad. Hasta que el conjuro termine, la criatura añade 1d4 a una prueba de característica con la habilidad elegida."
+  },
+  "Hablar con los animales": {
+    "name": "Hablar con los animales",
+    "typeLine": "Adivinación de nivel 1 (bardo, brujo, druida, explorador)",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Hasta que termine el conjuro, puedes comprender y comunicarte verbalmente con bestias y usar con ellas cualquiera de las opciones de la acción de influir. La mayoría de bestias tienen poco que decir en cuestiones que no tengan que ver con la supervivencia o la compañía, pero como mínimo podrán proporcionarte información sobre los lugares y monstruos cercanos, incluyendo lo que hayan percibido en el último día."
+  },
+  "Hechizar persona": {
+    "name": "Hechizar persona",
+    "typeLine": "Encantamiento de nivel 1 (bardo, brujo, druida, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Un humanoide que puedas ver dentro del alcance realiza una tirada de salvación de Sabiduría. La hace con ventaja si está luchando contra ti o tus aliados. Si la falla, tendrá el estado de hechizado hasta que el conjuro termine o hasta que tus aliados o tú le hagáis daño. La criatura hechizada es amistosa contigo, pero cuando el conjuro termine, sabrá que la hechizaste. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Heroísmo": {
+    "name": "Heroísmo",
+    "typeLine": "Encantamiento de nivel 1 (bardo, paladín)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Insuflas valor a una criatura voluntaria a la que toques. Hasta que el conjuro termine, la criatura es inmune al estado de asustada y obtiene una cantidad de puntos de golpe temporales igual a tu modificador por aptitud mágica al principio de cada uno de sus turnos. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Identificar": {
+    "name": "Identificar",
+    "typeLine": "Adivinación de nivel 1 (bardo, mago)",
+    "castingTime": "ó1ó ómóiónóuótóoó óoó óuónó óróiótóuóaóló",
+    "range": "Toque",
+    "components": "V, S, M (una perla que valga al menos 100 po)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Tocas un objeto durante el lanzamiento del conjuro. Si se trata de un objeto mágico de un objeto imbuido de magia, averiguarás sus propiedades y cómo usarlas, si hace falta sintonizarse con él y cuántas cargas tiene, si corresponde. Si hay conjuros activos que afecten al objeto, sabrás cuáles son. Si el objeto se creó mediante un conjuro, averiguarás su nombre. Si tocas a una criatura en lugar de un objeto, averiguarás qué conjuros activos le afectan en ese momento, si hay alguno."
+  },
+  "Ilusión menor": {
+    "name": "Ilusión menor",
+    "typeLine": "Truco de ilusionismo (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "S, M (un poco de vellón)",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Creas un sonido o una imagen de un objeto situado dentro del alcance que permanecerá hasta que termine el conjuro. Consulta las descripciones a continuación para conocer sus efectos. La ilusión termina si lanzas el conjuro de nuevo. Si una criatura emplea su acción de estudiar para examinar la imagen o el sonido, puede determinar que es una ilusión si supera una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros. Si la criatura descubre que se trata de una ilusión, esta se irá desvaneciendo para esa criatura. Sonido. Si creas un sonido, su volumen se situará entre el de un susurro y el de un grito. Puede ser tu voz, la de otra criatura, el rugido de un león, un redoblar de tambores o cualquier otro sonido que elijas. El sonido continúa incesante mientras dure el conjuro o puedes originar sonidos distintos en diferentes momentos antes del fin del conjuro. Imagen. Si creas la imagen de un objeto (como una silla, pisadas embarradas o un pequeño cofre), no podrá ser mayor que un cubo de 1,5 m de lado. La imagen no puede generar sonido, luz, olor o cualquier otro efecto sensorial. La interacción física con la imagen revela que es una ilusión, ya que las cosas pueden atravesarla."
+  },
+  "Imagen silenciosa": {
+    "name": "Imagen silenciosa",
+    "typeLine": "Ilusionismo de nivel 1 (bardo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S, M (un poco de vellón)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Creas una imagen de un objeto, una criatura u otro tipo de fenómeno visible cuyas dimensiones no excedan las de un cubo de 4,5 m de lado. La imagen aparece en un sitio dentro del alcance y se mantiene hasta el final del conjuro. La imagen es solamente visual; no está acompañada de sonido, olor u otros efectos sensoriales. Como acción de magia, puedes mover la imagen a cualquier sitio dentro del alcance. Al cambiarla de sitio, puedes alterar su apariencia de forma que sus movimientos parezcan naturales. Por ejemplo, si creas la imagen de una criatura y la mueves, puedes alterarla de forma que parezca estar andando. La interacción física con la imagen revela que es una ilusión, ya que las cosas pueden atravesarla. Si una criatura emplea una acción de estudiar para examinar la imagen, puede determinar que es una ilusión si supera una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros. Si la criatura descubre que la imagen es una ilusión, no se dejará engañar por ella."
+  },
+  "Impacto certero": {
+    "name": "Impacto certero",
+    "typeLine": "Truco de adivinación (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "S, M (un arma con la que tengas",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Un destello de perspicacia mágica te guía y haces un ataque con el arma empleada para lanzar el conjuro. El ataque usa tu aptitud mágica para las tiradas de ataque y de daño en lugar de la Fuerza o la Destreza. Si el ataque inflige daño, puede ser radiante o del tipo de daño normal del arma (a tu elección). Mejora de truco. Independientemente de si haces daño radiante o del tipo normal del arma, el ataque inflige daño radiante adicional cuando alcanzas los niveles 5 (146), 11 (246) y 17 (346)."
+  },
+  "Infligir heridas": {
+    "name": "Infligir heridas",
+    "typeLine": "Nigromancia de nivel 1 (clérigo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una criatura a la que toques hace una tirada de salvación de Constitución; sufrirá 2d10 de daño necrótico si la falla o la mitad del daño si la supera. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d10 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Látigo de espinas": {
+    "name": "Látigo de espinas",
+    "typeLine": "Truco de transmutación (druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S, M (el tallo de una planta con espinas)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Creas un látigo similar a una enredadera cubierta de espinas que fustiga bajo tus órdenes a una criatura dentro del alcance. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Si acierta, el objetivo sufre 146 de daño perforante y, si es Grande o más pequeño, puedes arrastrarlo hasta 3 m hacia ti. Mejora de truco. El daño aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6)."
+  },
+  "Llama sagrada": {
+    "name": "Llama sagrada",
+    "typeLine": "Truco de evocación (clérigo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Un fulgor de llamas desciende sobre una criatura que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Destreza o sufrirá 1d8 de daño radiante. No podrá beneficiarse de la cobertura media o tres cuartos en esta tirada. Mejora de truco. El daño aumenta en 1d8 cuando alcanzas los niveles 5 (2d8), 11 (3d8) y 17 (4d8)."
+  },
+  "Luces danzantes": {
+    "name": "Luces danzantes",
+    "typeLine": "Truco de ilusionismo (bardo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "36 m",
+    "components": "V, S, M (una pizca de fósforo)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Creas hasta cuatro luces del tamaño de antorchas dentro del alcance. Puedes darles la apariencia de antorchas, linternas u orbes luminosos, y levitarán hasta que el conjuro termine. Como alternativa, combinas las cuatro luces en una sola de tamaño Mediano y aspecto vagamente humanoide. En ambos casos, cada luz proyecta una luz tenue en un radio de 3 m. Como acción adicional, puedes mover las luces hasta 18 m a otro espacio dentro del alcance. Cada luz debe estar a 6 mo menos de otra luz creada por este conjuro y se desvanecerá si sale del alcance del mismo."
+  },
+  "Luz": {
+    "name": "Luz",
+    "typeLine": "Truco de evocación (bardo, clérigo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, M (una luciérnaga o musgo fosforescente)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Tocas un objeto Grande o más pequeño que nadie lleve o vista. Hasta que el conjuro termine, el objeto emitirá luz brillante en un radio de 6 m y luz tenue otros 6 m más allá. La luz puede tener el color que desees. Tapar completamente el objeto con un material opaco bloquea la luz. El conjuro termina si lo vuelves a lanzar."
+  },
+  "Maleficio": {
+    "name": "Maleficio",
+    "typeLine": "Encantamiento de nivel 1 (brujo)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "27 m",
+    "components": "V, S, M (el ojo petrificado de un tritón)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó óhóoóróaó",
+    "desc": "Impones una maldición a una criatura que puedas ver dentro del alcance. Hasta que el conjuro termine, infliges 1d6 de daño necrótico adicional al objetivo siempre que le aciertes con una tirada de ataque. Además, elige una característica cuando lances el conjuro. El objetivo tendrá desventaja en las pruebas que haga con la característica elegida. Silos puntos de golpe del objetivo se reducen a O antes de que el conjuro termine, puedes usar una acción adicional en un turno posterior para maldecir a una nueva criatura. Con un espacio de conjuro de nivel superior. Tu concen- tración puede durar más si usas un espacio de conjuro de nivel 2 (hasta 4 horas), 3 o 4 (hasta 8 horas) o 5 o más (24 horas)."
+  },
+  "Mano de mago": {
+    "name": "Mano de mago",
+    "typeLine": "Truco de conjuración (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Conjuras una mano espectral flotante en un punto de tu elección dentro del alcance. La mano dura hasta que el conjuro termine. Además, desaparecerá si en algún momento está a más de 9 m de ti o si vuelves a lanzar este conjuro. Cuando lances este conjuro, puedes utilizar la mano para manipular un objeto, abrir una puerta o un recipiente que no estén cerrados con llave, sacar un objeto de un recipiente abierto o guardarlo en él o verter el contenido de un vial. Como acción de magia en tus siguientes turnos, puedes volver a controlar la mano de esta forma. Como parte de la acción, puedes mover la mano hasta 9 m. La mano no puede atacar, activar objetos mágicos ni llevar más de 5 kg de peso."
+  },
+  "Manos ardientes": {
+    "name": "Manos ardientes",
+    "typeLine": "Evocación de nivel 1 (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una fina capa de llamas se proyecta desde ti. Todas las criaturas situadas en un cono de 4,5 m hacen una tirada de salvación de Destreza; sufrirán 3d6 de daño de fuego si la fallan o la mitad del daño si la superan. Los objetos inflamables dentro del cono que no lleve o vista nadie empezarán a arder. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio. EL maco MORDENKAINEN DA LA BIENVENIDA A SUS HUÉSPEDES A SU MORADA MÁGICA, LA MANSIÓN MAGNÍFICA DE MORDENKAINEN."
+  },
+  "Marca del cazador": {
+    "name": "Marca del cazador",
+    "typeLine": "Adivinación de nivel 1 (explorador)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "27 m",
+    "components": "V",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó óhóoóróaó",
+    "desc": "Marcas mágicamente a una criatura que puedas ver dentro del alcance como tu presa. Hasta que el conjuro termine, infliges 1d6 de daño de fuerza adicional al objetivo siempre que le aciertes con una tirada de ataque. También tendrás ventaja en cualquier prueba de Sabiduría (Percepción o Supervivencia) que realices para buscarlo. Si los puntos de golpe del objetivo se reducen a O antes de que el conjuro termine, puedes emplear una acción adicional para transferir la marca a una nueva criatura que puedas ver dentro del alcance. Con un espacio de conjuro de nivel superior. Tu concen- tración puede durar más si usas un espacio de conjuro de nivel 3 o 4 (hasta 8 horas) o 5 o más (hasta 24 horas)."
+  },
+  "Mensaje": {
+    "name": "Mensaje",
+    "typeLine": "Truco de transmutación (bardo, druida, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "36 m",
+    "components": "S, M (un alambre de cobre)",
+    "duration": "ó1ó óaósóaólótóoó",
+    "desc": "Señalas a una criatura dentro del alcance y susurras un mensaje. El objetivo (y únicamente el objetivo) escucha el mensaje y puede responder con un susurro que solamente tú puedes oír. Puedes lanzar este conjuro a través de objetos físicos si conoces al objetivo. y sabes que está detrás de la barrera. El silencio mágico, 30 cm de piedra, metal o madera o una lámina fina de plomo bloquean el conjuro."
+  },
+  "Nube de oscurecimiento": {
+    "name": "Nube de oscurecimiento",
+    "typeLine": "Conjuración de nivel 1 (druida, explorador, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "36 m",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó óhóoóróaó",
+    "desc": "Creas una esfera de niebla de 6 m de radio centrada en un punto dentro del alcance. La esfera está muy oscura y dura hasta que el conjuro termine o hasta que la disperse un viento fuerte (por ejemplo, el que crea ráfaga de viento). Con un espacio de conjuro de nivel superior. El radio de la niebla aumenta en 6 m por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Orbe cromático": {
+    "name": "Orbe cromático",
+    "typeLine": "Evocación de nivel 1 (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "27 m",
+    "components": "V, S, M (un diamante que valga al menos",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Lanzas un orbe de energía a un objetivo dentro del alcance. Elige entre ácido, frío, fuego, relámpago, trueno o veneno para el tipo de orbe creado y después haz un ataque de conjuro a distancia contra el objetivo. Si acierta, el objetivo recibe 3d8 de daño del tipo elegido. Si sacas el mismo número en dos o más de los d8, el orbe salta a otro objetivo distinto de tu elección que esté a 9 m o menos del objetivo. Haz una tirada de ataque contra el nuevo objetivo y otra tirada de daño. El orbe no puede volver a saltar, a menos que lances el conjuro con un espacio de nivel 2 o superior. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d8 por cada nivel por encima de 1 que tenga el espacio. El orbe puede saltar un máximo de veces igual al nivel del espacio gastado. Una criatura solo puede ser el objetivo una vez por cada lanzamiento del conjuro."
+  },
+  "Orden imperiosa": {
+    "name": "Orden imperiosa",
+    "typeLine": "Encantamiento de nivel 1 (bardo, clérigo, paladín)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Das una orden de una sola palabra a una criatura que puedas ver dentro del alcance. El objetivo debe superar una tirada de salvación de Sabiduría o verse obligado a obedecer la orden en su próximo turno. Elige una de las siguientes órdenes: Acércate. El objetivo se acerca a ti por la ruta más corta y directa posible, y su turno acaba si se sitúa a 1,5 m o menos de ti. Detente. En su turno, el objetivo no se mueve y no usa acciones ni acciones adicionales. Huye. El objetivo emplea su turno en alejarse de ti de la manera más rápida posible. Póstrate. El objetivo adopta el estado de derribado y termina su turno. Suelta. El objetivo suelta lo que sea que esté sujetando y acaba su turno. Con un espacio de conjuro de nivel superior. Puedes afectar a una criatura adicional por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Palabra de curación": {
+    "name": "Palabra de curación",
+    "typeLine": "Abjuración de nivel 1 (bardo, clérigo, druida)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "18 m",
+    "components": "V",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una criatura de tu elección que puedas ver dentro del alcance recupera una cantidad de puntos de golpe igual a 2d4 más tu modificador por aptitud mágica. Con un espacio de conjuro de nivel superior. La curación aumenta en 2d4 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Piedad con los moribundos": {
+    "name": "Piedad con los moribundos",
+    "typeLine": "Truco de nigromancia (clérigo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "4,5 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Elige a una criatura dentro del alcance que tenga O puntos de golpe y no esté muerta. La criatura pasa a estar estable. Mejora de truco. El alcance se duplica cuando alcanzas los niveles 5 (9 m), 11 (18 m) y 17 (36 m)."
+  },
+  "Prestidigitación": {
+    "name": "Prestidigitación",
+    "typeLine": "Truco de transmutación (bardo, brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "3 m",
+    "components": "V, S",
+    "duration": "óHóaósótóaó ó1ó óhóoóróaó",
+    "desc": "Creas un efecto mágico dentro del alcance, elegido de entre las opciones a continuación. Si lanzas este conjuro varias veces, puedes mantener activos a la vez hasta tres de sus efectos no instantáneos. Efecto sensorial. Creas un efecto sensorial instantáneo e inofensivo, como una lluvia de chispas, una ligera ráfaga de viento, tenues notas musicales o un olor extraño. Jugar con fuego. Enciendes o apagas al instante una vela, una antorcha o una hoguera pequeña. Limpiar o ensuciar. Limpias o ensucias al instante un objeto de hasta 0,03 m'. Sensación menor. Enfrías, calientas o das sabor a un material inerte de hasta 0,03 mi durante 1 hora. Marca mágica. Haces que aparezca una mancha de color, una pequeña marca o un símbolo en un objeto o superficie durante 1 hora. Creación menor. Creas un abalorio no mágico o una imagen ilusoria que te cabe en la mano y dura hasta el final de tu siguiente turno. El abalorio no inflige daño y no tiene valor monetario."
+  },
+  "Protección contra el bien y el mal": {
+    "name": "Protección contra el bien y el mal",
+    "typeLine": "Abjuración de nivel 1 (brujo, clérigo, druida, mago, paladín)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S, M (un frasco de agua bendita que valga",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó0ó ómóiónóuótóoósó",
+    "desc": "Hasta que el conjuro termine, una criatura voluntaria a la que toques estará protegida contra aberraciones, celestiales, elementales, feéricos, infernales o muertos vivientes. La protección concede varios beneficios. Las criaturas de esos tipos tendrán desventaja en las tiradas de ataque contra el objetivo. El objetivo tampoco puede ser poseído por las criaturas ni obtener los estados de asustado o hechizado a causa de ellas. Si el objetivo ya está asustado, hechizado o poseído por una criatura de estos tipos, dicho objetivo tendrá ventaja en cualquier nueva tirada de salvación contra el efecto correspondiente."
+  },
+  "Purificar comida y bebida": {
+    "name": "Purificar comida y bebida",
+    "typeLine": "Transmutación de nivel 1 (clérigo, druida, paladín)",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "3 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Eliminas el veneno y la podredumbre de la comida y bebida no mágicas en una esfera de 1,5 m de radio centrada en un punto dentro del alcance."
+  },
+  "Rayo de escarcha": {
+    "name": "Rayo de escarcha",
+    "typeLine": "Truco de evocación (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Lanzas un rayo helado de luz blanquiazul hacia una criatura dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si acierta, el objetivo recibe 1d8 de daño de frío y su velocidad se reduce en 3 m hasta el principio de tu siguiente turno. Mejora de truco. El daño aumenta en 1d8 cuando alcanzas los niveles 5 (2d8), 11 (3d8) y 17 (4d8)."
+  },
+  "Reparar": {
+    "name": "Reparar",
+    "typeLine": "Truco de transmutación (bardo, clérigo, druida, hechicero,",
+    "castingTime": "ó1ó ómóiónóuótóoó",
+    "range": "Toque",
+    "components": "V, S, M (dos imanes naturales)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Este conjuro repara una sola grieta o desgarrón en un objeto que toques, como un eslabón roto en una cadena, las dos mitades de una llave partida, una capa rasgada o una fuga en una bota de vino. Mientras la grieta o el desgarrón no tenga más de 30 cm de tamaño en ninguna de sus dimensiones, lo arreglarás sin dejar rastro del daño. Este conjuro puede reparar el componente físico de un objeto mágico, pero no puede restaurar su magia."
+  },
+  "Reprensión infernal": {
+    "name": "Reprensión infernal",
+    "typeLine": "Evocación de nivel 1 (brujo)",
+    "castingTime": "óRóeóaócócóióóónó,ó óqóuóeó ólólóeóvóaósó óaó ócóaóbóoó óeónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "La criatura que te ha dañado se ve rodeada momentáneamente por unas llamas verdes y hará una tirada de salvación de Destreza; sufrirá 2d10 de daño de fuego si la falla o la mitad del daño si la supera. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d10 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Resistencia": {
+    "name": "Resistencia",
+    "typeLine": "Truco de abjuración (clérigo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Tocas a una criatura voluntaria y eliges un tipo de daño: ácido, contundente, cortante, frío, fuego, necrótico, perforante, radiante, relámpago, trueno o veneno. Cuando la criatura sufra daño del tipo elegido antes de que termine el conjuro, reduce el daño total recibido en 144. Una criatura solo puede beneficiarse de este conjuro una vez por turno."
+  },
+  "Risa horrible de Tasha": {
+    "name": "Risa horrible de Tasha",
+    "typeLine": "Encantamiento de nivel 1 (bardo, brujo, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V, S, M (una tarta y una pluma)",
+    "duration": "óCóoónócóeónótóróaócóióóónó,ó óhóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Una criatura de tu elección que puedas ver dentro del alcance realiza una tirada de salvación de Sabiduría. Si la falla, tendrá los estados de derribada e incapacitada hasta que el conjuro termine. Durante ese tiempo, se reirá de forma incontrolable si tiene la capacidad de reírse y no podrá poner fin a su estado de derribada. Al final de cada uno de sus turnos y cada vez que reciba daño, realizará otra tirada de salvación de Sabiduría. Tendrá ventaja en ella si la realiza por sufrir daño. Si la supera, el conjuro terminará. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio. ] | 330 |"
+  },
+  "Rociada de color": {
+    "name": "Rociada de color",
+    "typeLine": "Hlusionismo de nivel 1 (bardo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Lanzador",
+    "components": "V, S, M (una pizca de arena de colores)",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Emites una ráfaga de luces brillantes y parpadeantes de múltiples colores. Todas las criaturas situadas en un cono de 4,5 m que se origina en ti deberán superar una tirada de salvación de Constitución o tendrán el estado de cegadas hasta el final de tu siguiente turno."
+  },
+  "Salpicadura ácida": {
+    "name": "Salpicadura ácida",
+    "typeLine": "Truco de evocación (hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Creas una burbuja ácida en un punto dentro del alcance, donde explotará en una esfera de 1,5 m de radio. Todas las criaturas situadas en la esfera deberán superar una tirada de salvación de Destreza o sufrirán 1d6 de daño de ácido. Mejora de truco. El daño aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6)."
+  },
+  "Salto": {
+    "name": "Salto",
+    "typeLine": "Transmutación de nivel 1 (druida, explorador, hechicero, mago)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "Toque",
+    "components": "V, S, M (la pata trasera de un saltamontes)",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Tocas a una criatura voluntaria. Una vez en cada uno de sus turnos hasta que el conjuro termine, la criatura puede saltar hasta 9 m usando 3 m de movimiento. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio. SANCTASANCTÓRUM PRIVADO"
+  },
+  "Santuario": {
+    "name": "Santuario",
+    "typeLine": "Abjuración de nivel 1 (clérigo)",
+    "castingTime": "óAócócóióóónó óaódóiócóióoónóaóló",
+    "range": "9 m",
+    "components": "V, S, M (un trozo de vidrio de un espejo)",
+    "duration": "ó1ó ómóiónóuótóoó",
+    "desc": "Proteges a una criatura que esté dentro del alcance. Hasta que el conjuro termine, cualquier criatura que haga objetivo a la criatura protegida con un ataque o un conjuro que inflija daño deberá superar primero una tirada de salvación de Sabiduría; de lo contrario, elegirá un nuevo objetivo o perderá el ataque o conjuro. Este conjuro no protege a la criatura contra los efectos de área. El conjuro termina si la criatura protegida hace una tirada de ataque, lanza un conjuro o inflige daño."
+  },
+  "Sirviente invisible": {
+    "name": "Sirviente invisible",
+    "typeLine": "Conjuración de nivel 1 (bardo, brujo, mago)",
+    "castingTime": "óAócócóióóónó óoó óróiótóuóaóló",
+    "range": "18 m",
+    "components": "V, S, M (un trozo de cuerda y uno de madera)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Este conjuro crea una fuerza invisible de tamaño Mediano, sin mente y sin forma, que realiza las tareas sencillas que le ordenes hasta que el conjuro termine. El sirviente surge en un espacio sin ocupar en el suelo dentro del alcance. Tiene una CA de 10, 1 punto de golpe, una Fuerza de 2 y no puede atacar. Si sus puntos de golpe se reducen a O, el conjuro termina. Una vez en cada uno de tus turnos como acción adicional, puedes ordenar mentalmente al sirviente que se mueva hasta 4,5 m y que interactúe con un objeto. El sirviente puede realizar tareas sencillas que también podría llevar a cabo un humano, como traer y llevar cosas, limpiar, remendar, plegar ropa, encender un fuego y servir comida o bebida. En cuanto das la orden, el sirviente realiza la tarea lo mejor que puede hasta que la completa y luego espera tu siguiente orden. Si ordenas al sirviente que lleve a cabo una tarea que lo alejaría más de 18 m de ti, el conjuro termina."
+  },
+  "Susurros discordantes": {
+    "name": "Susurros discordantes",
+    "typeLine": "Encantamiento de nivel 1 (bardo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Una criatura de tu elección que puedas ver dentro del alcance oye una melodía discordante en su mente. El objetivo hace una tirada de salvación de Sabiduría. Si la falla, recibirá 3d6 de daño psíquico y deberá utilizar su reacción inmediatamente, si es posible, para alejarse de ti tanto como pueda por la ruta más segura. Si supera la tirada, solo sufrirá la mitad de ese daño. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio."
+  },
+  "Tañido por los muertos": {
+    "name": "Tañido por los muertos",
+    "typeLine": "Truco de nigromancia (brujo, clérigo, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Señalas a una criatura que puedas ver dentro del alcance y el sonido de una campana funesta suena a 3 m o menos del objetivo. El objetivo deberá superar una tirada de salvación de Sabiduría o sufrirá 1d8 de daño necrótico. Si el objetivo no tiene todos sus puntos de golpe, el daño necrótico aumenta a 1d12. Mejora de truco. El daño aumenta en un dado cuando alcanzas los niveles 5 (2d8 o 2d12), 11 (3d8 o 3d12) y 17 (4d8 o 4d12)."
+  },
+  "Taumaturgia": {
+    "name": "Taumaturgia",
+    "typeLine": "Truco de transmutación (clérigo)",
+    "castingTime": "óAócócóióóónó",
+    "range": "9 m",
+    "components": "V",
+    "duration": "óHóaósótóaó ó1ó ómóiónóuótóoó",
+    "desc": "Manifiestas un pequeño milagro dentro del alcance y produces uno de los siguientes efectos mágicos. Si lanzas este conjuro varias veces, puedes mantener activos a la vez hasta tres de sus efectos de 1 minuto. Jugar con fuego. Haces que las llamas parpadeen, brillen más, se atenúen o cambien de color durante 1 minuto. Mano invisible. Abres o cierras de golpe una puerta o ventana que no esté cerrada con llave. Ojos alterados. Cambias el aspecto de tus ojos durante 1 minuto. Sonido fantasmal. Creas un sonido instantáneo que procede de un punto de tu elección dentro del alcance. Por ejemplo, el retumbar de un trueno, el graznido de un cuervo o unos susurros de mal agúero. Temblores. Provocas que la tierra tiemble sin causar daños durante 1 minuto. Voz atronadora. Tu voz resuena hasta tres veces más alto de lo normal durante 1 minuto. Hasta que termine el conjuro, tienes ventaja en las pruebas de Carisma (Intimidación)."
+  },
+  "Texto ilusorio": {
+    "name": "Texto ilusorio",
+    "typeLine": "Ilusionismo de nivel 1 (bardo, brujo, mago)",
+    "castingTime": "ó1ó ómóiónóuótóoó óoó óuónó óróiótóuóaóló",
+    "range": "Toque",
+    "components": "S, M (tinta que valga al menos 10 po,",
+    "duration": "ó1ó0ó ódóíóaósó",
+    "desc": "Escribes en pergamino, papel u otro material adecuado y lo impregnas con una ilusión hasta que termine el conjuro. Para ti y las demás criaturas que designes cuando lanzas el conjuro, el texto parece normal, escrito con tu letra, y transmite el significado que pretendieras al escribirlo. Para los demás, el texto parece escrito en letra mágica o desconocida y es ininteligible. Como alternativa, la ilusión puede modificar el significado, la caligrafía y el idioma de un texto, aunque el idioma debe ser uno que conozcas. Si el conjuro se disipa, desaparecerán tanto el escrito original como la ilusión. Una criatura con visión verdadera puede leer el mensaje oculto."
+  },
+  "Toque helado": {
+    "name": "Toque helado",
+    "typeLine": "Truco de nigromancia (brujo, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Canalizas un frío sepulcral y haces un ataque de conjuro cuerpo a cuerpo contra un objetivo dentro del alcance. Si acierta, el objetivo recibirá 1d10 de daño necrótico y no podrá recuperar puntos de golpe hasta el final de tu siguiente turno. Mejora de truco. El daño aumenta en 1d10 cuando alcanzas los niveles 5 (2d10), 11 (3d10) y 17 (4d10)."
+  },
+  "Tronar": {
+    "name": "Tronar",
+    "typeLine": "Truco de evocación (bardo, brujo, druida, hechicero, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S, M (un trozo de cuerda)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Todas las criaturas situadas en una emanación de 1,5 m que se origina en ti deberán superar una tirada de salvación de Constitución o sufrirán 1d6 de daño de trueno. El sonido atronador del conjuro se puede oír a una distancia de hasta 30 m. Mejora de truco. El daño aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6). “TRUCO DE LA CUERDA Transmutación de nivel 2 (mago) Tocas una cuerda, lo que hace que uno de sus extremos flote hacia arriba hasta que la cuerda se ponga perpendicular al suelo o toque un techo. En el extremo superior de la cuerda se abre un portal invisible de 0,9 m por 1,5 m, el cual conduce a un espacio extradimensional que dura hasta que el conjuro termine. Este espacio puede alcanzarse trepando por la cuerda, que puede recogerse o soltarse desde el interior. En el espacio caben hasta ocho criaturas Medianas o más pequeñas. Los ataques, conjuros y otros efectos no pueden cruzar el espacio en ningún sentido, pero las criaturas que están dentro pueden ver a través del portal. Todo lo que esté dentro del espacio caerá fuera cuando el conjuro termine."
+  },
+  "Voluta estelar": {
+    "name": "Voluta estelar",
+    "typeLine": "Truco de evocación (bardo, druida)",
+    "castingTime": "óAócócóióóónó",
+    "range": "18 m",
+    "components": "V, S",
+    "duration": "óIónósótóaónótóáónóeóoó",
+    "desc": "Lanzas una mota de luz contra una criatura u objeto dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si acierta, el objetivo recibirá 1d8 de daño radiante y, hasta el final de tu siguiente turno, emitirá luz tenue en un radio de 3 m y no podrá beneficiarse del estado de invisible. Mejora de truco. El daño aumenta en 1d8 cuando alcanzas los niveles 5 (2d8), 11 (3d8) y 17 (4d8)."
+  },
+  "Zancada prodigiosa": {
+    "name": "Zancada prodigiosa",
+    "typeLine": "Transmutación de nivel 1 (bardo, druida, explorador, mago)",
+    "castingTime": "óAócócóióóónó",
+    "range": "Toque",
+    "components": "V, S, M (una pizca de tierra)",
+    "duration": "ó1ó óhóoóróaó",
+    "desc": "Tocas a una criatura y su velocidad aumenta en 3 m hasta que el conjuro termine. Con un espacio de conjuro de nivel superior. Puedes hacer objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio."
+  }
+}

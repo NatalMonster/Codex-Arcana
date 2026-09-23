@@ -1,0 +1,868 @@
+[
+  {
+    "name": "billi",
+    "level": 3,
+    "xp": 450,
+    "alignment": "NB",
+    "gender": "Masculino",
+    "appearance": "Comun",
+    "personalityNotes": "",
+    "classId": "barbaro",
+    "subclassId": "senda_berserker",
+    "speciesId": "aasimar",
+    "speciesLineageId": null,
+    "size": "Mediano",
+    "backgroundId": "acolito",
+    "languages": [
+      "comun",
+      "draconico",
+      "elfo"
+    ],
+    "abilityGenerationMethod": "standard_array",
+    "baseAbilityScores": {
+      "fuerza": 13,
+      "destreza": 13,
+      "constitucion": 13,
+      "inteligencia": 15,
+      "sabiduria": 10,
+      "carisma": 14
+    },
+    "backgroundAbilityBonus": {
+      "inteligencia": 2,
+      "sabiduria": 1
+    },
+    "classSkills": [
+      "intimidacion",
+      "naturaleza"
+    ],
+    "humanBonusSkill": null,
+    "humanBonusOriginFeat": null,
+    "weaponMasteries": [
+      "baston",
+      "estoque"
+    ],
+    "fightingStyle": null,
+    "holyOrder": null,
+    "primalOrder": null,
+    "eldritchInvocation": null,
+    "expertise": [],
+    "monkTool": null,
+    "bardoInstruments": [],
+    "cantrips": [],
+    "preparedSpells": [],
+    "spellbook": [],
+    "classEquipmentChoice": "B",
+    "backgroundEquipmentChoice": "B",
+    "trinket": "",
+    "speciesName": "Aasimar",
+    "className": "Bárbaro",
+    "backgroundName": "Acólito",
+    "calculatedStats": {
+      "ac": 12,
+      "maxHp": 13,
+      "currentHp": 13,
+      "initiative": 1,
+      "passivePerception": 10,
+      "proficiencyBonus": 2,
+      "abilities": {
+        "fuerza": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1
+        },
+        "destreza": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1
+        },
+        "constitucion": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1
+        },
+        "inteligencia": {
+          "base": 15,
+          "bonus": 2,
+          "score": 17,
+          "mod": 3
+        },
+        "sabiduria": {
+          "base": 10,
+          "bonus": 1,
+          "score": 11,
+          "mod": 0
+        },
+        "carisma": {
+          "base": 14,
+          "bonus": 0,
+          "score": 14,
+          "mod": 2
+        }
+      },
+      "spellcasting": null
+    },
+    "id": "char_1789432388064_xcedv",
+    "createdAt": "2026-09-15T00:33:08.064Z",
+    "currentHp": 13,
+    "tempHp": 0,
+    "updatedAt": "2026-09-16T02:49:10.392Z",
+    "inventory": [
+      {
+        "id": "item_1",
+        "name": "Bastón",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 2,
+        "equipped": true,
+        "properties": "versatil (1d8)"
+      },
+      {
+        "id": "item_2",
+        "name": "Estoque",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 1,
+        "equipped": false,
+        "properties": "sutil"
+      },
+      {
+        "id": "item_3",
+        "name": "Mochila de aventurero",
+        "type": "equipo",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Capacidad para guardar objetos"
+      },
+      {
+        "id": "item_4",
+        "name": "Raciones de viaje (días)",
+        "type": "suministro",
+        "quantity": 10,
+        "weight": 2,
+        "equipped": false,
+        "properties": "Alimento diario"
+      },
+      {
+        "id": "item_5",
+        "name": "Odre de agua",
+        "type": "suministro",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Lleno de agua potable"
+      }
+    ]
+  },
+  {
+    "name": "billi",
+    "level": 5,
+    "xp": 0,
+    "alignment": "LB",
+    "gender": "el",
+    "appearance": "comun",
+    "personalityNotes": "",
+    "classId": "bardo",
+    "subclassId": "colegio_danza",
+    "speciesId": "aasimar",
+    "speciesLineageId": null,
+    "size": "Mediano",
+    "backgroundId": "acolito",
+    "languages": [
+      "comun",
+      "draconico",
+      "lenguaje_signos_comun"
+    ],
+    "abilityGenerationMethod": "standard_array",
+    "baseAbilityScores": {
+      "fuerza": 15,
+      "destreza": 14,
+      "constitucion": 13,
+      "inteligencia": 12,
+      "sabiduria": 10,
+      "carisma": 8
+    },
+    "backgroundAbilityBonus": {
+      "inteligencia": 1,
+      "sabiduria": 2
+    },
+    "classSkills": [
+      "acrobacias",
+      "historia",
+      "investigacion"
+    ],
+    "humanBonusSkill": null,
+    "humanBonusOriginFeat": null,
+    "weaponMasteries": [],
+    "fightingStyle": null,
+    "holyOrder": null,
+    "primalOrder": null,
+    "eldritchInvocation": null,
+    "expertise": [],
+    "monkTool": null,
+    "bardoInstruments": [],
+    "cantrips": [
+      "Amistad",
+      "Burla dañina"
+    ],
+    "preparedSpells": [
+      "Curar heridas",
+      "Caída de pluma",
+      "Encantar animal",
+      "Fuego feérico"
+    ],
+    "spellbook": [],
+    "classEquipmentChoice": "A",
+    "backgroundEquipmentChoice": "A",
+    "trinket": "",
+    "speciesName": "Aasimar",
+    "className": "Bardo",
+    "backgroundName": "Acólito",
+    "calculatedStats": {
+      "ac": 12,
+      "maxHp": 33,
+      "currentHp": 9,
+      "initiative": 2,
+      "passivePerception": 11,
+      "proficiencyBonus": 3,
+      "abilities": {
+        "fuerza": {
+          "base": 15,
+          "bonus": 0,
+          "score": 15,
+          "mod": 2
+        },
+        "destreza": {
+          "base": 14,
+          "bonus": 0,
+          "score": 14,
+          "mod": 2
+        },
+        "constitucion": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1
+        },
+        "inteligencia": {
+          "base": 12,
+          "bonus": 1,
+          "score": 13,
+          "mod": 1
+        },
+        "sabiduria": {
+          "base": 10,
+          "bonus": 2,
+          "score": 12,
+          "mod": 1
+        },
+        "carisma": {
+          "base": 8,
+          "bonus": 0,
+          "score": 8,
+          "mod": -1
+        }
+      },
+      "spellcasting": {
+        "ability": "carisma",
+        "mod": -1,
+        "saveDc": 9,
+        "attackBonus": 1
+      }
+    },
+    "id": "char_1789435635300_1lyc6",
+    "createdAt": "2026-09-15T01:27:15.300Z",
+    "usedSpellSlots": {},
+    "updatedAt": "2026-09-16T19:14:11.634Z",
+    "tempHp": 0,
+    "currentHp": 33
+  },
+  {
+    "name": "fdasdas",
+    "level": 3,
+    "xp": 1000,
+    "alignment": "N",
+    "gender": "masculino",
+    "appearance": "COMUN",
+    "personalityNotes": "",
+    "classId": "brujo",
+    "subclassId": "patron_feerico",
+    "speciesId": "draconido",
+    "speciesLineageId": "azul",
+    "size": "Mediano",
+    "backgroundId": "charlatan",
+    "languages": [
+      "comun",
+      "draconico",
+      "elfo"
+    ],
+    "abilityGenerationMethod": "standard_array",
+    "baseAbilityScores": {
+      "fuerza": 15,
+      "destreza": 14,
+      "constitucion": 13,
+      "inteligencia": 12,
+      "sabiduria": 10,
+      "carisma": 8
+    },
+    "backgroundAbilityBonus": {
+      "destreza": 1,
+      "constitucion": 1,
+      "carisma": 1
+    },
+    "classSkills": [
+      "conocimiento_arcano",
+      "investigacion"
+    ],
+    "humanBonusSkill": null,
+    "humanBonusOriginFeat": null,
+    "weaponMasteries": [],
+    "fightingStyle": null,
+    "holyOrder": null,
+    "primalOrder": null,
+    "eldritchInvocation": "pacto_grimorio",
+    "expertise": [],
+    "monkTool": null,
+    "bardoInstruments": [],
+    "cantrips": [
+      "Descarga sobrenatural",
+      "Impacto certero",
+      "Toque Helado"
+    ],
+    "preparedSpells": [
+      "Brazos de Hadar"
+    ],
+    "spellbook": [],
+    "classEquipmentChoice": "A",
+    "backgroundEquipmentChoice": "A",
+    "trinket": "",
+    "speciesName": "Dracónido",
+    "className": "Brujo",
+    "backgroundName": "Charlatán",
+    "calculatedStats": {
+      "ac": 13,
+      "maxHp": 24,
+      "currentHp": 10,
+      "initiative": 2,
+      "passivePerception": 10,
+      "proficiencyBonus": 2,
+      "abilities": {
+        "fuerza": {
+          "base": 15,
+          "bonus": 0,
+          "score": 15,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "destreza": {
+          "base": 14,
+          "bonus": 1,
+          "score": 15,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "constitucion": {
+          "base": 13,
+          "bonus": 1,
+          "score": 14,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "inteligencia": {
+          "base": 12,
+          "bonus": 0,
+          "score": 12,
+          "mod": 1,
+          "isAssigned": true
+        },
+        "sabiduria": {
+          "base": 10,
+          "bonus": 0,
+          "score": 10,
+          "mod": 0,
+          "isAssigned": true
+        },
+        "carisma": {
+          "base": 8,
+          "bonus": 1,
+          "score": 9,
+          "mod": -1,
+          "isAssigned": true
+        }
+      },
+      "spellcasting": {
+        "ability": "carisma",
+        "mod": -1,
+        "saveDc": 9,
+        "attackBonus": 1
+      }
+    },
+    "id": "char_1789600380287_3mge6",
+    "createdAt": "2026-09-16T23:13:00.287Z",
+    "updatedAt": "2026-09-18T04:42:46.047Z",
+    "inventory": [
+      {
+        "id": "item_1",
+        "name": "Armadura de cuero",
+        "type": "armadura",
+        "quantity": 1,
+        "weight": 10,
+        "equipped": true,
+        "properties": "Protección base"
+      },
+      {
+        "id": "item_2",
+        "name": "Mochila de aventurero",
+        "type": "equipo",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Capacidad para guardar objetos"
+      },
+      {
+        "id": "item_3",
+        "name": "Raciones de viaje (días)",
+        "type": "suministro",
+        "quantity": 10,
+        "weight": 2,
+        "equipped": false,
+        "properties": "Alimento diario"
+      },
+      {
+        "id": "item_4",
+        "name": "Odre de agua",
+        "type": "suministro",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Lleno de agua potable"
+      },
+      {
+        "id": "item_1789600502250_fzup",
+        "name": "Agua bendita (frasco)",
+        "quantity": 1,
+        "weight": 1,
+        "type": "suministro",
+        "equipped": false,
+        "cost": "25 po",
+        "properties": "Frasco arrojadizo a 6 m. Inflige 2d8 de daño radiante a muer..."
+      },
+      {
+        "id": "item_1789604080700_wlz5",
+        "name": "Daga",
+        "quantity": 1,
+        "weight": 1,
+        "type": "arma",
+        "equipped": false,
+        "cost": "2 po",
+        "properties": "arrojadiza (6/18), ligera, sutil"
+      }
+    ],
+    "currentHp": 26,
+    "usedSpellSlots": {
+      "1": 1
+    },
+    "usedHitDice": 0,
+    "tempHp": 0,
+    "heroicInspiration": false,
+    "silver": 150
+  },
+  {
+    "name": "jjdjd",
+    "level": 3,
+    "xp": 2500,
+    "alignment": "CN",
+    "gender": "masculino",
+    "appearance": "Comun",
+    "personalityNotes": "",
+    "classId": "bardo",
+    "subclassId": "colegio_glamour",
+    "speciesId": "draconido",
+    "speciesLineageId": "bronce",
+    "size": "Mediano",
+    "backgroundId": "charlatan",
+    "languages": [
+      "comun",
+      "draconico",
+      "elfo"
+    ],
+    "abilityGenerationMethod": "roll",
+    "baseAbilityScores": {
+      "fuerza": 12,
+      "destreza": 17,
+      "constitucion": 15,
+      "inteligencia": 14,
+      "sabiduria": 13,
+      "carisma": 10
+    },
+    "backgroundAbilityBonus": {
+      "destreza": 1,
+      "constitucion": 1,
+      "carisma": 1
+    },
+    "classSkills": [
+      "investigacion",
+      "atletismo",
+      "acrobacias"
+    ],
+    "humanBonusSkill": null,
+    "humanBonusOriginFeat": null,
+    "weaponMasteries": [],
+    "fightingStyle": null,
+    "holyOrder": null,
+    "primalOrder": null,
+    "eldritchInvocation": null,
+    "expertise": [],
+    "monkTool": null,
+    "bardoInstruments": [],
+    "cantrips": [
+      "Amistad",
+      "Ilusión menor"
+    ],
+    "preparedSpells": [
+      "Caída de pluma",
+      "Disfrazarse",
+      "Curar heridas",
+      "Dormir",
+      "Nube de Dagas",
+      "Calentar Metal"
+    ],
+    "spellbook": [],
+    "classEquipmentChoice": "B",
+    "backgroundEquipmentChoice": "B",
+    "trinket": "",
+    "speciesName": "Dracónido",
+    "className": "Bardo",
+    "backgroundName": "Charlatán",
+    "gold": 150,
+    "silver": 10,
+    "copper": 10,
+    "calculatedStats": {
+      "ac": 15,
+      "maxHp": 27,
+      "currentHp": 11,
+      "initiative": 4,
+      "passivePerception": 11,
+      "proficiencyBonus": 2,
+      "abilities": {
+        "fuerza": {
+          "base": 12,
+          "bonus": 0,
+          "score": 12,
+          "mod": 1,
+          "isAssigned": true
+        },
+        "destreza": {
+          "base": 17,
+          "bonus": 1,
+          "score": 18,
+          "mod": 4,
+          "isAssigned": true
+        },
+        "constitucion": {
+          "base": 15,
+          "bonus": 1,
+          "score": 16,
+          "mod": 3,
+          "isAssigned": true
+        },
+        "inteligencia": {
+          "base": 14,
+          "bonus": 0,
+          "score": 14,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "sabiduria": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1,
+          "isAssigned": true
+        },
+        "carisma": {
+          "base": 10,
+          "bonus": 1,
+          "score": 11,
+          "mod": 0,
+          "isAssigned": true
+        }
+      },
+      "spellcasting": {
+        "ability": "carisma",
+        "mod": 0,
+        "saveDc": 10,
+        "attackBonus": 2
+      }
+    },
+    "id": "char_1789687352828_x74m7",
+    "createdAt": "2026-09-17T23:22:32.828Z",
+    "updatedAt": "2026-09-18T00:37:38.001Z",
+    "currentHp": 27,
+    "usedSpellSlots": {},
+    "inventory": [
+      {
+        "id": "item_1",
+        "name": "Estoque",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 1,
+        "equipped": true,
+        "properties": "sutil"
+      },
+      {
+        "id": "item_2",
+        "name": "Daga",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 2,
+        "equipped": false,
+        "properties": "arrojadiza (6/18), ligera, sutil"
+      },
+      {
+        "id": "item_3",
+        "name": "Armadura de cuero",
+        "type": "armadura",
+        "quantity": 1,
+        "weight": 10,
+        "equipped": true,
+        "properties": "Protección base"
+      },
+      {
+        "id": "item_4",
+        "name": "Mochila de aventurero",
+        "type": "equipo",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Capacidad para guardar objetos"
+      },
+      {
+        "id": "item_5",
+        "name": "Raciones de viaje (días)",
+        "type": "suministro",
+        "quantity": 10,
+        "weight": 2,
+        "equipped": false,
+        "properties": "Alimento diario"
+      },
+      {
+        "id": "item_6",
+        "name": "Odre de agua",
+        "type": "suministro",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Lleno de agua potable"
+      },
+      {
+        "id": "item_1789688725771_uc5c",
+        "name": "Lanza",
+        "quantity": 1,
+        "weight": 3,
+        "type": "arma",
+        "equipped": true,
+        "cost": "1 po",
+        "properties": "arrojadiza (6/18), versatil (1d8)"
+      },
+      {
+        "id": "item_1789691857904_rosd",
+        "name": "Munición: Flechas (20)",
+        "quantity": 1,
+        "weight": 1,
+        "type": "equipo",
+        "equipped": false,
+        "cost": "1 po",
+        "properties": "Haz de 20 flechas para arcos cortos o arcos largos."
+      }
+    ]
+  },
+  {
+    "name": "dfh",
+    "level": 1,
+    "xp": 0,
+    "alignment": "N",
+    "gender": "jhm",
+    "appearance": "jkb",
+    "personalityNotes": "",
+    "classId": "guerrero",
+    "subclassId": null,
+    "speciesId": "goliat",
+    "speciesLineageId": "fuego",
+    "size": "Mediano",
+    "backgroundId": "charlatan",
+    "languages": [
+      "comun",
+      "draconico",
+      "elfo"
+    ],
+    "abilityGenerationMethod": "roll",
+    "baseAbilityScores": {
+      "fuerza": 13,
+      "destreza": 16,
+      "constitucion": 14,
+      "inteligencia": 11,
+      "sabiduria": 14,
+      "carisma": 7
+    },
+    "backgroundAbilityBonus": {
+      "destreza": 1,
+      "constitucion": 1,
+      "carisma": 1
+    },
+    "classSkills": [
+      "acrobacias",
+      "percepcion"
+    ],
+    "humanBonusSkill": null,
+    "humanBonusOriginFeat": null,
+    "weaponMasteries": [
+      "baston",
+      "daga",
+      "garrote"
+    ],
+    "fightingStyle": "estilo_defensa",
+    "holyOrder": null,
+    "primalOrder": null,
+    "eldritchInvocation": null,
+    "expertise": [],
+    "monkTool": null,
+    "bardoInstruments": [],
+    "cantrips": [],
+    "preparedSpells": [],
+    "spellbook": [],
+    "classEquipmentChoice": "C",
+    "backgroundEquipmentChoice": "B",
+    "trinket": "",
+    "speciesName": "Goliat",
+    "className": "Guerrero",
+    "backgroundName": "Charlatán",
+    "gold": 205,
+    "silver": 0,
+    "copper": 0,
+    "calculatedStats": {
+      "ac": 17,
+      "maxHp": 12,
+      "currentHp": 12,
+      "initiative": 3,
+      "passivePerception": 14,
+      "proficiencyBonus": 2,
+      "abilities": {
+        "fuerza": {
+          "base": 13,
+          "bonus": 0,
+          "score": 13,
+          "mod": 1,
+          "isAssigned": true
+        },
+        "destreza": {
+          "base": 16,
+          "bonus": 1,
+          "score": 17,
+          "mod": 3,
+          "isAssigned": true
+        },
+        "constitucion": {
+          "base": 14,
+          "bonus": 1,
+          "score": 15,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "inteligencia": {
+          "base": 11,
+          "bonus": 0,
+          "score": 11,
+          "mod": 0,
+          "isAssigned": true
+        },
+        "sabiduria": {
+          "base": 14,
+          "bonus": 0,
+          "score": 14,
+          "mod": 2,
+          "isAssigned": true
+        },
+        "carisma": {
+          "base": 7,
+          "bonus": 1,
+          "score": 8,
+          "mod": -1,
+          "isAssigned": true
+        }
+      },
+      "spellcasting": null
+    },
+    "id": "char_1789706481415_4x26q",
+    "createdAt": "2026-09-18T04:41:21.415Z",
+    "inventory": [
+      {
+        "id": "item_1",
+        "name": "Bastón",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 2,
+        "equipped": false,
+        "properties": "versatil (1d8)"
+      },
+      {
+        "id": "item_2",
+        "name": "Daga",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 2,
+        "equipped": true,
+        "properties": "arrojadiza (6/18), ligera, sutil"
+      },
+      {
+        "id": "item_3",
+        "name": "Garrote",
+        "type": "arma",
+        "quantity": 1,
+        "weight": 1,
+        "equipped": true,
+        "properties": "ligero"
+      },
+      {
+        "id": "item_4",
+        "name": "Cota de malla",
+        "type": "armadura",
+        "quantity": 1,
+        "weight": 55,
+        "equipped": true,
+        "properties": "Protección base"
+      },
+      {
+        "id": "item_5",
+        "name": "Mochila de aventurero",
+        "type": "equipo",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Capacidad para guardar objetos"
+      },
+      {
+        "id": "item_6",
+        "name": "Raciones de viaje (días)",
+        "type": "suministro",
+        "quantity": 10,
+        "weight": 2,
+        "equipped": false,
+        "properties": "Alimento diario"
+      },
+      {
+        "id": "item_7",
+        "name": "Odre de agua",
+        "type": "suministro",
+        "quantity": 1,
+        "weight": 5,
+        "equipped": false,
+        "properties": "Lleno de agua potable"
+      }
+    ],
+    "updatedAt": "2026-09-18T04:41:42.549Z"
+  }
+]

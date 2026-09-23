@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "barbaro",
+    "name": "Bárbaro",
+    "hitDie": 12,
+    "primaryAbilities": [
+      "fuerza"
+    ],
+    "savingThrows": [
+      "fuerza",
+      "constitucion"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "atletismo",
+      "intimidacion",
+      "naturaleza",
+      "percepcion",
+      "supervivencia",
+      "trato_con_animales"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "medias",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 2,
+    "spellcasting": null,
+    "level1Features": [
+      {
+        "name": "Defensa sin armadura",
+        "desc": "Mientras no lleves puesta armadura, tu Clase de Armadura base es igual a 10 + tu modificador por Destreza + tu modificador por Constitución. Puedes usar un escudo y seguir beneficiándote de este rasgo."
+      },
+      {
+        "name": "Furia",
+        "desc": "Como acción adicional, entras en furia (2 usos por descanso largo). Obtienes ventaja en pruebas de Fuerza y tiradas de salvación de Fuerza, bonificador de +2 al daño con ataques de Fuerza, y resistencia al daño contundente, cortante y perforante."
+      },
+      {
+        "name": "Maestría con armas",
+        "desc": "Puedes utilizar las propiedades de maestría de dos tipos de armas con las que tengas competencia."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "weaponMasteries",
+        "type": "weaponMastery",
+        "count": 2,
+        "label": "Armas para Maestría"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Hacha a dos manos, 4 hachas de mano, paquete de explorador y 15 po",
+        "gold": 15,
+        "items": [
+          "Hacha a dos manos",
+          "Hacha de mano (x4)",
+          "Paquete de explorador"
+        ]
+      },
+      "B": {
+        "desc": "75 po para comprar equipo",
+        "gold": 75,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "bardo",
+    "name": "Bardo",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "carisma"
+    ],
+    "savingThrows": [
+      "destreza",
+      "carisma"
+    ],
+    "skillCount": 3,
+    "skillPool": "all",
+    "armorProficiencies": [
+      "ligeras"
+    ],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [
+      "3 instrumentos musicales a tu elección"
+    ],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "carisma",
+      "cantripsKnown": 2,
+      "preparedSpellsCount": 4,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Instrumento musical"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Lanzas conjuros mediante la música y la poesía. Preparas 4 conjuros de nivel 1 y conoces 2 trucos. Tu aptitud mágica es Carisma."
+      },
+      {
+        "name": "Inspiración bárdica",
+        "desc": "Como acción adicional, otorgas a una criatura a 18 m un dado de Inspiración bárdica (1d6). Usos = modificador por Carisma (mínimo 1) por descanso largo."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "musicalInstruments",
+        "type": "tool",
+        "category": "instrumento",
+        "count": 3,
+        "label": "Tres instrumentos musicales"
+      },
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 2,
+        "label": "Dos trucos de bardo"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 4,
+        "label": "Cuatro conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Armadura de cuero, 2 dagas, instrumento musical de tu elección, paquete de artista y 19 po",
+        "gold": 19,
+        "items": [
+          "Armadura de cuero",
+          "Daga (x2)",
+          "Instrumento musical a elegir",
+          "Paquete de artista"
+        ]
+      },
+      "B": {
+        "desc": "90 po para comprar equipo",
+        "gold": 90,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "brujo",
+    "name": "Brujo",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "carisma"
+    ],
+    "savingThrows": [
+      "sabiduria",
+      "carisma"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "conocimiento_arcano",
+      "engano",
+      "historia",
+      "intimidacion",
+      "investigacion",
+      "naturaleza",
+      "religion"
+    ],
+    "armorProficiencies": [
+      "ligeras"
+    ],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "carisma",
+      "cantripsKnown": 2,
+      "preparedSpellsCount": 2,
+      "spellSlots": {
+        "1": 1
+      },
+      "isPactMagic": true,
+      "focus": "Canalizador arcano"
+    },
+    "level1Features": [
+      {
+        "name": "Magia del pacto",
+        "desc": "Dispones de 1 espacio de conjuro de nivel 1 que se recupera tras un descanso corto o largo. Preparas 2 conjuros y conoces 2 trucos. Aptitud mágica: Carisma."
+      },
+      {
+        "name": "Invocaciones sobrenaturales",
+        "desc": "Obtienes 1 invocación sobrenatural a tu elección (como Pacto del grimorio, Pacto de la espada, etc.)."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "eldritchInvocation",
+        "type": "invocation",
+        "count": 1,
+        "label": "Una Invocación Sobrenatural"
+      },
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 2,
+        "label": "Dos trucos de brujo"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 2,
+        "label": "Dos conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Armadura de cuero, hoz, 2 dagas, canalizador arcano (orbe), libro de conocimiento oculto, paquete de erudito y 15 po",
+        "gold": 15,
+        "items": [
+          "Armadura de cuero",
+          "Hoz",
+          "Daga (x2)",
+          "Canalizador arcano (orbe)",
+          "Paquete de erudito"
+        ]
+      },
+      "B": {
+        "desc": "100 po para comprar equipo",
+        "gold": 100,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "clerigo",
+    "name": "Clérigo",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "sabiduria"
+    ],
+    "savingThrows": [
+      "sabiduria",
+      "carisma"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "historia",
+      "medicina",
+      "perspicacia",
+      "persuasion",
+      "religion"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "medias",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "sabiduria",
+      "cantripsKnown": 3,
+      "preparedSpellsCount": 4,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Símbolo sagrado"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Preparas 4 conjuros de nivel 1 y conoces 3 trucos de clérigo. Tu aptitud mágica es Sabiduría."
+      },
+      {
+        "name": "Orden sagrada",
+        "desc": "Eliges un orden sagrado que define tu servicio: Protector (competencia con armas marciales y armaduras pesadas) o Taumaturgo (aprendes un truco extra de clérigo y sumas tu modificador de Sabiduría a pruebas de Conocimiento arcano o Religión)."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "holyOrder",
+        "type": "select",
+        "label": "Orden sagrada",
+        "options": [
+          {
+            "id": "protector",
+            "name": "Protector",
+            "desc": "Obtienes entrenamiento con armaduras pesadas y competencia con armas marciales."
+          },
+          {
+            "id": "taumaturgo",
+            "name": "Taumaturgo",
+            "desc": "Aprendes 1 truco adicional de clérigo y sumas tu mod. de Sabiduría a tus pruebas de Conocimiento arcano y Religión."
+          }
+        ]
+      },
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 3,
+        "label": "Tres trucos de clérigo"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 4,
+        "label": "Cuatro conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Camisa de malla, escudo, maza, paquete de sacerdote, símbolo sagrado y 7 po",
+        "gold": 7,
+        "items": [
+          "Camisa de malla",
+          "Escudo",
+          "Maza",
+          "Paquete de sacerdote",
+          "Símbolo sagrado"
+        ]
+      },
+      "B": {
+        "desc": "110 po para comprar equipo",
+        "gold": 110,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "druida",
+    "name": "Druida",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "sabiduria"
+    ],
+    "savingThrows": [
+      "inteligencia",
+      "sabiduria"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "conocimiento_arcano",
+      "medicina",
+      "naturaleza",
+      "percepcion",
+      "perspicacia",
+      "religion",
+      "supervivencia",
+      "trato_con_animales"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [
+      "Útiles de herborista"
+    ],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "sabiduria",
+      "cantripsKnown": 2,
+      "preparedSpellsCount": 4,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Canalizador druídico"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Preparas 4 conjuros de nivel 1 y conoces 2 trucos de druida. Tu aptitud mágica es Sabiduría."
+      },
+      {
+        "name": "Orden primigenia",
+        "desc": "Eliges un camino: Magisterio (aprendes un truco extra de druida y sumas tu modificador de Sabiduría a Naturaleza o Trato con animales) o Guardián (entrenamiento con armaduras medias y armas marciales)."
+      },
+      {
+        "name": "Druídico",
+        "desc": "Conoces el idioma secreto druídico de forma automática."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "primalOrder",
+        "type": "select",
+        "label": "Orden primigenia",
+        "options": [
+          {
+            "id": "magisterio",
+            "name": "Magisterio",
+            "desc": "Aprendes 1 truco extra de druida y sumas tu mod. de Sabiduría a Naturaleza y Trato con animales."
+          },
+          {
+            "id": "guardian",
+            "name": "Guardián",
+            "desc": "Obtienes entrenamiento con armaduras medias y competencia con armas marciales."
+          }
+        ]
+      },
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 2,
+        "label": "Dos trucos de druida"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 4,
+        "label": "Cuatro conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Armadura de cuero, escudo, hoz, canalizador druídico (bastón), paquete de explorador, útiles de herborista y 9 po",
+        "gold": 9,
+        "items": [
+          "Armadura de cuero",
+          "Escudo",
+          "Hoz",
+          "Canalizador druídico (bastón)",
+          "Paquete de explorador",
+          "Útiles de herborista"
+        ]
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "explorador",
+    "name": "Explorador",
+    "hitDie": 10,
+    "primaryAbilities": [
+      "destreza",
+      "sabiduria"
+    ],
+    "savingThrows": [
+      "fuerza",
+      "destreza"
+    ],
+    "skillCount": 3,
+    "skillPool": [
+      "atletismo",
+      "investigacion",
+      "naturaleza",
+      "percepcion",
+      "perspicacia",
+      "sigilo",
+      "supervivencia",
+      "trato_con_animales"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "medias",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 2,
+    "spellcasting": {
+      "ability": "sabiduria",
+      "cantripsKnown": 0,
+      "preparedSpellsCount": 2,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Canalizador druídico"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Preparas 2 conjuros de explorador de nivel 1 y tienes 2 espacios de nivel 1. Aptitud mágica: Sabiduría."
+      },
+      {
+        "name": "Enemigo predilecto",
+        "desc": "Siempre tienes preparado el conjuro Marca del cazador y puedes lanzarlo 2 veces por descanso largo sin gastar espacios de conjuro."
+      },
+      {
+        "name": "Maestría con armas",
+        "desc": "Puedes utilizar las propiedades de maestría de dos tipos de armas competentes."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "weaponMasteries",
+        "type": "weaponMastery",
+        "count": 2,
+        "label": "Dos armas para Maestría"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 2,
+        "label": "Dos conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Armadura de cuero tachonado, 2 cimitarras, arco corto, 20 flechas, aljaba, canalizador druídico, paquete de explorador y 7 po",
+        "gold": 7,
+        "items": [
+          "Armadura de cuero tachonado",
+          "Cimitarra (x2)",
+          "Arco corto",
+          "20 flechas y aljaba",
+          "Canalizador druídico",
+          "Paquete de explorador"
+        ]
+      },
+      "B": {
+        "desc": "150 po para comprar equipo",
+        "gold": 150,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "guerrero",
+    "name": "Guerrero",
+    "hitDie": 10,
+    "primaryAbilities": [
+      "fuerza",
+      "destreza"
+    ],
+    "savingThrows": [
+      "fuerza",
+      "constitucion"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "acrobacias",
+      "atletismo",
+      "historia",
+      "intimidacion",
+      "percepcion",
+      "perspicacia",
+      "persuasion",
+      "supervivencia",
+      "trato_con_animales"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "medias",
+      "pesadas",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 3,
+    "spellcasting": null,
+    "level1Features": [
+      {
+        "name": "Estilo de combate",
+        "desc": "Obtienes una dote de la categoría Estilo de combate a tu elección (como Defensa, Duelo, Tiro con arco, etc.)."
+      },
+      {
+        "name": "Segundo aliento",
+        "desc": "Como acción adicional, recuperas 1d10 + tu nivel de guerrero puntos de golpe. Tienes 2 usos por descanso corto o largo."
+      },
+      {
+        "name": "Maestría con armas",
+        "desc": "Puedes utilizar las propiedades de maestría de tres tipos de armas con las que tengas competencia."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "fightingStyle",
+        "type": "fightingStyle",
+        "label": "Estilo de combate"
+      },
+      {
+        "id": "weaponMasteries",
+        "type": "weaponMastery",
+        "count": 3,
+        "label": "Tres armas para Maestría"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Cota de malla, espadón, mangual, 3 jabalinas, paquete de explorador de mazmorras y 4 po",
+        "gold": 4,
+        "items": [
+          "Cota de malla",
+          "Espadón",
+          "Mangual",
+          "Jabalina (x3)",
+          "Paquete de explorador de mazmorras"
+        ]
+      },
+      "B": {
+        "desc": "Armadura de cuero tachonado, cimitarra, espada corta, arco largo, 20 flechas, aljaba, paquete de explorador de mazmorras y 11 po",
+        "gold": 11,
+        "items": [
+          "Armadura de cuero tachonado",
+          "Cimitarra",
+          "Espada corta",
+          "Arco largo",
+          "20 flechas y aljaba",
+          "Paquete de explorador de mazmorras"
+        ]
+      },
+      "C": {
+        "desc": "155 po para comprar equipo",
+        "gold": 155,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "hechicero",
+    "name": "Hechicero",
+    "hitDie": 6,
+    "primaryAbilities": [
+      "carisma"
+    ],
+    "savingThrows": [
+      "constitucion",
+      "carisma"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "conocimiento_arcano",
+      "engano",
+      "intimidacion",
+      "perspicacia",
+      "persuasion",
+      "religion"
+    ],
+    "armorProficiencies": [],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "carisma",
+      "cantripsKnown": 4,
+      "preparedSpellsCount": 2,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Canalizador arcano"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Conoces 4 trucos y preparas 2 conjuros de nivel 1. Aptitud mágica: Carisma."
+      },
+      {
+        "name": "Magia innata",
+        "desc": "Como acción adicional, desatas tu magia interior durante 1 minuto (2 veces por descanso largo). Tienes ventaja en tiradas de ataque de conjuro y la CD de salvación de tus conjuros de hechicero aumenta en 1."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 4,
+        "label": "Cuatro trucos de hechicero"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 2,
+        "label": "Dos conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Lanza, 2 dagas, canalizador arcano (cristal), paquete de explorador de mazmorras y 28 po",
+        "gold": 28,
+        "items": [
+          "Lanza",
+          "Daga (x2)",
+          "Canalizador arcano (cristal)",
+          "Paquete de explorador de mazmorras"
+        ]
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "mago",
+    "name": "Mago",
+    "hitDie": 6,
+    "primaryAbilities": [
+      "inteligencia"
+    ],
+    "savingThrows": [
+      "inteligencia",
+      "sabiduria"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "conocimiento_arcano",
+      "historia",
+      "investigacion",
+      "medicina",
+      "naturaleza",
+      "perspicacia",
+      "religion"
+    ],
+    "armorProficiencies": [],
+    "weaponProficiencies": [
+      "sencillas"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 0,
+    "spellcasting": {
+      "ability": "inteligencia",
+      "cantripsKnown": 3,
+      "spellbookCount": 6,
+      "preparedSpellsCount": 4,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Canalizador arcano"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Posees un libro de conjuros con 6 conjuros de nivel 1. Preparas 4 conjuros y conoces 3 trucos. Aptitud mágica: Inteligencia."
+      },
+      {
+        "name": "Recuperación arcana",
+        "desc": "Una vez al día durante un descanso corto, puedes recuperar espacios de conjuro gastados con un nivel combinado de hasta la mitad de tu nivel de mago (mínimo 1 espacio de nv 1 a nivel 1)."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "cantrips",
+        "type": "spells",
+        "level": 0,
+        "count": 3,
+        "label": "Tres trucos de mago"
+      },
+      {
+        "id": "spellbook",
+        "type": "spells",
+        "level": 1,
+        "count": 6,
+        "label": "Seis conjuros para tu Libro de Conjuros"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spellsFromSpellbook",
+        "level": 1,
+        "count": 4,
+        "label": "Cuatro conjuros preparados de tu Libro"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "2 dagas, canalizador arcano (bastón), libro de conjuros, paquete de erudito, túnica y 5 po",
+        "gold": 5,
+        "items": [
+          "Daga (x2)",
+          "Canalizador arcano (bastón)",
+          "Libro de conjuros",
+          "Paquete de erudito",
+          "Túnica"
+        ]
+      },
+      "B": {
+        "desc": "55 po para comprar equipo",
+        "gold": 55,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "monje",
+    "name": "Monje",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "destreza",
+      "sabiduria"
+    ],
+    "savingThrows": [
+      "fuerza",
+      "destreza"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "acrobacias",
+      "atletismo",
+      "historia",
+      "perspicacia",
+      "religion",
+      "sigilo"
+    ],
+    "armorProficiencies": [],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales_ligeras"
+    ],
+    "toolProficiencies": [
+      "1 tipo de herramientas de artesano o instrumento musical a tu elección"
+    ],
+    "weaponMasteryCount": 0,
+    "spellcasting": null,
+    "level1Features": [
+      {
+        "name": "Defensa sin armadura",
+        "desc": "Mientras no lleves armadura ni escudo, tu Clase de Armadura base es 10 + tu modificador por Destreza + tu modificador por Sabiduría."
+      },
+      {
+        "name": "Artes marciales",
+        "desc": "Puedes usar Destreza en vez de Fuerza para ataques sin armas o con armas de monje. Tu dado de artes marciales es 1d6. Puedes hacer un ataque sin armas como acción adicional tras atacar."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "monkTool",
+        "type": "tool",
+        "category": "artesano_o_instrumento",
+        "count": 1,
+        "label": "Herramienta de artesano o instrumento musical"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Lanza, 5 dagas, herramientas de artesano o instrumento musical elegido, paquete de explorador y 11 po",
+        "gold": 11,
+        "items": [
+          "Lanza",
+          "Daga (x5)",
+          "Herramienta/Instrumento elegido",
+          "Paquete de explorador"
+        ]
+      },
+      "B": {
+        "desc": "50 po para comprar equipo",
+        "gold": 50,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "paladin",
+    "name": "Paladín",
+    "hitDie": 10,
+    "primaryAbilities": [
+      "fuerza",
+      "carisma"
+    ],
+    "savingThrows": [
+      "sabiduria",
+      "carisma"
+    ],
+    "skillCount": 2,
+    "skillPool": [
+      "atletismo",
+      "intimidacion",
+      "medicina",
+      "perspicacia",
+      "persuasion",
+      "religion"
+    ],
+    "armorProficiencies": [
+      "ligeras",
+      "medias",
+      "pesadas",
+      "escudos"
+    ],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales"
+    ],
+    "toolProficiencies": [],
+    "weaponMasteryCount": 2,
+    "spellcasting": {
+      "ability": "carisma",
+      "cantripsKnown": 0,
+      "preparedSpellsCount": 2,
+      "spellSlots": {
+        "1": 2
+      },
+      "focus": "Símbolo sagrado"
+    },
+    "level1Features": [
+      {
+        "name": "Lanzamiento de conjuros",
+        "desc": "Preparas 2 conjuros de paladín de nivel 1 y tienes 2 espacios de nivel 1. Tu aptitud mágica es Carisma."
+      },
+      {
+        "name": "Imposición de manos",
+        "desc": "Tienes una reserva curativa igual a 5 x tu nivel de paladín (5 PG a nivel 1). Como acción adicional puedes tocar a una criatura y restaurarle puntos de golpe de esa reserva."
+      },
+      {
+        "name": "Maestría con armas",
+        "desc": "Puedes utilizar las propiedades de maestría de dos tipos de armas competentes."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "weaponMasteries",
+        "type": "weaponMastery",
+        "count": 2,
+        "label": "Dos armas para Maestría"
+      },
+      {
+        "id": "preparedSpells",
+        "type": "spells",
+        "level": 1,
+        "count": 2,
+        "label": "Dos conjuros preparados de nivel 1"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Cota de malla, escudo, espada larga, 6 jabalinas, símbolo sagrado, paquete de sacerdote y 9 po",
+        "gold": 9,
+        "items": [
+          "Cota de malla",
+          "Escudo",
+          "Espada larga",
+          "Jabalina (x6)",
+          "Símbolo sagrado",
+          "Paquete de sacerdote"
+        ]
+      },
+      "B": {
+        "desc": "150 po para comprar equipo",
+        "gold": 150,
+        "items": []
+      }
+    }
+  },
+  {
+    "id": "picaro",
+    "name": "Pícaro",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "destreza"
+    ],
+    "savingThrows": [
+      "destreza",
+      "inteligencia"
+    ],
+    "skillCount": 4,
+    "skillPool": [
+      "acrobacias",
+      "atletismo",
+      "engano",
+      "intimidacion",
+      "investigacion",
+      "juego_de_manos",
+      "percepcion",
+      "perspicacia",
+      "persuasion",
+      "sigilo"
+    ],
+    "armorProficiencies": [
+      "ligeras"
+    ],
+    "weaponProficiencies": [
+      "sencillas",
+      "marciales_ligeras_sutiles"
+    ],
+    "toolProficiencies": [
+      "Herramientas de ladrón"
+    ],
+    "weaponMasteryCount": 2,
+    "spellcasting": null,
+    "level1Features": [
+      {
+        "name": "Experiencia",
+        "desc": "Elige dos de tus competencias en habilidades o una habilidad y herramientas de ladrón: tu bonificador por competencia se duplica para cualquier prueba de característica que las utilice."
+      },
+      {
+        "name": "Ataque furtivo",
+        "desc": "Una vez por turno, puedes infligir 1d6 de daño adicional a una criatura que impactes si tienes ventaja o si otro enemigo de la criatura está a 1,5 m de ella."
+      },
+      {
+        "name": "Jerga de ladrones",
+        "desc": "Conoces la jerga secreta de ladrones y además aprendes otro idioma a tu elección de la tabla de Idiomas estándar."
+      },
+      {
+        "name": "Maestría con armas",
+        "desc": "Puedes utilizar las propiedades de maestría de dos tipos de armas competentes."
+      }
+    ],
+    "choicesRequired": [
+      {
+        "id": "expertise",
+        "type": "expertise",
+        "count": 2,
+        "label": "Dos habilidades o herramientas para Experiencia"
+      },
+      {
+        "id": "thievesCantBonusLanguage",
+        "type": "language",
+        "count": 1,
+        "label": "Idioma adicional por Jerga de ladrones"
+      },
+      {
+        "id": "weaponMasteries",
+        "type": "weaponMastery",
+        "count": 2,
+        "label": "Dos armas para Maestría"
+      }
+    ],
+    "equipmentOptions": {
+      "A": {
+        "desc": "Armadura de cuero, 2 dagas, espada corta, arco corto, 20 flechas, aljaba, herramientas de ladrón, paquete de ladrón y 3 po",
+        "gold": 3,
+        "items": [
+          "Armadura de cuero",
+          "Daga (x2)",
+          "Espada corta",
+          "Arco corto",
+          "20 flechas y aljaba",
+          "Herramientas de ladrón",
+          "Paquete de ladrón"
+        ]
+      },
+      "B": {
+        "desc": "100 po para comprar equipo",
+        "gold": 100,
+        "items": []
+      }
+    }
+  }
+]
