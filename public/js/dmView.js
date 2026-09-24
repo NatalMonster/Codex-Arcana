@@ -118,7 +118,7 @@ export function renderPreparationView(container, activeTab = 'partida') {
             
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
             
-            ${getMonsterStatBlockHtml(m)}
+            ${getMiniMonsterStatBlockHtml(m)}
           </div>
         </div>
       `).join('');
@@ -234,6 +234,99 @@ function renderSenses(senses) {
   if (senses.truesight) parts.push(`Visión verdadera ${senses.truesight} pies`);
   parts.push(`Percepción Pasiva ${senses.passivePerception}`);
   return parts.join(', ');
+}
+export function showMonsterAbility(name, descHtml) {
+  window.app.showAlert({
+    title: name,
+    messageHtml: `<div style="font-size: 1rem; line-height: 1.5; color: var(--text-color);">${descHtml}</div>`,
+    icon: '✨'
+  });
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+export function getMiniMonsterStatBlockHtml(m) {
+  const speeds = renderSpeeds(m.movement);
+  
+  let html = `
+    <div class="monster-stat-block-mini" style="text-align: left; color: var(--text-color); font-size: 0.9rem;">
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+        <p style="margin: 0;"><strong>CA:</strong> ${m.defenses.ac.value} ${m.defenses.ac.desc ? `(${m.defenses.ac.desc})` : ''}</p>
+        <p style="margin: 0;"><strong>PG:</strong> ${m.defenses.hp.average} (${m.defenses.hp.formula})</p>
+        <p style="margin: 0;"><strong>Velocidad:</strong> ${speeds}</p>
+      </div>
+      
+      <table style="width: 100%; text-align: center; margin: 0.5rem 0; border-collapse: collapse; font-size: 0.85rem; background: rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
+        <tr style="color: var(--text-muted); border-bottom: 1px solid var(--border-color);">
+          <th style="padding: 0.3rem;">FUE</th>
+          <th style="padding: 0.3rem;">DES</th>
+          <th style="padding: 0.3rem;">CON</th>
+          <th style="padding: 0.3rem;">INT</th>
+          <th style="padding: 0.3rem;">SAB</th>
+          <th style="padding: 0.3rem;">CAR</th>
+        </tr>
+        <tr>
+          <td style="padding: 0.3rem;">${m.stats.str} (${formatMod(m.stats.str)})</td>
+          <td style="padding: 0.3rem;">${m.stats.dex} (${formatMod(m.stats.dex)})</td>
+          <td style="padding: 0.3rem;">${m.stats.con} (${formatMod(m.stats.con)})</td>
+          <td style="padding: 0.3rem;">${m.stats.int} (${formatMod(m.stats.int)})</td>
+          <td style="padding: 0.3rem;">${m.stats.wis} (${formatMod(m.stats.wis)})</td>
+          <td style="padding: 0.3rem;">${m.stats.cha} (${formatMod(m.stats.cha)})</td>
+        </tr>
+      </table>
+  `;
+
+  // Helper para crear botones de habilidades
+  const makePill = (name, desc, typeColor) => {
+    const escapedDesc = escapeHtml(desc);
+    const escapedName = escapeHtml(name);
+    return `<button class="btn btn-sm" style="background: transparent; border: 1px solid ${typeColor}; color: ${typeColor}; padding: 0.1rem 0.5rem; margin: 0.2rem; font-size: 0.8rem; border-radius: 12px;" onclick="window.app.showMonsterAbility('${escapedName}', '${escapedDesc}')">${escapedName}</button>`;
+  };
+
+  html += `<div style="margin-top: 1rem;">`;
+
+  if (m.traits && m.traits.length > 0) {
+    html += `<div style="margin-bottom: 0.5rem;"><strong>Rasgos:</strong> `;
+    html += m.traits.map(t => makePill(t.name, t.desc, 'var(--text-main)')).join('');
+    html += `</div>`;
+  }
+
+  if (m.actions && m.actions.length > 0) {
+    html += `<div style="margin-bottom: 0.5rem;"><strong>Acciones:</strong> `;
+    html += m.actions.map(a => {
+      let desc = a.desc || '';
+      if (!desc && a.hit !== undefined) {
+        let dmgString = a.damage && a.damage.length > 0 ? a.damage.map(d => `${d.average} (${d.formula}) de daño ${d.type.toLowerCase()}`).join(' más ') : '';
+        desc = `<em>${a.type}</em>: ${a.hit >= 0 ? '+'+a.hit : a.hit} para impactar, alcance ${a.reach}. <em>Impacto:</em> ${dmgString}.`;
+      }
+      return makePill(a.name, desc, 'var(--gold)');
+    }).join('');
+    html += `</div>`;
+  }
+
+  if (m.bonusActions && m.bonusActions.length > 0) {
+    html += `<div style="margin-bottom: 0.5rem;"><strong>Bonus:</strong> `;
+    html += m.bonusActions.map(a => makePill(a.name, a.desc, '#60a5fa')).join('');
+    html += `</div>`;
+  }
+
+  if (m.reactions && m.reactions.length > 0) {
+    html += `<div style="margin-bottom: 0.5rem;"><strong>Reacciones:</strong> `;
+    html += m.reactions.map(a => makePill(a.name, a.desc, 'var(--green)')).join('');
+    html += `</div>`;
+  }
+
+  if (m.legendaryActions && m.legendaryActions.length > 0) {
+    html += `<div style="margin-bottom: 0.5rem;"><strong>Legendarias:</strong> `;
+    html += m.legendaryActions.map(a => makePill(a.name, a.desc, 'var(--danger-color)')).join('');
+    html += `</div>`;
+  }
+
+  html += `</div></div>`;
+  return html;
 }
 
 export function getMonsterStatBlockHtml(m) {
