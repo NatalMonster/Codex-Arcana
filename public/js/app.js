@@ -545,10 +545,6 @@ const app = {
   },
 
   openDMModule() {
-    if (!state.currentUser || state.currentUser.role !== 'admin') {
-      showAlert({ title: 'Acceso Denegado', message: 'Solo el Dungeon Master puede ver detrás de la pantalla.', type: 'danger' });
-      return;
-    }
     state.setView('dm_module');
     this.closeModal();
     window.scrollTo({ top: 0, behavior: 'smooth' });

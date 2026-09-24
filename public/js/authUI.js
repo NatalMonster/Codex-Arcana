@@ -112,8 +112,6 @@ export const authUI = {
     const container = document.getElementById('auth-container');
     if (!container) return;
     
-    const roleClass = user.role === 'admin' ? 'role-admin' : 'role-player';
-    const roleName = user.role === 'admin' ? 'Dungeon Master' : 'Jugador';
 
     container.innerHTML = `
       <div class="user-profile-widget" style="display: flex; align-items: center; gap: 1rem;">

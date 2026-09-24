@@ -29,19 +29,19 @@ export const campaignUI = {
     document.getElementById('creator-stepper-container').style.display = 'none';
     document.getElementById('main-layout').classList.add('full-width-view');
     
-    const isAdmin = state.currentUser.role === 'admin';
-    
     let html = `
       <div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px;">
         <h2 style="color: var(--gold); border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">⛺ Mis Campañas</h2>
         
         <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-          ${isAdmin 
-            ? `<input type="text" id="new-campaign-name" class="input-text" placeholder="Nombre de la nueva campaña..." style="flex:1;">
-               <button class="btn btn-primary" onclick="window.campaignUI.createCampaign()">+ Crear Mesa</button>`
-            : `<input type="text" id="join-campaign-code" class="input-text" placeholder="Código de 6 letras..." style="flex:1; text-transform: uppercase;">
-               <button class="btn btn-primary" onclick="window.campaignUI.joinCampaign()">Unirse a Mesa</button>`
-          }
+          <div style="flex: 1; display: flex; gap: 0.5rem;">
+            <input type="text" id="new-campaign-name" class="input-text" placeholder="Nueva campaña..." style="flex:1;">
+            <button class="btn btn-primary" onclick="window.campaignUI.createCampaign()">+ Crear Mesa</button>
+          </div>
+          <div style="flex: 1; display: flex; gap: 0.5rem;">
+            <input type="text" id="join-campaign-code" class="input-text" placeholder="Código de 6 letras..." style="flex:1; text-transform: uppercase;">
+            <button class="btn btn-secondary" onclick="window.campaignUI.joinCampaign()">Unirse a Mesa</button>
+          </div>
         </div>
 
         <div>
@@ -98,8 +98,9 @@ export const campaignUI = {
     const res = await apiFetch(`/api/campaigns/${campaignId}/players`);
     const data = await res.json();
     
-    const isAdmin = state.currentUser.role === 'admin';
     const c = this.campaigns.find(x => x.id === campaignId);
+    if (!c) return;
+    const isAdmin = c.is_dm === 1;
     
     // Socket.io connection logic (we will assume window.socket exists or we create it)
     if (!window.socket) {
@@ -108,7 +109,7 @@ export const campaignUI = {
         console.log("HP updated via WS:", eventData);
         // Refresh view if active
         if (this.activeCampaign === eventData.campaignId) {
-           this.viewCampaign(eventData.campaignId);
+          this.viewCampaign(eventData.campaignId);
         }
       });
       window.socket.on('dice_rolled', (eventData) => {

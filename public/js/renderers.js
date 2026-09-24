@@ -71,7 +71,6 @@ export function renderApp(options = {}) {
         reactRoot = null;
       }
       const user = state.currentUser || {};
-      const isAdmin = user.role === 'admin';
       
       stepContent.innerHTML = `
         <div class="mode-selection-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; padding: 2rem;">

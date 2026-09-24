@@ -18,10 +18,6 @@ function generateInviteCode() {
 // 1. Crear Campaña (Solo DM)
 router.post('/', authenticateToken, async (req, res) => {
   try {
-    if (req.user.role !== 'admin') {
-      return res.status(403).json({ error: 'Solo el Dungeon Master puede crear campañas' });
-    }
-
     const { name } = req.body;
     if (!name) return res.status(400).json({ error: 'El nombre de la campaña es requerido' });
 
@@ -80,17 +76,13 @@ router.post('/join', authenticateToken, async (req, res) => {
 // 3. Obtener campañas del usuario actual (DM o Jugador)
 router.get('/', authenticateToken, async (req, res) => {
   try {
-    let campaigns = [];
-    if (req.user.role === 'admin') {
-      campaigns = await dbAsync.all('SELECT id, name, invite_code FROM campaigns WHERE dm_id = ?', [req.user.id]);
-    } else {
-      campaigns = await dbAsync.all(`
-        SELECT c.id, c.name, c.invite_code 
-        FROM campaigns c
-        JOIN campaign_players cp ON c.id = cp.campaign_id
-        WHERE cp.user_id = ?
-      `, [req.user.id]);
-    }
+    const campaigns = await dbAsync.all(`
+      SELECT DISTINCT c.id, c.name, c.invite_code, 
+             CASE WHEN c.dm_id = ? THEN 1 ELSE 0 END as is_dm
+      FROM campaigns c
+      LEFT JOIN campaign_players cp ON c.id = cp.campaign_id
+      WHERE c.dm_id = ? OR cp.user_id = ?
+    `, [req.user.id, req.user.id, req.user.id]);
     res.json({ success: true, campaigns });
   } catch (err) {
     res.status(500).json({ error: 'Error al obtener campañas' });
