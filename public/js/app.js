@@ -18,7 +18,7 @@ import * as Rules from '/src/engine/rulesEngine.js';
 import { validateCharacter } from '/src/engine/validator.js';
 import { diceEngine } from './diceEngine.js';
 import { exportCharacterToPDF } from './pdfExport.js';
-import { filterMonsters, filterMonstersCR, showMonsterSheet, addMonsterToSession, removeMonsterFromSession, renderPreparationView, showMonsterAbility } from './dmView.js';
+import { filterMonsters, filterMonstersCR, showMonsterSheet, addMonsterToSession, removeMonsterFromSession, renderPreparationView, showMonsterAbility, duplicateMonsterInSession, showMonsterLoot } from './dmView.js';
 import { setActiveTab, setSpellSubTab, setSpellLevelFilter, setSpellSearchFilter, renderCoinSvg } from './characterSheetView.js';
 import { getAllCatalogItems, getSpellDetail } from './infoHelper.js';
 import { showPrompt, showConfirm, showAlert } from './dialogModal.js';
@@ -561,6 +561,8 @@ const app = {
   showMonsterSheet(id) { showMonsterSheet(id); },
   showMonsterAbility(name, desc) { showMonsterAbility(name, desc); },
   addMonsterToSession(id) { addMonsterToSession(id); },
+  duplicateMonsterInSession(sessionId) { duplicateMonsterInSession(sessionId); },
+  showMonsterLoot(id) { showMonsterLoot(id); },
 
   editCharacterInCreator(charId) {
     const char = state.savedCharacters.find(c => c.id === charId);

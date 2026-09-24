@@ -100,10 +100,12 @@ export function renderPreparationView(container, activeTab = 'partida') {
       html += `<div class="empty-state-text">No hay monstruos en la partida actual.<br>Ve a la pestaña de "Catálogo de Monstruos" para añadirlos.</div>`;
     } else {
       html += `<div class="characters-grid">`;
-      html += activeMonsters.map(m => `
+      html += activeMonsters.map(m => {
+        const speeds = renderSpeeds(m.movement);
+        return `
         <div class="character-card" style="display: flex; flex-direction: column;">
           <div class="char-card-body" style="padding: 1.5rem; flex: 1;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
               <div>
                 <h3 class="char-card-name" style="margin-bottom: 0.2rem; font-size: 1.5rem; color: var(--gold);">${m.name}</h3>
                 <p style="font-style: italic; color: var(--text-muted); margin: 0; font-size: 0.9rem;">
@@ -112,16 +114,27 @@ export function renderPreparationView(container, activeTab = 'partida') {
               </div>
               <div style="text-align: right;">
                 <p class="char-card-info" style="margin-bottom: 0.2rem; font-size: 1.1rem;"><strong>Iniciativa:</strong> ${formatMod(m.stats.dex)}</p>
-                <button class="btn btn-secondary btn-sm" style="margin-top: 0.5rem; color: var(--crimson-dark); border-color: var(--crimson-dark);" onclick="window.app.removeMonsterFromSession('${m.sessionId}')">❌ Quitar del Encuentro</button>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.4;">
+                  <div><strong>CA:</strong> ${m.defenses.ac.value}</div>
+                  <div><strong>PG:</strong> ${m.defenses.hp.average}</div>
+                  <div><strong>Vel:</strong> ${speeds}</div>
+                </div>
               </div>
             </div>
             
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.5rem 0 1rem 0;" />
             
             ${getMiniMonsterStatBlockHtml(m)}
           </div>
+          
+          <div class="char-card-actions" style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-color); background: rgba(0,0,0,0.2); display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+            <button class="btn btn-secondary btn-sm" onclick="window.app.duplicateMonsterInSession('${m.sessionId}')">➕ Duplicar</button>
+            <button class="btn btn-secondary btn-sm" onclick="window.app.showMonsterLoot('${m.id}')">💰 Loot</button>
+            <button class="btn btn-danger btn-sm" style="background-color: var(--crimson-dark); color: white;" onclick="window.app.removeMonsterFromSession('${m.sessionId}')">❌ Quitar</button>
+          </div>
         </div>
-      `).join('');
+      `;
+      }).join('');
       html += `</div>`;
     }
   } else {
@@ -253,12 +266,6 @@ export function getMiniMonsterStatBlockHtml(m) {
   
   let html = `
     <div class="monster-stat-block-mini" style="text-align: left; color: var(--text-color); font-size: 0.9rem;">
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-        <p style="margin: 0;"><strong>CA:</strong> ${m.defenses.ac.value} ${m.defenses.ac.desc ? `(${m.defenses.ac.desc})` : ''}</p>
-        <p style="margin: 0;"><strong>PG:</strong> ${m.defenses.hp.average} (${m.defenses.hp.formula})</p>
-        <p style="margin: 0;"><strong>Velocidad:</strong> ${speeds}</p>
-      </div>
-      
       <table style="width: 100%; text-align: center; margin: 0.5rem 0; border-collapse: collapse; font-size: 0.85rem; background: rgba(0,0,0,0.2); border-radius: 6px; overflow: hidden;">
         <tr style="color: var(--text-muted); border-bottom: 1px solid var(--border-color);">
           <th style="padding: 0.3rem;">FUE</th>
@@ -462,6 +469,29 @@ export function addMonsterToSession(id) {
     message: `${m.name} fue añadido a tu sesión de combate exitosamente.`,
     icon: '✅',
     type: 'success'
+  });
+}
+
+export function duplicateMonsterInSession(sessionId) {
+  const existing = state.dmSession.activeMonsters.find(x => x.sessionId === sessionId);
+  if (existing) {
+    const duplicate = { ...existing, sessionId: Date.now().toString() };
+    state.dmSession.activeMonsters.push(duplicate);
+    if (state.activeView === 'dm_preparation') {
+      const stepContent = document.getElementById('step-content') || document.querySelector('.main-layout');
+      renderPreparationView(stepContent, 'partida');
+    }
+  }
+}
+
+export function showMonsterLoot(id) {
+  const m = state.dmCatalogs.monsters.find(x => x.id === id);
+  if (!m) return;
+  
+  window.app.showAlert({
+    title: `Loot de ${m.name}`,
+    messageHtml: `<div style="text-align: center; color: var(--text-muted);"><p>Calculadora de Loot en desarrollo...</p><p style="font-size: 2rem;">💰</p></div>`,
+    icon: '💎'
   });
 }
 
