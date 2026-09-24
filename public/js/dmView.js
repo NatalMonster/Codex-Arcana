@@ -101,15 +101,24 @@ export function renderPreparationView(container, activeTab = 'partida') {
     } else {
       html += `<div class="characters-grid">`;
       html += activeMonsters.map(m => `
-        <div class="character-card">
-          <div class="char-card-body">
-            <h3 class="char-card-name" style="margin-bottom: 0.5rem;">${m.name}</h3>
-            <p class="char-card-info"><strong>HP:</strong> ${m.defenses.hp.average} | <strong>CA:</strong> ${m.defenses.ac.value}</p>
-            <p class="char-card-info"><strong>Iniciativa:</strong> +${Math.floor((m.stats.dex - 10)/2)}</p>
-          </div>
-          <div class="char-card-actions" style="margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); display: flex; gap: 0.5rem;">
-            <button class="btn btn-secondary btn-sm" onclick="window.app.showMonsterSheet('${m.id}')">📖 Ver Ficha</button>
-            <button class="btn btn-danger btn-sm" style="background-color: var(--crimson-dark); color: white;" onclick="window.app.removeMonsterFromSession('${m.sessionId}')">❌ Quitar</button>
+        <div class="character-card" style="grid-column: 1 / -1; display: flex; flex-direction: column;">
+          <div class="char-card-body" style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <h3 class="char-card-name" style="margin-bottom: 0.2rem; font-size: 1.5rem; color: var(--gold);">${m.name}</h3>
+                <p style="font-style: italic; color: var(--text-muted); margin: 0; font-size: 0.9rem;">
+                  ${m.basicInfo.size} ${m.basicInfo.type}, ${m.basicInfo.alignment}
+                </p>
+              </div>
+              <div style="text-align: right;">
+                <p class="char-card-info" style="margin-bottom: 0.2rem; font-size: 1.1rem;"><strong>Iniciativa:</strong> ${formatMod(m.stats.dex)}</p>
+                <button class="btn btn-secondary btn-sm" style="margin-top: 0.5rem; color: var(--crimson-dark); border-color: var(--crimson-dark);" onclick="window.app.removeMonsterFromSession('${m.sessionId}')">❌ Quitar del Encuentro</button>
+              </div>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+            
+            ${getMonsterStatBlockHtml(m)}
           </div>
         </div>
       `).join('');
@@ -227,27 +236,15 @@ function renderSenses(senses) {
   return parts.join(', ');
 }
 
-export function showMonsterSheet(id) {
-  const m = state.dmCatalogs.monsters.find(x => x.id === id);
-  if (!m) return;
-  
+export function getMonsterStatBlockHtml(m) {
   const speeds = renderSpeeds(m.movement);
   const senses = renderSenses(m.senses);
   
   let html = `
-    <div style="padding: 1.5rem; background-color: var(--panel-bg); border-radius: 8px; text-align: left; max-height: 75vh; overflow-y: auto; color: var(--text-color);">
-      <h2 style="color: var(--danger-color); margin: 0 0 0.25rem 0; font-size: 1.8rem;">${m.name}</h2>
-      <p style="font-style: italic; color: var(--text-muted); margin-top: 0; font-size: 0.95rem;">
-        ${m.basicInfo.size} ${m.basicInfo.type}, ${m.basicInfo.alignment}
-      </p>
-      
-      <hr style="border: 0; border-top: 2px solid var(--danger-color); margin: 1rem 0;" />
-      
+    <div class="monster-stat-block" style="text-align: left; color: var(--text-color);">
       <p style="margin: 0.3rem 0;"><strong>Clase de Armadura:</strong> ${m.defenses.ac.value} ${m.defenses.ac.desc ? `(${m.defenses.ac.desc})` : ''}</p>
       <p style="margin: 0.3rem 0;"><strong>Puntos de Golpe:</strong> ${m.defenses.hp.average} (${m.defenses.hp.formula})</p>
       <p style="margin: 0.3rem 0;"><strong>Velocidad:</strong> ${speeds}</p>
-      
-      <hr style="border: 0; border-top: 2px solid var(--danger-color); margin: 1rem 0;" />
       
       <table style="width: 100%; text-align: center; margin: 1rem 0; border-collapse: collapse; font-size: 0.95rem;">
         <tr style="color: var(--danger-color);">
@@ -267,8 +264,6 @@ export function showMonsterSheet(id) {
           <td style="padding: 0.2rem;">${m.stats.cha} (${formatMod(m.stats.cha)})</td>
         </tr>
       </table>
-      
-      <hr style="border: 0; border-top: 2px solid var(--danger-color); margin: 1rem 0;" />
   `;
 
   if (m.proficiencies?.saves?.length > 0) {
@@ -294,51 +289,71 @@ export function showMonsterSheet(id) {
       <p style="margin: 0.3rem 0;"><strong>Sentidos:</strong> ${senses}</p>
       <p style="margin: 0.3rem 0;"><strong>Idiomas:</strong> ${m.languages && m.languages.length > 0 ? m.languages.join(', ') : '--'}</p>
       <p style="margin: 0.3rem 0;"><strong>Desafío:</strong> ${m.basicInfo.cr} (${m.basicInfo.xp} PE)</p>
-      
-      <hr style="border: 0; border-top: 2px solid var(--danger-color); margin: 1rem 0;" />
+      <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
   `;
       
   if (m.traits && m.traits.length > 0) {
     html += `<div style="margin-top: 1rem;">`;
-    html += m.traits.map(t => `<p style="margin: 0.5rem 0; line-height: 1.4;"><strong><em>${t.name}.</em></strong> ${t.desc}</p>`).join('');
+    html += m.traits.map(t => `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9rem;"><strong><em>${t.name}.</em></strong> ${t.desc}</p>`).join('');
     html += `</div>`;
   }
 
   if (m.actions && m.actions.length > 0) {
-    html += `<h3 style="border-bottom: 1px solid var(--border-color); color: var(--danger-color); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.2rem;">Acciones</h3>`;
+    html += `<h4 style="border-bottom: 1px solid var(--border-color); color: var(--gold); margin: 1rem 0 0.5rem 0; padding-bottom: 0.2rem; font-family: var(--font-serif);">Acciones</h4>`;
     html += m.actions.map(a => {
       let desc = a.desc || '';
       if (!desc && a.hit !== undefined) {
         let dmgString = a.damage && a.damage.length > 0 ? a.damage.map(d => `${d.average} (${d.formula}) de daño ${d.type.toLowerCase()}`).join(' más ') : '';
         desc = `<em>${a.type}</em>: ${a.hit >= 0 ? '+'+a.hit : a.hit} para impactar, alcance ${a.reach}. <em>Impacto:</em> ${dmgString}.`;
       }
-      return `<p style="margin: 0.5rem 0; line-height: 1.4;"><strong><em>${a.name}.</em></strong> ${desc}</p>`;
+      return `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9rem;"><strong><em>${a.name}.</em></strong> ${desc}</p>`;
     }).join('');
   }
 
   if (m.bonusActions && m.bonusActions.length > 0) {
-    html += `<h3 style="border-bottom: 1px solid var(--border-color); color: var(--danger-color); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.2rem;">Acciones Adicionales</h3>`;
-    html += m.bonusActions.map(a => `<p style="margin: 0.5rem 0; line-height: 1.4;"><strong><em>${a.name}.</em></strong> ${a.desc}</p>`).join('');
+    html += `<h4 style="border-bottom: 1px solid var(--border-color); color: var(--gold); margin: 1rem 0 0.5rem 0; padding-bottom: 0.2rem; font-family: var(--font-serif);">Acciones Adicionales</h4>`;
+    html += m.bonusActions.map(a => `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9rem;"><strong><em>${a.name}.</em></strong> ${a.desc}</p>`).join('');
   }
 
   if (m.reactions && m.reactions.length > 0) {
-    html += `<h3 style="border-bottom: 1px solid var(--border-color); color: var(--danger-color); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.2rem;">Reacciones</h3>`;
-    html += m.reactions.map(a => `<p style="margin: 0.5rem 0; line-height: 1.4;"><strong><em>${a.name}.</em></strong> ${a.desc}</p>`).join('');
+    html += `<h4 style="border-bottom: 1px solid var(--border-color); color: var(--gold); margin: 1rem 0 0.5rem 0; padding-bottom: 0.2rem; font-family: var(--font-serif);">Reacciones</h4>`;
+    html += m.reactions.map(a => `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9rem;"><strong><em>${a.name}.</em></strong> ${a.desc}</p>`).join('');
   }
 
   if (m.legendaryActions && m.legendaryActions.length > 0) {
-    html += `<h3 style="border-bottom: 1px solid var(--border-color); color: var(--danger-color); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.2rem;">Acciones Legendarias</h3>`;
-    html += `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9em; color: var(--text-muted);">El monstruo puede realizar 3 acciones legendarias, eligiendo de las opciones de abajo. Solo puede usar una opción a la vez y únicamente al final del turno de otra criatura. Recupera las acciones gastadas al inicio de su turno.</p>`;
+    html += `<h4 style="border-bottom: 1px solid var(--border-color); color: var(--gold); margin: 1rem 0 0.5rem 0; padding-bottom: 0.2rem; font-family: var(--font-serif);">Acciones Legendarias</h4>`;
+    html += `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.8em; color: var(--text-muted);">El monstruo puede realizar 3 acciones legendarias, eligiendo de las opciones de abajo. Solo puede usar una opción a la vez y únicamente al final del turno de otra criatura. Recupera las acciones gastadas al inicio de su turno.</p>`;
     html += m.legendaryActions.map(a => {
       let costText = a.cost && a.cost > 1 ? ` (Cuesta ${a.cost} Acciones)` : '';
-      return `<p style="margin: 0.5rem 0; line-height: 1.4;"><strong><em>${a.name}${costText}.</em></strong> ${a.desc}</p>`;
+      return `<p style="margin: 0.5rem 0; line-height: 1.4; font-size: 0.9rem;"><strong><em>${a.name}${costText}.</em></strong> ${a.desc}</p>`;
     }).join('');
   }
 
   html += `</div>`;
+  return html;
+}
+
+export function showMonsterSheet(id) {
+  const m = state.dmCatalogs.monsters.find(x => x.id === id);
+  if (!m) return;
+  
+  const statBlockHtml = getMonsterStatBlockHtml(m);
+  
+  let html = `
+    <div style="padding: 1.5rem; background-color: var(--panel-bg); border-radius: 8px; text-align: left; max-height: 75vh; overflow-y: auto;">
+      <h2 style="color: var(--danger-color); margin: 0 0 0.25rem 0; font-size: 1.8rem; font-family: var(--font-serif);">${m.name}</h2>
+      <p style="font-style: italic; color: var(--text-muted); margin-top: 0; font-size: 0.95rem;">
+        ${m.basicInfo.size} ${m.basicInfo.type}, ${m.basicInfo.alignment}
+      </p>
+      
+      <hr style="border: 0; border-top: 2px solid var(--danger-color); margin: 1rem 0;" />
+      
+      ${statBlockHtml}
+    </div>
+  `;
 
   window.app.showAlert({
-    title: `Ficha de Monstruo`,
+    title: \`Ficha de Monstruo\`,
     messageHtml: html,
     icon: '🐉'
   });
