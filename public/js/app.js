@@ -112,6 +112,25 @@ const app = {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
+  async reloadUserData() {
+    try {
+      const charactersRes = await apiFetch('/api/characters');
+      if (charactersRes.ok) {
+        state.savedCharacters = await charactersRes.json();
+      }
+      
+      const dmSessionRes = await apiFetch('/api/dm-session');
+      if (dmSessionRes.ok) {
+        state.dmSession = await dmSessionRes.json();
+      }
+      
+      // Force re-render of current view
+      state.setView(state.activeView);
+    } catch(e) {
+      console.error('Error reloading user data', e);
+    }
+  },
+
   updateDraftField(field, value) {
     const updates = { [field]: value };
     const textFields = ['name', 'gender', 'appearance', 'personalityNotes'];

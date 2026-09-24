@@ -127,13 +127,18 @@ app.put('/api/dm-session', async (req, res) => {
 // API de Personajes
 app.get('/api/characters', optionalAuthenticateToken, async (req, res) => {
   try {
-    const rows = await dbAsync.all('SELECT * FROM characters');
+    let rows;
+    if (req.user) {
+      rows = await dbAsync.all('SELECT * FROM characters WHERE user_id = ?', [req.user.id]);
+    } else {
+      rows = await dbAsync.all('SELECT * FROM characters WHERE user_id IS NULL');
+    }
+
     const allChars = rows.map(r => {
       const char = JSON.parse(r.data);
       char.userId = r.user_id; // Add back userId for the frontend
       return char;
     });
-    // Opcional: filtrar si se desea que un jugador solo vea los suyos
     res.json(allChars);
   } catch (err) {
     res.status(500).json({ error: 'Error al obtener personajes' });

@@ -46,6 +46,7 @@ export const authUI = {
         state.currentUser = { id: data.userId, username: data.username, role: data.role };
         this.renderLoggedIn(state.currentUser);
         showAlert({ title: 'Bienvenido', message: `Has entrado a la taberna, ${username}.`, icon: '🍻', type: 'success' });
+        if (window.app && window.app.reloadUserData) window.app.reloadUserData();
       } else {
         showAlert({ title: 'Error', message: data.error || 'Credenciales inválidas', type: 'danger' });
       }
@@ -80,6 +81,7 @@ export const authUI = {
     state.currentUser = null;
     this.renderLoggedOut();
     if(showMsg) showAlert({ title: 'Desconectado', message: 'Has dejado la mesa.', icon: '👋' });
+    if (window.app && window.app.reloadUserData) window.app.reloadUserData();
   },
 
   renderLoggedOut() {
