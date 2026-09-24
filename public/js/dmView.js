@@ -353,7 +353,7 @@ export function showMonsterSheet(id) {
   `;
 
   window.app.showAlert({
-    title: \`Ficha de Monstruo\`,
+    title: 'Ficha de Monstruo',
     messageHtml: html,
     icon: '🐉'
   });
