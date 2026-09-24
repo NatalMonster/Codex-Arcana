@@ -9,6 +9,7 @@ import { renderStep5, renderStep6 } from './step5_6.js';
 import { renderStep7, renderStep8 } from './step7_8.js';
 import Dashboard from '/src/components/Dashboard.jsx';
 import CharacterSheetWrapper from '/src/components/CharacterSheetWrapper.jsx';
+import TableSessionWrapper from '/src/components/TableSessionWrapper.jsx';
 import CreatorStepWrapper from '/src/components/CreatorStepWrapper.jsx';
 import { renderCharacterSheetView } from './characterSheetView.js';
 
@@ -54,7 +55,7 @@ export function renderApp(options = {}) {
   }
 
   // Unmount React root si la vista NO está en nuestra lista de vistas migradas a React
-  const isReactView = ['characters_list', 'sheet', 'creator'].includes(state.activeView || 'creator');
+  const isReactView = ['characters_list', 'sheet', 'creator', 'table_session'].includes(state.activeView || 'creator');
   if (!isReactView && reactRoot) {
     reactRoot.unmount();
     reactRoot = null;
@@ -125,6 +126,37 @@ export function renderApp(options = {}) {
           tick: renderTick
         })
       );
+    }
+    return;
+  }
+
+  if (state.activeView === 'table_session') {
+    if (stepperContainer) stepperContainer.style.display = 'none';
+    if (sidebar) sidebar.style.display = 'none';
+    if (mainLayout) mainLayout.classList.add('full-width-view');
+    if (stepContent) {
+      if (!reactRoot) {
+        reactRoot = createRoot(stepContent);
+      }
+      reactRoot.render(
+        React.createElement(TableSessionWrapper, {
+          campaignId: state.activeCampaignId,
+          myCharacterId: state.activeCharacterId,
+          tick: renderTick
+        })
+      );
+    }
+    return;
+  }
+  
+  if (state.activeView === 'campaigns') {
+    if (window.campaignUI) window.campaignUI.openCampaignsList(true); // true = skip setView
+    return;
+  }
+  
+  if (state.activeView === 'campaign_lobby') {
+    if (window.campaignUI && state.activeCampaignId) {
+      window.campaignUI.viewCampaign(state.activeCampaignId, true);
     }
     return;
   }

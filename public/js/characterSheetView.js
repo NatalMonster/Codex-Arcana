@@ -30,10 +30,10 @@ function getClassSymbol(classId) {
   return map[(classId || '').toLowerCase()] || '⚔️';
 }
 
-export function renderCharacterSheetView(container, characterId) {
+export function renderCharacterSheetView(container, characterId, forceCharObj = null) {
   if (!container) return;
 
-  const char = state.savedCharacters.find(c => c.id === characterId);
+  const char = forceCharObj || state.savedCharacters.find(c => c.id === characterId);
   if (!char) {
     container.innerHTML = `
       <div class="alert-box alert-error" style="margin: 2rem auto; max-width: 600px;">
@@ -191,10 +191,12 @@ export function renderCharacterSheetView(container, characterId) {
     </div>
 
     <!-- BARRA SUPERIOR DE HOJA DE PARTIDA -->
-    <div class="sheet-top-bar">
+    <div class="sheet-top-bar" ${state.activeView === 'table_session' ? 'style="justify-content: flex-end;"' : ''}>
+      ${state.activeView === 'table_session' ? '' : `
       <button class="btn btn-secondary btn-back-nav" onclick="window.app.openCharactersList()">
         ← Volver a Mis Personajes
       </button>
+      `}
       <div class="sheet-quick-actions">
         <button class="btn btn-secondary" onclick="window.app.triggerShortRest('${char.id}')" title="Recupera dados de golpe y rasgos de descanso corto">
           ☕ Descanso Corto
@@ -213,8 +215,6 @@ export function renderCharacterSheetView(container, characterId) {
       <div class="header-identity-block">
         <h1 class="header-char-name">${char.name || 'Sin Nombre'}</h1>
         <div class="header-meta-tags">
-          <span class="sheet-tag">${char.speciesName || 'Especie ?'}</span>
-          <span class="sheet-tag class-tag">${char.className || 'Clase ?'} Nv ${char.level}</span>
           <span class="sheet-tag">${window.app.escapeHTML(char.speciesName || 'Especie ?')}</span>
           <span class="sheet-tag class-tag">${window.app.escapeHTML(char.className || 'Clase ?')} Nv ${char.level || 1}</span>
           ${subclassDef ? `
@@ -2577,7 +2577,7 @@ function getCharacterWeapons(char, catalog) {
   return result;
 }
 
-function buildInitialInventory(char, catalogs) {
+export function buildInitialInventory(char, catalogs) {
   const list = [];
   let itemId = 1;
 

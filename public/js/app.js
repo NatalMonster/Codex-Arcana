@@ -84,8 +84,21 @@ const app = {
         this.showAlert({ message: String(msg) });
       };
 
-      // Primer render
-      renderApp();
+      // Restaurar estado de sessionStorage si existe
+      const lastView = sessionStorage.getItem('lastActiveView');
+      const lastCharId = sessionStorage.getItem('lastActiveCharId');
+      const lastCampaignId = sessionStorage.getItem('lastActiveCampaignId');
+      
+      if (lastCampaignId) {
+        state.activeCampaignId = lastCampaignId;
+      }
+      
+      if (lastView && lastView !== 'welcome') {
+        state.setView(lastView, lastCharId); // Esto disparará notify() y renderApp()
+      } else {
+        // Primer render por defecto
+        renderApp();
+      }
     } catch (err) {
       console.error('Error inicializando la aplicación:', err);
       const content = document.getElementById('step-content');
@@ -626,7 +639,7 @@ const app = {
 
   async duplicateCharacter(charId) {
     try {
-      const response = await fetch(`/api/characters/${charId}/duplicate`, {
+      const response = await apiFetch(`/api/characters/${charId}/duplicate`, {
         method: 'POST'
       });
       if (!response.ok) throw new Error('Error en el servidor al duplicar el personaje');
@@ -667,7 +680,7 @@ const app = {
     if (!confirmed) return;
 
     try {
-      const response = await fetch(`/api/characters/${charId}`, {
+      const response = await apiFetch(`/api/characters/${charId}`, {
         method: 'DELETE'
       });
 
@@ -906,7 +919,7 @@ const app = {
     renderApp({ renderStep: false });
 
     try {
-      await fetch(`/api/characters/${charId}`, {
+      await apiFetch(`/api/characters/${charId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updates)

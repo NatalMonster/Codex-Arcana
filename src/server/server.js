@@ -227,6 +227,18 @@ app.put('/api/characters/:id', optionalAuthenticateToken, async (req, res) => {
       [updatedChar.name || 'Sin Nombre', JSON.stringify(updatedChar), req.params.id]
     );
     
+    // Notificar a las salas de las campañas donde esté este personaje
+    try {
+      const campaigns = await dbAsync.all('SELECT campaign_id FROM campaign_players WHERE character_id = ?', [req.params.id]);
+      if (campaigns && campaigns.length > 0) {
+        campaigns.forEach(c => {
+          io.to(c.campaign_id).emit('character_hp_updated', { campaignId: c.campaign_id, characterId: req.params.id });
+        });
+      }
+    } catch (err) {
+      console.error('Error notificando a la campaña:', err);
+    }
+    
     res.json({ success: true, character: updatedChar });
   } catch (e) {
     res.status(400).json({ error: 'Error procesando solicitud: ' + e.message });

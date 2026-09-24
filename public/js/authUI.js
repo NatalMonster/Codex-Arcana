@@ -47,6 +47,7 @@ export const authUI = {
         this.renderLoggedIn(state.currentUser);
         showAlert({ title: 'Bienvenido', message: `Has entrado a la taberna, ${username}.`, icon: '🍻', type: 'success' });
         if (window.app && window.app.reloadUserData) window.app.reloadUserData();
+        if (window.app && window.app.openWelcomeScreen) window.app.openWelcomeScreen();
       } else {
         showAlert({ title: 'Error', message: data.error || 'Credenciales inválidas', type: 'danger' });
       }
@@ -78,6 +79,9 @@ export const authUI = {
   logout(showMsg = true) {
     this.token = null;
     localStorage.removeItem('dnd_token');
+    sessionStorage.removeItem('lastActiveView');
+    sessionStorage.removeItem('lastActiveCharId');
+    sessionStorage.removeItem('lastActiveCampaignId');
     state.currentUser = null;
     this.renderLoggedOut();
     if(showMsg) showAlert({ title: 'Desconectado', message: 'Has dejado la mesa.', icon: '👋' });
@@ -122,10 +126,6 @@ export const authUI = {
 
     // Mostrar UI Principal
     document.getElementById('main-layout').style.display = 'flex';
-
-    if (window.app && window.app.openWelcomeScreen) {
-      window.app.openWelcomeScreen();
-    }
   },
 
   showLoginModal(isRegister = false) {

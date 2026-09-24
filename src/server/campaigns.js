@@ -78,8 +78,10 @@ router.get('/', authenticateToken, async (req, res) => {
   try {
     const campaigns = await dbAsync.all(`
       SELECT DISTINCT c.id, c.name, c.invite_code, 
-             CASE WHEN c.dm_id = ? THEN 1 ELSE 0 END as is_dm
+             CASE WHEN c.dm_id = ? THEN 1 ELSE 0 END as is_dm,
+             u.username as dm_name
       FROM campaigns c
+      JOIN users u ON c.dm_id = u.id
       LEFT JOIN campaign_players cp ON c.id = cp.campaign_id
       WHERE c.dm_id = ? OR cp.user_id = ?
     `, [req.user.id, req.user.id, req.user.id]);

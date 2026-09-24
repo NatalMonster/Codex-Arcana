@@ -17,8 +17,13 @@ export const campaignUI = {
     }
   },
 
-  async openCampaignsList() {
+  async openCampaignsList(skipSetView = false) {
     if (!state.currentUser) return showAlert({ title: 'Atención', message: 'Debes iniciar sesión' });
+    
+    if (!skipSetView) {
+      state.setView('campaigns');
+      return;
+    }
     
     await this.fetchCampaigns();
     
@@ -31,7 +36,10 @@ export const campaignUI = {
     
     let html = `
       <div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px;">
-        <h2 style="color: var(--gold); border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">⛺ Mis Campañas</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">
+          <h2 style="color: var(--gold); margin: 0;">⛺ Mis Campañas</h2>
+          <button class="btn btn-secondary" onclick="window.app.openWelcomeScreen()">Volver</button>
+        </div>
         
         <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
           <div style="flex: 1; display: flex; gap: 0.5rem;">
@@ -50,6 +58,7 @@ export const campaignUI = {
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); margin-bottom: 1rem; border-radius: 8px;">
               <div>
                 <h3 style="margin-bottom: 0.5rem; color: var(--gold-light);">${c.name}</h3>
+                <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.3rem;">DM: <strong style="color:white;">${c.dm_name || 'Desconocido'}</strong></div>
                 <div style="color: var(--text-muted); font-size: 0.85rem;">Código de Invitación: <strong style="color:white; letter-spacing: 2px;">${c.invite_code}</strong></div>
               </div>
               <button class="btn btn-secondary" onclick="window.campaignUI.viewCampaign('${c.id}')">Entrar a la Sala</button>
@@ -94,9 +103,19 @@ export const campaignUI = {
     }
   },
 
-  async viewCampaign(campaignId) {
+  async viewCampaign(campaignId, skipSetView = false) {
+    if (!skipSetView) {
+      state.activeCampaignId = campaignId;
+      state.setView('campaign_lobby');
+      return;
+    }
+    
     const res = await apiFetch(`/api/campaigns/${campaignId}/players`);
     const data = await res.json();
+    
+    if (!this.campaigns || this.campaigns.length === 0) {
+      await this.fetchCampaigns();
+    }
     
     const c = this.campaigns.find(x => x.id === campaignId);
     if (!c) return;
@@ -120,23 +139,41 @@ export const campaignUI = {
     window.socket.emit('join_campaign', campaignId);
     this.activeCampaign = campaignId;
 
+    const myPlayer = data.players.find(p => p.username === state.currentUser.username);
+    const hasCharacter = myPlayer && myPlayer.character;
+
     let html = `
       <div style="max-width: 1000px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px;">
         <div style="display:flex; justify-content: space-between; align-items:center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
-          <h2 style="color: var(--gold); ">Mesa: ${c.name}</h2>
-          <button class="btn btn-secondary" onclick="window.campaignUI.openCampaignsList()">Volver</button>
+          <div>
+            <h2 style="color: var(--gold); margin: 0;">Mesa: ${c.name}</h2>
+            <div style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.2rem;">Dungeon Master: <strong style="color: white;">${c.dm_name || 'Desconocido'}</strong></div>
+          </div>
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn btn-primary" onclick="window.campaignUI.enterTable('${campaignId}', ${isAdmin}, ${!!hasCharacter})">
+              ${isAdmin ? 'Pantalla del Master' : 'Ver Mesa'}
+            </button>
+            <button class="btn btn-secondary" onclick="window.campaignUI.openCampaignsList()">Volver</button>
+          </div>
         </div>
         
-        <h3>Jugadores Conectados</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <h3>Lobby de Espera</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
           ${data.players.map(p => `
-            <div style="background: var(--bg-input); padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px;">
-              <div style="font-weight:bold; color:var(--text-main); margin-bottom:0.5rem;">Jugador: ${p.username}</div>
-              ${p.character 
-                ? `<div style="color:var(--gold-light)">Héroe: ${p.character.name} (NV ${p.character.level})</div>
-                   <div style="color:var(--crimson)">HP: ${p.character.currentHp !== undefined ? p.character.currentHp : (p.character.calculatedStats?.maxHp || '?')}/${p.character.calculatedStats?.maxHp || '?'}</div>` 
-                : `<div style="color:var(--text-muted)">Aún no ha asignado un personaje</div>`
-              }
+            <div style="background: var(--bg-input); padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+              ${p.character ? `
+                <h3 style="color: var(--gold-light); margin-bottom: 0.5rem;">${p.character.name}</h3>
+                <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Jugador: ${p.username}</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.95rem;">
+                  <div><span style="color: #94a3b8">Clase:</span> ${p.character.className || 'Desconocida'}</div>
+                  <div><span style="color: #94a3b8">Nivel:</span> ${p.character.level || 1}</div>
+                  <div><span style="color: #94a3b8">Raza:</span> ${p.character.speciesName || 'Desconocida'}</div>
+                  <div><span style="color: #94a3b8">HP:</span> ${p.character.currentHp !== undefined ? p.character.currentHp : (p.character.calculatedStats?.maxHp || '?')}/${p.character.calculatedStats?.maxHp || '?'}</div>
+                </div>
+              ` : `
+                <div style="font-weight:bold; color:var(--text-main); margin-bottom:0.5rem;">Jugador: ${p.username}</div>
+                <div style="color:var(--text-muted)">Aún no ha asignado un personaje</div>
+              `}
             </div>
           `).join('')}
         </div>
@@ -171,6 +208,31 @@ export const campaignUI = {
       showAlert({ title: 'Excelente', message: 'Personaje asignado', type: 'success' });
       this.viewCampaign(campaignId);
     }
+  },
+
+  async enterTable(campaignId, isAdmin, hasCharacter) {
+    if (!isAdmin && !hasCharacter) {
+      return showAlert({ 
+        title: 'Acceso Denegado', 
+        message: 'Debes asignar un personaje primero antes de poder ver la mesa.', 
+        type: 'danger' 
+      });
+    }
+
+    const res = await apiFetch(`/api/campaigns/${campaignId}/players`);
+    const data = await res.json();
+    const myPlayer = data.players.find(p => p.username === state.currentUser.username);
+    
+    state.activeCampaignId = campaignId;
+    if (myPlayer && myPlayer.character) {
+      state.activeCharacterId = myPlayer.character.id;
+    } else {
+      state.activeCharacterId = null; // DM or no character
+    }
+    
+    // Switch to the new table session view
+    state.setView('table_session', state.activeCharacterId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
 

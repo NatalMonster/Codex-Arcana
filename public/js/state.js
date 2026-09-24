@@ -115,6 +115,13 @@ export const state = {
     } else {
       this.activeCharacter = null;
     }
+    
+    // Guardar en sessionStorage para que no saque al usuario al dar F5
+    sessionStorage.setItem('lastActiveView', view);
+    if (charId) sessionStorage.setItem('lastActiveCharId', charId);
+    else sessionStorage.removeItem('lastActiveCharId');
+    if (this.activeCampaignId) sessionStorage.setItem('lastActiveCampaignId', this.activeCampaignId);
+    
     this.notify();
   },
 
