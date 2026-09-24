@@ -10,7 +10,7 @@ export async function apiFetch(url, options = {}) {
   if (options.body && typeof options.body === 'string' && !headers['Content-Type']) {
     headers['Content-Type'] = 'application/json';
   }
-  return fetch(url, { ...options, headers });
+  return fetch(url, { cache: 'no-store', ...options, headers });
 }
 import DOMPurify from 'dompurify';
 import { renderApp, renderSavedCharactersModal } from './renderers.js';
