@@ -1,6 +1,30 @@
 import { state } from './state.js';
 
 export function renderDMModule(container) {
+  let html = `
+    <div class="characters-list-header">
+      <h2 class="view-main-title">🐉 Panel del Dungeon Master</h2>
+      <p class="view-subtitle">Gestiona campañas, sesiones, jugadores y monstruos.</p>
+    </div>
+    
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <!-- Monstruos Card -->
+      <div class="mode-card" onclick="window.app.openMonstersCatalog()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="cursor:pointer; border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; text-align: center; background: var(--bg-card); flex: 1; min-width: 250px; transition: transform 0.2s;">
+        <h2 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem; font-family: var(--font-serif);">💀 Monstruos</h2>
+        <p style="color: var(--text-muted);">Accede al catálogo completo de criaturas, estadísticas y habilidades. Usa monstruos existentes o añade nuevos al encuentro.</p>
+      </div>
+
+      <!-- Espacio para futuras cartas (Campañas, Loot, etc) -->
+      <div class="mode-card" style="opacity: 0.5; cursor:not-allowed; border: 1px dashed var(--border-color); border-radius: 12px; padding: 2.5rem; text-align: center; background: var(--bg-card); flex: 1; min-width: 250px;">
+        <h2 style="color: var(--text-muted); font-size: 2rem; margin-bottom: 1rem; font-family: var(--font-serif);">⛺ Campañas</h2>
+        <p style="color: var(--text-muted);">Gestor de aventuras y notas de campaña. (Próximamente)</p>
+      </div>
+    </div>
+  `;
+  container.innerHTML = html;
+}
+
+export function renderMonstersCatalog(container) {
   const monsters = state.dmCatalogs.monsters || [];
   
   // Extraer valores únicos para los filtros
@@ -12,12 +36,20 @@ export function renderDMModule(container) {
 
   let html = `
     <div class="characters-list-header">
-      <h2>Dungeon Master: Catálogo de Monstruos</h2>
-      <p style="color: var(--text-muted);">Manual de Monstruos (D&D 2024)</p>
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+          <h2 class="view-main-title">💀 Catálogo de Monstruos</h2>
+          <p class="view-subtitle">Manual de Monstruos (D&D 2024)</p>
+        </div>
+        <button class="btn btn-secondary" onclick="window.app.openDMModule()">Volver al Panel</button>
+      </div>
     </div>
 
-    <div class="search-filters-bar" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-      <input type="text" class="search-input" id="dm-search" placeholder="Buscar monstruo..." style="flex: 1; min-width: 200px;" oninput="window.app.filterMonsters(this.value)" />
+    <div class="filters-toolbar" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <div class="search-box-wrapper" style="flex: 1; min-width: 200px;">
+        <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+        <input type="text" class="input-text search-input" id="dm-search" placeholder="Buscar monstruo..." oninput="window.app.filterMonsters(this.value)" />
+      </div>
       
       <select class="filter-select" id="dm-filter-cr" onchange="window.app.filterMonstersCR(this.value)">
         <option value="all">Todas las Dificultades</option>

@@ -535,6 +535,12 @@ const app = {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
+  openMonstersCatalog() {
+    state.setView('dm_monsters');
+    this.closeModal();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
   filterMonsters(query) { filterMonsters(query); },
   filterMonstersCR(cr) { filterMonstersCR(cr); },
   showMonsterSheet(id) { showMonsterSheet(id); },

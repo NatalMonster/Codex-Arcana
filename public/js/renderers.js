@@ -36,7 +36,7 @@ export function renderApp(options = {}) {
     if (creatorBtn) { creatorBtn.style.display = 'none'; creatorBtn.classList.remove('nav-btn-active'); }
     if (charactersBtn) { charactersBtn.style.display = 'none'; charactersBtn.classList.remove('nav-btn-active'); }
     if (campBtn) { campBtn.style.display = 'inline-block'; campBtn.classList.remove('nav-btn-active'); }
-  } else if (state.activeView === 'dm_module') {
+  } else if (state.activeView === 'dm_module' || state.activeView === 'dm_monsters') {
     if (dmBtn) { dmBtn.style.display = 'none'; dmBtn.classList.add('nav-btn-active'); }
     if (creatorBtn) { creatorBtn.style.display = 'inline-block'; creatorBtn.classList.remove('nav-btn-active'); }
     if (charactersBtn) { charactersBtn.style.display = 'inline-block'; charactersBtn.classList.remove('nav-btn-active'); }
@@ -130,7 +130,7 @@ export function renderApp(options = {}) {
     return;
   }
 
-  if (state.activeView === 'dm_module') {
+  if (state.activeView === 'dm_module' || state.activeView === 'dm_monsters') {
     if (stepperContainer) stepperContainer.style.display = 'none';
     if (sidebar) sidebar.style.display = 'none';
     if (mainLayout) mainLayout.classList.add('full-width-view');
@@ -140,7 +140,11 @@ export function renderApp(options = {}) {
         reactRoot = null;
       }
       import('./dmView.js').then(module => {
-        module.renderDMModule(stepContent);
+        if (state.activeView === 'dm_monsters') {
+          module.renderMonstersCatalog(stepContent);
+        } else {
+          module.renderDMModule(stepContent);
+        }
       });
     }
     return;
