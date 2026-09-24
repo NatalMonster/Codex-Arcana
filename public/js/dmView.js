@@ -101,8 +101,8 @@ export function renderPreparationView(container, activeTab = 'partida') {
     } else {
       html += `<div class="characters-grid">`;
       html += activeMonsters.map(m => `
-        <div class="character-card" style="grid-column: 1 / -1; display: flex; flex-direction: column;">
-          <div class="char-card-body" style="padding: 1.5rem;">
+        <div class="character-card" style="display: flex; flex-direction: column;">
+          <div class="char-card-body" style="padding: 1.5rem; flex: 1;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
               <div>
                 <h3 class="char-card-name" style="margin-bottom: 0.2rem; font-size: 1.5rem; color: var(--gold);">${m.name}</h3>
