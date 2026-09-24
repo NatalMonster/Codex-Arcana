@@ -18,7 +18,7 @@ import * as Rules from '/src/engine/rulesEngine.js';
 import { validateCharacter } from '/src/engine/validator.js';
 import { diceEngine } from './diceEngine.js';
 import { exportCharacterToPDF } from './pdfExport.js';
-import { filterMonsters, filterMonstersCR, showMonsterSheet, addMonsterToSession } from './dmView.js';
+import { filterMonsters, filterMonstersCR, showMonsterSheet, addMonsterToSession, removeMonsterFromSession, renderPreparationView } from './dmView.js';
 import { setActiveTab, setSpellSubTab, setSpellLevelFilter, setSpellSearchFilter, renderCoinSvg } from './characterSheetView.js';
 import { getAllCatalogItems, getSpellDetail } from './infoHelper.js';
 import { showPrompt, showConfirm, showAlert } from './dialogModal.js';
@@ -539,6 +539,21 @@ const app = {
     state.setView('dm_monsters');
     this.closeModal();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  openPreparationView() {
+    state.setView('dm_preparation');
+    this.closeModal();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  renderPreparation(tab) {
+    const stepContent = document.getElementById('step-content') || document.querySelector('.main-layout');
+    renderPreparationView(stepContent, tab);
+  },
+
+  removeMonsterFromSession(sessionId) {
+    removeMonsterFromSession(sessionId);
   },
 
   filterMonsters(query) { filterMonsters(query); },

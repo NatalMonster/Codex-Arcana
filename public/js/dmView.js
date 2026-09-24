@@ -8,13 +8,19 @@ export function renderDMModule(container) {
     </div>
     
     <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <!-- Preparación Card -->
+      <div class="mode-card" onclick="window.app.openPreparationView()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="cursor:pointer; border: 1px solid var(--border-active); border-radius: 12px; padding: 2.5rem; text-align: center; background: var(--bg-card); flex: 1; min-width: 250px; transition: transform 0.2s;">
+        <h2 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem; font-family: var(--font-serif);">⚔️ Preparación</h2>
+        <p style="color: var(--text-muted);">Gestiona los monstruos y NPCs que participarán en la partida actual.</p>
+      </div>
+
       <!-- Monstruos Card -->
       <div class="mode-card" onclick="window.app.openMonstersCatalog()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="cursor:pointer; border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; text-align: center; background: var(--bg-card); flex: 1; min-width: 250px; transition: transform 0.2s;">
         <h2 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem; font-family: var(--font-serif);">💀 Monstruos</h2>
-        <p style="color: var(--text-muted);">Accede al catálogo completo de criaturas, estadísticas y habilidades. Usa monstruos existentes o añade nuevos al encuentro.</p>
+        <p style="color: var(--text-muted);">Catálogo de criaturas y estadísticas.</p>
       </div>
 
-      <!-- Espacio para futuras cartas (Campañas, Loot, etc) -->
+      <!-- Espacio para futuras cartas (Campañas) -->
       <div class="mode-card" style="opacity: 0.5; cursor:not-allowed; border: 1px dashed var(--border-color); border-radius: 12px; padding: 2.5rem; text-align: center; background: var(--bg-card); flex: 1; min-width: 250px;">
         <h2 style="color: var(--text-muted); font-size: 2rem; margin-bottom: 1rem; font-family: var(--font-serif);">⛺ Campañas</h2>
         <p style="color: var(--text-muted);">Gestor de aventuras y notas de campaña. (Próximamente)</p>
@@ -67,6 +73,89 @@ export function renderMonstersCatalog(container) {
     </div>
   `;
   container.innerHTML = html;
+}
+
+export function renderPreparationView(container, activeTab = 'partida') {
+  const isPartida = activeTab === 'partida';
+  let html = `
+    <div class="characters-list-header">
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+          <h2 class="view-main-title">⚔️ Preparación de Partida</h2>
+          <p class="view-subtitle">Añade monstruos y prepárate para el encuentro.</p>
+        </div>
+        <button class="btn btn-secondary" onclick="window.app.openDMModule()">Volver al Panel</button>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 2rem;">
+      <button class="btn ${isPartida ? 'btn-primary' : 'btn-secondary'}" onclick="window.app.renderPreparation('partida')">En Partida</button>
+      <button class="btn ${!isPartida ? 'btn-primary' : 'btn-secondary'}" onclick="window.app.renderPreparation('monstruos')">Catálogo de Monstruos</button>
+    </div>
+  `;
+
+  if (isPartida) {
+    const activeMonsters = state.dmSession.activeMonsters || [];
+    if (activeMonsters.length === 0) {
+      html += `<div class="empty-state-text">No hay monstruos en la partida actual.<br>Ve a la pestaña de "Catálogo de Monstruos" para añadirlos.</div>`;
+    } else {
+      html += `<div class="characters-grid">`;
+      html += activeMonsters.map(m => `
+        <div class="character-card">
+          <div class="char-card-body">
+            <h3 class="char-card-name" style="margin-bottom: 0.5rem;">${m.name}</h3>
+            <p class="char-card-info"><strong>HP:</strong> ${m.defenses.hp.average} | <strong>CA:</strong> ${m.defenses.ac.value}</p>
+            <p class="char-card-info"><strong>Iniciativa:</strong> +${Math.floor((m.stats.dex - 10)/2)}</p>
+          </div>
+          <div class="char-card-actions" style="margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); display: flex; gap: 0.5rem;">
+            <button class="btn btn-secondary btn-sm" onclick="window.app.showMonsterSheet('${m.id}')">📖 Ver Ficha</button>
+            <button class="btn btn-danger btn-sm" style="background-color: var(--crimson-dark); color: white;" onclick="window.app.removeMonsterFromSession('${m.sessionId}')">❌ Quitar</button>
+          </div>
+        </div>
+      `).join('');
+      html += `</div>`;
+    }
+  } else {
+    // Render the catalog but inside the tabs
+    html += `
+      <div id="prep-catalog-container"></div>
+    `;
+  }
+
+  container.innerHTML = html;
+
+  if (!isPartida) {
+    const catalogContainer = document.getElementById('prep-catalog-container');
+    if (catalogContainer) {
+      // Re-use logic but stripped down without the header
+      const monsters = state.dmCatalogs.monsters || [];
+      const crs = [...new Set(monsters.map(m => m.basicInfo.cr))].sort((a, b) => {
+        const parseCR = (val) => val.includes('/') ? eval(val) : parseFloat(val);
+        return parseCR(a) - parseCR(b);
+      });
+      const types = [...new Set(monsters.map(m => m.basicInfo.type))].sort();
+
+      catalogContainer.innerHTML = `
+        <div class="filters-toolbar" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div class="search-box-wrapper" style="flex: 1; min-width: 200px;">
+            <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            <input type="text" class="input-text search-input" id="dm-search" placeholder="Buscar monstruo..." oninput="window.app.filterMonsters(this.value)" />
+          </div>
+          <select class="filter-select" id="dm-filter-cr" onchange="window.app.filterMonstersCR(this.value)">
+            <option value="all">Todas las Dificultades</option>
+            ${crs.map(cr => `<option value="${cr}">Desafío ${cr}</option>`).join('')}
+          </select>
+          <select class="filter-select" id="dm-filter-type" onchange="window.app.filterMonsters()">
+            <option value="all">Todos los Tipos</option>
+            ${types.map(t => `<option value="${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="characters-grid" id="dm-monsters-grid">
+          ${renderMonstersList(monsters)}
+        </div>
+      `;
+    }
+  }
 }
 
 export function renderMonstersList(monstersList) {
@@ -266,4 +355,12 @@ export function addMonsterToSession(id) {
     icon: '✅',
     type: 'success'
   });
+}
+
+export function removeMonsterFromSession(sessionId) {
+  state.dmSession.activeMonsters = state.dmSession.activeMonsters.filter(x => x.sessionId !== sessionId);
+  if (state.activeView === 'dm_preparation') {
+    const stepContent = document.getElementById('step-content') || document.querySelector('.main-layout');
+    renderPreparationView(stepContent, 'partida');
+  }
 }
