@@ -145,8 +145,8 @@ export default function TableSessionWrapper({ campaignId, myCharacterId, tick })
           <CharacterSheetWrapper characterId={myCharacterId} tick={tick} />
         </div>
       ) : (
-        <div style={{ padding: '2rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.5rem' }}>
+        <div style={{ padding: '1rem', maxWidth: '1200px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.5rem' }}>
             <h2 style={{ color: 'var(--gold)', margin: 0 }}>
               👑 Panel del Dungeon Master
             </h2>
@@ -157,7 +157,7 @@ export default function TableSessionWrapper({ campaignId, myCharacterId, tick })
               &larr; Volver
             </button>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {otherPlayers.map(p => {
               const c = p.character;
               const stats = c.calculatedStats || {};
@@ -316,8 +316,8 @@ export default function TableSessionWrapper({ campaignId, myCharacterId, tick })
               padding: '2rem', overflowY: 'auto'
             }}
           >
-            <div style={{ maxWidth: '1200px', width: '100%', margin: '0 auto', background: 'var(--bg-main)', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.8)', padding: '1rem', position: 'relative' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
+            <div style={{ maxWidth: '1200px', width: '100%', margin: '0 auto', background: 'var(--bg-main)', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.8)', padding: '1rem', position: 'relative', boxSizing: 'border-box' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
                 <h3 style={{ margin: 0, color: 'var(--gold)' }}>
                   Hoja de {viewingPlayer.name} <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>(Modo Lectura - Dungeon Master)</span>
                 </h3>

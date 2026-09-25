@@ -35,27 +35,28 @@ export const campaignUI = {
     document.getElementById('main-layout').classList.add('full-width-view');
     
     let html = `
-      <div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">
+      <div style="max-width: 800px; width: 95%; margin: 1rem auto; padding: 1rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px; box-sizing: border-box;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem; gap: 1rem;">
           <h2 style="color: var(--gold); margin: 0;">⛺ Mis Campañas</h2>
           <button class="btn btn-secondary" onclick="window.app.openWelcomeScreen()">Volver</button>
         </div>
         
-        <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-          <div style="flex: 1; display: flex; gap: 0.5rem;">
-            <input type="text" id="new-campaign-name" class="input-text" placeholder="Nueva campaña..." style="flex:1;">
-            <button class="btn btn-primary" onclick="window.campaignUI.createCampaign()">+ Crear Mesa</button>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <input type="text" id="new-campaign-name" class="input-text" placeholder="Nueva campaña..." style="flex: 1 1 200px; min-width: 150px;">
+            <button class="btn btn-primary" style="flex: 1 1 120px;" onclick="window.campaignUI.createCampaign()">+ Crear Mesa</button>
           </div>
-          <div style="flex: 1; display: flex; gap: 0.5rem;">
-            <input type="text" id="join-campaign-code" class="input-text" placeholder="Código de 6 letras..." style="flex:1; text-transform: uppercase;">
-            <button class="btn btn-secondary" onclick="window.campaignUI.joinCampaign()">Unirse a Mesa</button>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <input type="text" id="join-campaign-code" class="input-text" placeholder="Código 6 letras..." style="flex: 1 1 200px; min-width: 150px; text-transform: uppercase;">
+            <button class="btn btn-secondary" style="flex: 1 1 120px;" onclick="window.campaignUI.joinCampaign()">Unirse</button>
           </div>
         </div>
 
         <div>
           ${this.campaigns.length === 0 ? '<p style="color:var(--text-muted)">No estás en ninguna campaña activa.</p>' : ''}
           ${this.campaigns.map(c => `
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); margin-bottom: 1rem; border-radius: 8px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); margin-bottom: 1rem; border-radius: 8px;">
+
               <div>
                 <h3 style="margin-bottom: 0.5rem; color: var(--gold-light);">${c.name}</h3>
                 <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.3rem;">DM: <strong style="color:white;">${c.dm_name || 'Desconocido'}</strong></div>
@@ -143,13 +144,13 @@ export const campaignUI = {
     const hasCharacter = myPlayer && myPlayer.character;
 
     let html = `
-      <div style="max-width: 1000px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px;">
-        <div style="display:flex; justify-content: space-between; align-items:center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
+      <div style="max-width: 1000px; width: 95%; margin: 1rem auto; padding: 1rem; background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px; box-sizing: border-box;">
+        <div style="display:flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items:center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
           <div>
             <h2 style="color: var(--gold); margin: 0;">Mesa: ${c.name}</h2>
             <div style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.2rem;">Dungeon Master: <strong style="color: white;">${c.dm_name || 'Desconocido'}</strong></div>
           </div>
-          <div style="display: flex; gap: 1rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
             <button class="btn btn-primary" onclick="window.campaignUI.enterTable('${campaignId}', ${isAdmin}, ${!!hasCharacter})">
               ${isAdmin ? 'Pantalla del Master' : 'Ver Mesa'}
             </button>
@@ -181,11 +182,11 @@ export const campaignUI = {
         ${!isAdmin ? `
           <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
             <h4>Asignar Personaje a esta Mesa</h4>
-            <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-              <select id="assign-character-select" class="select-box" style="flex:1;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+              <select id="assign-character-select" class="select-box" style="flex: 1 1 200px; min-width: 150px;">
                 ${state.savedCharacters.map(char => `<option value="${char.id}">${char.name}</option>`).join('')}
               </select>
-              <button class="btn btn-primary" onclick="window.campaignUI.assignCharacter('${campaignId}')">Asignar</button>
+              <button class="btn btn-primary" style="flex: 1 1 120px;" onclick="window.campaignUI.assignCharacter('${campaignId}')">Asignar</button>
             </div>
           </div>
         ` : ''}

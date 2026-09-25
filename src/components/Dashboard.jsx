@@ -62,15 +62,18 @@ export default function Dashboard({ characters = [], classList = [], app }) {
     >
       <div className="characters-view-header">
         <div className="view-title-group">
-          <h2 className="view-main-title">
-            <svg width="28" height="32" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight: '12px', verticalAlign: 'bottom'}}>
-              <path d="M12 0L0 4V12C0 19.3 5.1 26 12 28C18.9 26 24 19.3 24 12V4L12 0Z" fill="#C89B3C"/>
-              <path d="M12 2.5L2 5.8V12C2 18 6.3 23.5 12 25.2C17.7 23.5 22 18 22 12V5.8L12 2.5Z" fill="#151B25"/>
-              <path d="M12 5V22.5C8 21 5 16.5 5 12V7.5L12 5Z" fill="#C89B3C"/>
-            </svg>
-            Mis Personajes
-          </h2>
-          <p className="view-subtitle">Gestiona tus héroes forjados o crea uno nuevo para tu próxima aventura.</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+            <h2 className="view-main-title" style={{ margin: 0 }}>
+              <svg width="28" height="32" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight: '12px', verticalAlign: 'bottom'}}>
+                <path d="M12 0L0 4V12C0 19.3 5.1 26 12 28C18.9 26 24 19.3 24 12V4L12 0Z" fill="#C89B3C"/>
+                <path d="M12 2.5L2 5.8V12C2 18 6.3 23.5 12 25.2C17.7 23.5 22 18 22 12V5.8L12 2.5Z" fill="#151B25"/>
+                <path d="M12 5V22.5C8 21 5 16.5 5 12V7.5L12 5Z" fill="#C89B3C"/>
+              </svg>
+              Mis Personajes
+            </h2>
+            <button className="btn btn-secondary" onClick={() => app.openWelcomeScreen()}>Volver</button>
+          </div>
+          <p className="view-subtitle" style={{ margin: 0 }}>Gestiona tus héroes forjados o crea uno nuevo para tu próxima aventura.</p>
         </div>
         <button className="btn btn-primary btn-lg" onClick={() => app.startNewCharacter()}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{marginRight: '6px'}}><path d="M12 5v14M5 12h14"/></svg>

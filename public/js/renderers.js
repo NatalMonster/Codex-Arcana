@@ -47,9 +47,12 @@ export function renderApp(options = {}) {
     if (dmBtn) { dmBtn.style.display = 'inline-block'; dmBtn.classList.remove('nav-btn-active'); }
     if (creatorBtn) { creatorBtn.style.display = 'none'; creatorBtn.classList.remove('nav-btn-active'); }
     if (charactersBtn) { 
-      charactersBtn.style.display = 'none'; 
-      // If we are in player mode, we hide this button from header anyway (as requested by user). 
-      // So no active state is visible.
+      charactersBtn.style.display = 'inline-block';
+      if (state.activeView === 'characters_list') {
+        charactersBtn.classList.add('nav-btn-active');
+      } else {
+        charactersBtn.classList.remove('nav-btn-active');
+      }
     }
     if (campBtn) { campBtn.style.display = 'inline-block'; campBtn.classList.remove('nav-btn-active'); }
   }
@@ -75,7 +78,15 @@ export function renderApp(options = {}) {
       
       stepContent.innerHTML = `
         <div class="mode-selection-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; padding: 2rem;">
-          <h1 style="color: var(--gold); margin-bottom: 2rem; font-size: 2.5rem; text-align: center;">¿Qué camino deseas tomar?</h1>
+          
+          <div style="margin-bottom: 2rem; max-width: 800px; width: 100%; padding: 2rem; background: rgba(0,0,0,0.4); border: 1px solid var(--gold); border-radius: 12px; text-align: center; color: var(--text-muted); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <h2 style="color: var(--gold); margin-bottom: 1.25rem; font-size: 1.8rem; font-family: var(--font-serif);">Bienvenido a Codex Arcana</h2>
+            <p style="margin-bottom: 1rem; line-height: 1.5; font-size: 1.05rem;">Codex Arcana es un proyecto personal nacido de mi gusto por Dungeons & Dragons y de la idea de hacer que comenzar una aventura sea más sencillo para todos.</p>
+            <p style="margin-bottom: 1rem; line-height: 1.5; font-size: 1.05rem;">Actualmente se encuentra en fase Alpha y está pensado especialmente para quienes están dando sus primeros pasos en D&D, ayudándoles a crear personajes, preparar partidas y organizar sus aventuras desde un solo lugar.</p>
+            <p style="line-height: 1.5; font-size: 1.05rem;">Este es un proyecto que continúa creciendo y que, algún día, me gustaría poder compartir con toda la comunidad. Por ahora, esta Alpha es el comienzo de ese camino.</p>
+          </div>
+
+          <h1 style="color: var(--gold); margin-bottom: 2rem; margin-top: 1rem; font-size: 2.2rem; text-align: center;">¿Qué camino deseas tomar?</h1>
           <div style="display: flex; gap: 2rem; width: 100%; max-width: 800px; flex-wrap: wrap; justify-content: center;">
             <div class="mode-card" onclick="window.app.openCharactersList()" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" style="cursor:pointer; border: 2px solid var(--primary-color); border-radius: 8px; padding: 2.5rem; text-align: center; background: rgba(0,0,0,0.5); flex: 1; min-width: 250px; transition: transform 0.2s;">
               <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 1rem;">✨ Forja de Personajes</h2>
@@ -184,7 +195,10 @@ export function renderApp(options = {}) {
   }
 
   // Modo 'creator'
-  if (stepperContainer) stepperContainer.style.display = 'block';
+  if (stepperContainer) {
+    stepperContainer.style.setProperty('display', 'flex', 'important');
+    stepperContainer.style.setProperty('align-items', 'center', 'important');
+  }
   if (sidebar) sidebar.style.display = 'flex';
   if (mainLayout) mainLayout.classList.remove('full-width-view');
 
@@ -212,7 +226,8 @@ function updateSavedCount() {
 
 function renderStepper() {
   const stepper = document.getElementById('stepper');
-  if (!stepper) return;
+  const stepperContainer = document.getElementById('creator-stepper-container');
+  if (!stepper || !stepperContainer) return;
 
   const steps = [
     { num: 1, title: 'Clase' },

@@ -3,8 +3,13 @@ import { state } from './state.js';
 export function renderDMModule(container) {
   let html = `
     <div class="characters-list-header">
-      <h2 class="view-main-title">🐉 Panel del Dungeon Master</h2>
-      <p class="view-subtitle">Gestiona campañas, sesiones, jugadores y monstruos.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+          <h2 class="view-main-title">🐉 Panel del Dungeon Master</h2>
+          <p class="view-subtitle">Gestiona campañas, sesiones, jugadores y monstruos.</p>
+        </div>
+        <button class="btn btn-secondary" onclick="window.app.openWelcomeScreen()">Volver</button>
+      </div>
     </div>
     
     <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">

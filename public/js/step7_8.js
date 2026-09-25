@@ -117,7 +117,7 @@ export function renderStep8(c) {
     </div>
 
     <div style="background-color: var(--bg-input); border: 2px solid var(--gold); border-radius: 10px; padding: 1.5rem;">
-      <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem;">
         <div>
           <h2 style="color: var(--gold); font-size: 1.75rem;">${state.draft.name || 'Sin Nombre'}</h2>
           <p style="color: var(--text-muted); font-size: 0.95rem;">
@@ -130,7 +130,7 @@ export function renderStep8(c) {
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; text-align: center;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; text-align: center;">
         <div style="background: #1e293b; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color);">
           <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Clase de Armadura</span>
           <div style="font-size: 1.75rem; font-weight: bold; color: var(--gold);">${ac}</div>
