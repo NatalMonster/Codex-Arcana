@@ -127,9 +127,8 @@ export const campaignUI = {
       window.socket = io();
       window.socket.on('character_hp_updated', (eventData) => {
         console.log("HP updated via WS:", eventData);
-        // Refresh view if active
-        if (this.activeCampaign === eventData.campaignId) {
-          this.viewCampaign(eventData.campaignId);
+        if (this.activeCampaign === eventData.campaignId && state.activeView === 'campaign_lobby') {
+          this.viewCampaign(eventData.campaignId, true);
         }
       });
       window.socket.on('dice_rolled', (eventData) => {

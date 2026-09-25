@@ -290,7 +290,7 @@ app.delete('/api/characters/:id', optionalAuthenticateToken, async (req, res) =>
     });
   }
 
-  server.listen(PORT, () => {
+  server.listen(PORT, '0.0.0.0', () => {
     console.log(`\n======================================================`);
     console.log(`🚀 Servidor Unificado D&D 2024 corriendo en un solo puerto`);
     console.log(`📡 VTT y Socket.io Activos`);
