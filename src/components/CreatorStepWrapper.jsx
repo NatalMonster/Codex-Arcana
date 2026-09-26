@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { renderStep1, renderStep2 } from '../../public/js/step1_2.js';
-import { renderStep3, renderStep4 } from '../../public/js/step3_4.js';
-import { renderStep5, renderStep6 } from '../../public/js/step5_6.js';
-import { renderStep7, renderStep8 } from '../../public/js/step7_8.js';
-import { state } from '../../public/js/state.js';
+import { renderStep1, renderStep2 } from '../js/step1_2.js';
+import { renderStep3, renderStep4 } from '../js/step3_4.js';
+import { renderStep5, renderStep6 } from '../js/step5_6.js';
+import { renderStep7, renderStep8 } from '../js/step7_8.js';
+import { state } from '../js/state.js';
 
 function StepContent({ step, tick }) {
   const stepRef = useRef(null);

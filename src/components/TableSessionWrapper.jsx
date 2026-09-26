@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CharacterSheetWrapper from './CharacterSheetWrapper.jsx';
-import { apiFetch } from '../../public/js/app.js';
-import { state } from '../../public/js/state.js';
-import { buildInitialInventory, renderCharacterSheetView } from '../../public/js/characterSheetView.js';
+import { apiFetch } from '../js/app.js';
+import { state } from '../js/state.js';
+import { buildInitialInventory, renderCharacterSheetView } from '../js/characterSheetView.js';
 
 export default function TableSessionWrapper({ campaignId, myCharacterId, tick }) {
   const [players, setPlayers] = useState([]);

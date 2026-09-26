@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { renderCharacterSheetView } from '../../public/js/characterSheetView.js';
+import { renderCharacterSheetView } from '../js/characterSheetView.js';
 
 export default function CharacterSheetWrapper({ characterId, tick }) {
   const containerRef = useRef(null);
