@@ -226,9 +226,12 @@ export const campaignUI = {
       message: '¿Estás seguro de que quieres eliminar esta campaña y borrarla para todos los jugadores? Esta acción no se puede deshacer.',
       onConfirm: async () => {
         const res = await apiFetch(`/api/campaigns/${campaignId}`, { method: 'DELETE' });
-        if (res.ok) {
+        const data = await res.json().catch(()=>({}));
+        if (res.ok && data.success !== false) {
           showAlert({ title: 'Mesa Eliminada', message: 'La campaña ha sido borrada.', type: 'success' });
           this.openCampaignsList(true);
+        } else {
+          showAlert({ title: 'Error', message: data.error?.message || 'No se pudo eliminar.', type: 'danger' });
         }
       }
     });
@@ -241,9 +244,12 @@ export const campaignUI = {
       message: '¿Estás seguro de que quieres abandonar esta campaña? Tu personaje se retirará de la mesa.',
       onConfirm: async () => {
         const res = await apiFetch(`/api/campaigns/${campaignId}/leave`, { method: 'DELETE' });
-        if (res.ok) {
+        const data = await res.json().catch(()=>({}));
+        if (res.ok && data.success !== false) {
           showAlert({ title: 'Campaña Abandonada', message: 'Has salido de la mesa exitosamente.', type: 'success' });
           this.openCampaignsList(true);
+        } else {
+          showAlert({ title: 'Error', message: data.error?.message || 'No se pudo abandonar.', type: 'danger' });
         }
       }
     });
