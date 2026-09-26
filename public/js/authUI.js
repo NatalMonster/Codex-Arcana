@@ -1,89 +1,107 @@
 import { state } from './state.js';
 import { showAlert } from './dialogModal.js';
+import { supabase } from '../../src/lib/supabaseClient.js';
 
 export const authUI = {
   init() {
-    this.token = localStorage.getItem('dnd_token');
     this.checkSession();
   },
 
   async checkSession() {
-    if (!this.token) {
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (!session) {
       this.renderLoggedOut();
       return;
     }
 
     try {
-      const res = await fetch('/api/auth/me', {
-        headers: { 'Authorization': `Bearer ${this.token}` }
-      });
-      const data = await res.json();
+      const { user } = session;
+      const username = user.user_metadata?.username || user.email.split('@')[0];
       
-      if (data.success) {
-        state.currentUser = data.user;
-        this.renderLoggedIn(data.user);
-      } else {
-        this.logout(false);
+      // SICRONIZACIÓN: Asegurar que el usuario exista en public.users para las Foreign Keys
+      const { data: exist } = await supabase.from('users').select('id').eq('id', user.id).single();
+      if (!exist) {
+        await supabase.from('users').insert({
+          id: user.id,
+          username: username,
+          hash: 'supabase_auth',
+          salt: 'supabase_auth',
+          role: 'player'
+        });
       }
+
+      state.currentUser = { id: user.id, username, role: 'player' }; // Hardcoding role for now
+      this.renderLoggedIn(state.currentUser);
     } catch (e) {
       console.error('Auth error', e);
       this.renderLoggedOut();
     }
   },
 
-  async login(username, password) {
+  async login(email, password) {
     try {
-      const res = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
       });
-      const data = await res.json();
       
-      if (data.success) {
-        this.token = data.token;
-        localStorage.setItem('dnd_token', this.token);
-        state.currentUser = { id: data.userId, username: data.username, role: data.role };
+      if (data.session) {
+        // Obtenemos el username guardado en los metadatos durante el registro
+        const username = data.user.user_metadata?.username || email.split('@')[0];
+        state.currentUser = { id: data.user.id, username: username, role: 'player' };
+        
         this.renderLoggedIn(state.currentUser);
-        showAlert({ title: 'Bienvenido', message: `Has entrado a la taberna, ${username}.`, icon: '🍻', type: 'success' });
+        showAlert({ title: 'Bienvenido', message: `Has entrado a la taberna.`, icon: '🍻', type: 'success' });
         if (window.app && window.app.reloadUserData) window.app.reloadUserData();
         if (window.app && window.app.openWelcomeScreen) window.app.openWelcomeScreen();
       } else {
-        showAlert({ title: 'Error', message: data.error || 'Credenciales inválidas', type: 'danger' });
+        showAlert({ title: 'Error', message: error?.message || 'Credenciales inválidas.', type: 'danger' });
       }
     } catch(e) {
       showAlert({ title: 'Error', message: 'No se pudo conectar', type: 'danger' });
     }
   },
 
-  async register(username, password) {
+  async register(email, username, password) {
     try {
-      const res = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+      if (password.length < 6) {
+        return showAlert({ title: 'Error', message: 'La contraseña debe tener al menos 6 caracteres.', type: 'danger' });
+      }
+
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: { username: username }
+        }
       });
-      const data = await res.json();
       
-      if (data.success) {
-        showAlert({ title: 'Registrado', message: 'Personaje creado. Ahora inicia sesión.', icon: '📜', type: 'success' });
+      if (data.user && !error) {
+        // Si tienen Confirm Email activado, data.session será null
+        if (!data.session) {
+          showAlert({ title: '¡Casi listo!', message: 'Te hemos enviado un correo de confirmación. Revisa tu bandeja de entrada o spam para activar tu cuenta.', icon: '✉️', type: 'info' });
+        } else {
+          showAlert({ title: 'Registrado', message: 'Has forjado tu cuenta. Ya puedes entrar.', icon: '🛡️', type: 'success' });
+        }
         this.showLoginModal();
       } else {
-        showAlert({ title: 'Error', message: data.error || 'Error al registrar', type: 'danger' });
+        showAlert({ title: 'Error', message: error?.message || 'Error al registrar', type: 'danger' });
       }
     } catch(e) {
       showAlert({ title: 'Error', message: 'No se pudo conectar', type: 'danger' });
     }
   },
 
-  logout(showMsg = true) {
-    this.token = null;
-    localStorage.removeItem('dnd_token');
+  async logout(showMsg = true) {
+    await supabase.auth.signOut();
+    
     sessionStorage.removeItem('lastActiveView');
     sessionStorage.removeItem('lastActiveCharId');
     sessionStorage.removeItem('lastActiveCampaignId');
     state.currentUser = null;
     this.renderLoggedOut();
+    
     if(showMsg) showAlert({ title: 'Desconectado', message: 'Has dejado la mesa.', icon: '👋' });
     if (window.app && window.app.reloadUserData) window.app.reloadUserData();
   },
@@ -96,7 +114,6 @@ export const authUI = {
       `;
     }
     
-    // Ocultar UI principal hasta que inicie sesión
     document.getElementById('creator-stepper-container').style.display = 'none';
     document.getElementById('main-layout').style.display = 'none';
     const dmBtn = document.getElementById('btn-nav-dm');
@@ -108,7 +125,6 @@ export const authUI = {
     const charactersBtn = document.getElementById('btn-nav-characters');
     if (charactersBtn) charactersBtn.style.display = 'none';
 
-    // Forzar login
     this.showLoginModal();
   },
 
@@ -116,7 +132,6 @@ export const authUI = {
     const container = document.getElementById('auth-container');
     if (!container) return;
     
-
     container.innerHTML = `
       <div class="user-profile-widget" style="display: flex; align-items: center; gap: 1rem;">
         <div style="font-weight: bold; color: var(--gold);">${user.username}</div>
@@ -124,23 +139,26 @@ export const authUI = {
       </div>
     `;
 
-    // Mostrar UI Principal
     document.getElementById('main-layout').style.display = 'flex';
   },
 
   showLoginModal(isRegister = false) {
     const html = `
-      <div class="auth-modal" style="margin: 0 auto;">
+      <div class="auth-modal" style="margin: 0 auto; display: flex; flex-direction: column; gap: 0.8rem;">
         <h2 class="auth-title">${isRegister ? 'Unirse a la Campaña' : 'Identificarse'}</h2>
-        <input type="text" id="auth-username" class="auth-input" placeholder="Nombre de usuario" autocomplete="off"/>
-        <input type="password" id="auth-password" class="auth-input" placeholder="Contraseña" autocomplete="off"/>
         
-        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <input type="email" id="auth-email" class="auth-input" placeholder="Correo electrónico" autocomplete="email"/>
+        
+        ${isRegister ? `<input type="text" id="auth-username" class="auth-input" placeholder="Nombre de tu aventurero (Usuario)" autocomplete="off"/>` : ''}
+        
+        <input type="password" id="auth-password" class="auth-input" placeholder="Contraseña (mín 6 caracteres)" autocomplete="current-password"/>
+        
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
           <button class="btn btn-primary" style="flex:1" onclick="window.authUI.${isRegister ? 'submitRegister' : 'submitLogin'}()">${isRegister ? 'Registrar' : 'Entrar'}</button>
           <button class="btn btn-secondary" onclick="window.authUI.closeModal()">Cancelar</button>
         </div>
         
-        <div style="margin-top: 1.5rem; font-size: 0.9em; color: var(--text-muted);">
+        <div style="margin-top: 1rem; font-size: 0.9em; color: var(--text-muted);">
           ${isRegister 
             ? '¿Ya tienes una hoja de personaje? <a href="#" style="color:var(--gold)" onclick="window.authUI.showLoginModal(false); return false;">Inicia sesión</a>' 
             : '¿Eres un aventurero nuevo? <a href="#" style="color:var(--gold)" onclick="window.authUI.showLoginModal(true); return false;">Regístrate</a>'
@@ -162,20 +180,21 @@ export const authUI = {
   },
 
   submitLogin() {
-    const user = document.getElementById('auth-username').value;
+    const email = document.getElementById('auth-email').value;
     const pass = document.getElementById('auth-password').value;
-    if (user && pass) {
+    if (email && pass) {
       this.closeModal();
-      this.login(user, pass);
+      this.login(email, pass);
     }
   },
 
   submitRegister() {
+    const email = document.getElementById('auth-email').value;
     const user = document.getElementById('auth-username').value;
     const pass = document.getElementById('auth-password').value;
-    if (user && pass) {
+    if (email && user && pass) {
       this.closeModal();
-      this.register(user, pass);
+      this.register(email, user, pass);
     }
   }
 };

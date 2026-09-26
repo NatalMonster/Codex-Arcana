@@ -23,12 +23,15 @@ export default function TableSessionWrapper({ campaignId, myCharacterId, tick })
     };
     fetchPlayers();
     
-    const handleUpdate = () => { fetchPlayers(); };
-    if (window.socket) {
-      window.socket.on('character_hp_updated', handleUpdate);
-    }
+    const handleUpdate = (e) => { 
+      console.log('React caught character_hp_updated', e.detail);
+      fetchPlayers(); 
+    };
+    
+    window.addEventListener('supabase_character_hp_updated', handleUpdate);
+    
     return () => {
-      if (window.socket) window.socket.off('character_hp_updated', handleUpdate);
+      window.removeEventListener('supabase_character_hp_updated', handleUpdate);
     }
   }, [campaignId, tick]);
 

@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite --config vite.config.mjs --host 0.0.0.0",
+    "build": "vite build",
     "server": "node src/server/server.js"
   },
   "devDependencies": {
@@ -12,6 +13,7 @@
     "vite": "^8.3.0"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "cors": "^2.8.6",
     "dompurify": "^3.4.15",
     "express": "^5.2.1",

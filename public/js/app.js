@@ -1,15 +1,193 @@
 import { state } from './state.js';
 import { authUI } from './authUI.js';
 import './campaignUI.js';
+import { supabase } from '../../src/lib/supabaseClient.js';
 
 export async function apiFetch(url, options = {}) {
+  const method = options.method || 'GET';
+  let body = null;
+  if (options.body && typeof options.body === 'string') {
+    body = JSON.parse(options.body);
+  }
+
+  // --- INTERCEPTOR DE API A SUPABASE ---
+  // Reemplazamos el backend Express por consultas directas a Supabase (BaaS)
+
+  // 1. Personajes
+  if (url === '/api/characters') {
+    if (method === 'GET') {
+      const { data: authData } = await supabase.auth.getUser();
+      if (!authData.user) return { ok: true, json: async () => [] };
+      const { data, error } = await supabase.from('characters').select('*').eq('user_id', authData.user.id);
+      if (error) return { ok: false, json: async () => ({ success: false, error: error.message }) };
+      return { ok: true, json: async () => data.map(d => typeof d.data === 'string' ? JSON.parse(d.data) : d.data) };
+    }
+    if (method === 'POST') {
+      const { data: authData } = await supabase.auth.getUser();
+      if (!authData.user) return { ok: false, json: async () => ({ success: false, error: 'No autorizado' }) };
+      
+      const newChar = { ...body };
+      if (!newChar.id) newChar.id = 'char_' + Date.now().toString(36);
+      
+      const { error } = await supabase.from('characters').insert({
+        id: newChar.id, 
+        user_id: authData.user.id, 
+        name: newChar.name || 'Sin Nombre', 
+        data: newChar
+      });
+      return { ok: !error, json: async () => ({ success: !error, character: newChar }) };
+    }
+  }
+
+  const charMatch = url.match(/^\/api\/characters\/([^\/]+)$/);
+  if (charMatch) {
+    const charId = charMatch[1];
+    if (method === 'PUT') {
+      const { data: origData } = await supabase.from('characters').select('*').eq('id', charId).single();
+      if (origData) {
+        const oldJson = typeof origData.data === 'string' ? JSON.parse(origData.data) : origData.data;
+        const updatedChar = { ...oldJson, ...body };
+        const { error } = await supabase.from('characters').update({
+          name: updatedChar.name || 'Sin Nombre',
+          data: updatedChar,
+          updated_at: new Date().toISOString()
+        }).eq('id', charId);
+        
+        // --- Fase 4: Supabase Realtime Broadcast ---
+        if (!error && window.campaignChannel) {
+          window.campaignChannel.send({
+            type: 'broadcast',
+            event: 'character_hp_updated',
+            payload: { campaignId: window.activeCampaignId, characterId: charId }
+          }).catch(console.error);
+        }
+        
+        return { ok: !error, json: async () => ({ success: !error }) };
+      }
+      return { ok: false, json: async () => ({ success: false }) };
+    }
+    if (method === 'DELETE') {
+      const { error } = await supabase.from('characters').delete().eq('id', charId);
+      return { ok: !error, json: async () => ({ success: !error }) };
+    }
+  }
+
+  const dupMatch = url.match(/^\/api\/characters\/([^\/]+)\/duplicate$/);
+  if (dupMatch && method === 'POST') {
+    const origId = dupMatch[1];
+    const { data: orig } = await supabase.from('characters').select('*').eq('id', origId).single();
+    if (orig) {
+      const newId = 'char_' + Date.now().toString(36);
+      const { data: authData } = await supabase.auth.getUser();
+      
+      const clone = typeof orig.data === 'string' ? JSON.parse(orig.data) : orig.data;
+      clone.id = newId;
+      clone.name = `${clone.name} (Copia)`;
+      
+      const { error } = await supabase.from('characters').insert({
+        id: newId, 
+        user_id: authData.user?.id, 
+        name: clone.name, 
+        data: clone
+      });
+      return { ok: !error, json: async () => ({ success: !error, character: clone }) };
+    }
+    return { ok: false, json: async () => ({ success: false }) };
+  }
+
+  // 2. Campañas
+  if (url === '/api/campaigns') {
+    if (method === 'GET') {
+      const { data: authData } = await supabase.auth.getUser();
+      if (!authData.user) return { ok: true, json: async () => ({ success: true, campaigns: [] }) };
+      
+      // Obtener campañas donde soy DM
+      const { data: dmCamps } = await supabase.from('campaigns').select('*, users!campaigns_dm_id_fkey(username)').eq('dm_id', authData.user.id);
+      
+      // Obtener campañas donde soy jugador
+      const { data: playerCampsData } = await supabase.from('campaign_players').select('campaign_id').eq('user_id', authData.user.id);
+      let playerCamps = [];
+      if (playerCampsData && playerCampsData.length > 0) {
+        const campIds = playerCampsData.map(c => c.campaign_id);
+        const { data } = await supabase.from('campaigns').select('*, users!campaigns_dm_id_fkey(username)').in('id', campIds);
+        playerCamps = data || [];
+      }
+      
+      const allCampsMap = new Map();
+      (dmCamps || []).forEach(c => allCampsMap.set(c.id, {
+        id: c.id, name: c.name, invite_code: c.invite_code, is_dm: 1, dm_name: c.users?.username || 'DM'
+      }));
+      (playerCamps || []).forEach(c => {
+        if (!allCampsMap.has(c.id)) {
+          allCampsMap.set(c.id, {
+            id: c.id, name: c.name, invite_code: c.invite_code, is_dm: 0, dm_name: c.users?.username || 'DM'
+          });
+        }
+      });
+      
+      return { ok: true, json: async () => ({ success: true, campaigns: Array.from(allCampsMap.values()) }) };
+    }
+    if (method === 'POST') {
+      const id = 'camp_' + Date.now().toString(36);
+      const inviteCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+      const { data: authData } = await supabase.auth.getUser();
+      const { error } = await supabase.from('campaigns').insert({
+        id, name: body.name, dm_id: authData.user.id, invite_code: inviteCode
+      });
+      if (error) return { ok: false, json: async () => ({ success: false, error: error.message }) };
+      return { ok: true, json: async () => ({ success: true, campaign: { id, name: body.name, inviteCode } }) };
+    }
+  }
+
+  if (url === '/api/campaigns/join' && method === 'POST') {
+    const invite = body.code || body.inviteCode;
+    const { data: camp } = await supabase.from('campaigns').select('id').eq('invite_code', invite).single();
+    if (camp) {
+      const { data: authData } = await supabase.auth.getUser();
+      const { error } = await supabase.from('campaign_players').insert({
+        campaign_id: camp.id, user_id: authData.user.id
+      });
+      if (!error || error.code === '23505') { // 23505 = already exists
+         return { ok: true, json: async () => ({ success: true }) };
+      }
+    }
+    return { ok: false, json: async () => ({ success: false, error: 'Código inválido' }) };
+  }
+
+  const campPlayersMatch = url.match(/^\/api\/campaigns\/([^\/]+)\/players$/);
+  if (campPlayersMatch && method === 'GET') {
+    const campId = campPlayersMatch[1];
+    const { data } = await supabase.from('campaign_players')
+      .select('user_id, character_id, users(username), characters(name, data)')
+      .eq('campaign_id', campId);
+    
+    const players = (data || []).map(p => ({
+      userId: p.user_id,
+      username: p.users?.username || 'Desconocido',
+      characterId: p.character_id,
+      characterName: p.characters?.name || null,
+      character: p.characters?.data ? (typeof p.characters.data === 'string' ? JSON.parse(p.characters.data) : p.characters.data) : null
+    }));
+    return { ok: true, json: async () => ({ success: true, players }) };
+  }
+
+  const campCharMatch = url.match(/^\/api\/campaigns\/([^\/]+)\/character$/);
+  if (campCharMatch && method === 'POST') {
+    const campId = campCharMatch[1];
+    const { data: authData } = await supabase.auth.getUser();
+    const { error } = await supabase.from('campaign_players').update({
+      character_id: body.characterId
+    }).match({ campaign_id: campId, user_id: authData.user.id });
+    return { ok: !error, json: async () => ({ success: !error }) };
+  }
+
+  // --- FIN DEL INTERCEPTOR ---
+
+  // Peticiones locales (DM Data, manuales, etc)
   const headers = options.headers || {};
-  if (authUI.token) {
-    headers['Authorization'] = `Bearer ${authUI.token}`;
-  }
-  if (options.body && typeof options.body === 'string' && !headers['Content-Type']) {
-    headers['Content-Type'] = 'application/json';
-  }
+  if (authUI.token) headers['Authorization'] = `Bearer ${authUI.token}`;
+  if (body && !headers['Content-Type']) headers['Content-Type'] = 'application/json';
+  
   return fetch(url, { cache: 'no-store', ...options, headers });
 }
 import DOMPurify from 'dompurify';

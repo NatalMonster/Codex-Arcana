@@ -1,6 +1,7 @@
 import { state } from './state.js';
 import { apiFetch } from './app.js';
 import { showAlert } from './dialogModal.js';
+import { supabase } from '../../src/lib/supabaseClient.js';
 
 export const campaignUI = {
   campaigns: [],
@@ -122,22 +123,39 @@ export const campaignUI = {
     if (!c) return;
     const isAdmin = c.is_dm === 1;
     
-    // Socket.io connection logic (we will assume window.socket exists or we create it)
-    if (!window.socket) {
-      window.socket = io();
-      window.socket.on('character_hp_updated', (eventData) => {
-        console.log("HP updated via WS:", eventData);
-        if (this.activeCampaign === eventData.campaignId && state.activeView === 'campaign_lobby') {
-          this.viewCampaign(eventData.campaignId, true);
-        }
-      });
-      window.socket.on('dice_rolled', (eventData) => {
-        showAlert({ title: eventData.username + ' tiró dados', message: eventData.description + ': ' + eventData.rollResult, icon: '🎲' });
-      });
-    }
-    
-    window.socket.emit('join_campaign', campaignId);
-    this.activeCampaign = campaignId;
+      // Supabase Channels logic (Reemplaza Socket.io)
+      
+      window.activeCampaignId = campaignId;
+      if (window.campaignChannel && this.activeCampaign !== campaignId) {
+        supabase.removeChannel(window.campaignChannel);
+        window.campaignChannel = null;
+      }
+      
+      if (!window.campaignChannel) {
+        window.campaignChannel = supabase.channel(`campaign-${campaignId}`);
+        
+        window.campaignChannel.on('broadcast', { event: 'character_hp_updated' }, (payload) => {
+          console.log("HP updated via WS:", payload.payload);
+          if (this.activeCampaign === payload.payload.campaignId && state.activeView === 'campaign_lobby') {
+            this.viewCampaign(payload.payload.campaignId, true);
+          }
+          // Also trigger a generic window event for React components like TableSessionWrapper
+          window.dispatchEvent(new CustomEvent('supabase_character_hp_updated', { detail: payload.payload }));
+        });
+        
+        window.campaignChannel.on('broadcast', { event: 'dice_rolled' }, (payload) => {
+          const d = payload.payload;
+          showAlert({ title: d.username + ' tiró dados', message: d.description + ': ' + d.rollResult, icon: '🎲' });
+        });
+        
+        window.campaignChannel.subscribe((status) => {
+          if (status === 'SUBSCRIBED') {
+            console.log('Joined campaign channel:', campaignId);
+          }
+        });
+      }
+      
+      this.activeCampaign = campaignId;
 
     const myPlayer = data.players.find(p => p.username === state.currentUser.username);
     const hasCharacter = myPlayer && myPlayer.character;
