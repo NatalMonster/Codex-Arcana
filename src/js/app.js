@@ -13,7 +13,27 @@ export async function apiFetch(url, options = {}) {
   // --- INTERCEPTOR DE API A SUPABASE ---
   // Reemplazamos el backend Express por consultas directas a Supabase (BaaS)
 
-  // 1. Personajes
+  // 1. Catálogos estáticos (Reemplazan Express res.json(archivos))
+  if (url === '/api/rules') {
+    const [species, classes, backgrounds, feats, spells, equipment] = await Promise.all([
+      fetch('/data/species.json').then(r=>r.json()).catch(()=>([])),
+      fetch('/data/classes.json').then(r=>r.json()).catch(()=>([])),
+      fetch('/data/backgrounds.json').then(r=>r.json()).catch(()=>([])),
+      fetch('/data/feats.json').then(r=>r.json()).catch(()=>([])),
+      fetch('/data/spells.json').then(r=>r.json()).catch(()=>([])),
+      fetch('/data/equipment.json').then(r=>r.json()).catch(()=>([]))
+    ]);
+    return { ok: true, json: async () => ({ species, classes, backgrounds, feats, spells, equipment }) };
+  }
+  if (url === '/api/dm-data') {
+    const monsters = await fetch('/data/monsters.json').then(r=>r.json()).catch(()=>([]));
+    return { ok: true, json: async () => ({ monsters }) };
+  }
+  if (url === '/api/dm-session') {
+    return { ok: true, json: async () => ({ activeMonsters: [] }) };
+  }
+
+  // 2. Personajes
   if (url === '/api/characters') {
     if (method === 'GET') {
       const { data: authData } = await supabase.auth.getUser();
@@ -240,7 +260,7 @@ const app = {
       const [catalogsRes, charactersRes, dmDataRes, dmSessionRes] = await Promise.all([
         fetch('/api/data'),
         apiFetch('/api/characters'),
-        fetch('/api/dm-data'),
+        apiFetch('/api/dm-data'),
         apiFetch('/api/dm-session')
       ]);
 
