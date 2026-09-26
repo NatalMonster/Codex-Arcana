@@ -177,6 +177,31 @@ export async function apiFetch(url, options = {}) {
   }
 
   const campPlayersMatch = url.match(/^\/api\/campaigns\/([^\/]+)\/players$/);
+
+  // Borrar campaña (Solo DM)
+  const deleteCampMatch = url.match(/^\/api\/campaigns\/([^\/]+)$/);
+  if (deleteCampMatch && method === 'DELETE') {
+    const campaignId = deleteCampMatch[1];
+    const { data: authData } = await supabase.auth.getUser();
+    
+    // Verificar si es el DM
+    const { data: camp } = await supabase.from('campaigns').select('dm_id').eq('id', campaignId).single();
+    if (camp && camp.dm_id === authData.user.id) {
+      await supabase.from('campaign_players').delete().eq('campaign_id', campaignId);
+      await supabase.from('campaigns').delete().eq('id', campaignId);
+    }
+    return { ok: true, json: async () => ({ success: true }) };
+  }
+
+  // Abandonar campaña (Jugador)
+  const leaveCampMatch = url.match(/^\/api\/campaigns\/([^\/]+)\/leave$/);
+  if (leaveCampMatch && method === 'DELETE') {
+    const campaignId = leaveCampMatch[1];
+    const { data: authData } = await supabase.auth.getUser();
+    
+    await supabase.from('campaign_players').delete().eq('campaign_id', campaignId).eq('user_id', authData.user.id);
+    return { ok: true, json: async () => ({ success: true }) };
+  }
   if (campPlayersMatch && method === 'GET') {
     const campId = campPlayersMatch[1];
     const { data } = await supabase.from('campaign_players')

@@ -63,7 +63,13 @@ export const campaignUI = {
                 <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.3rem;">DM: <strong style="color:white;">${c.dm_name || 'Desconocido'}</strong></div>
                 <div style="color: var(--text-muted); font-size: 0.85rem;">Código de Invitación: <strong style="color:white; letter-spacing: 2px;">${c.invite_code}</strong></div>
               </div>
-              <button class="btn btn-secondary" onclick="window.campaignUI.viewCampaign('${c.id}')">Entrar a la Sala</button>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <button class="btn btn-secondary" onclick="window.campaignUI.viewCampaign('${c.id}')">Entrar a la Sala</button>
+                ${(c.is_dm === 1 || c.dm_id === state.currentUser?.id) 
+                  ? `<button class="btn btn-danger" style="background-color: #dc2626; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;" onclick="window.campaignUI.deleteCampaign('${c.id}')">Eliminar</button>` 
+                  : `<button class="btn btn-danger" style="background-color: #dc2626; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;" onclick="window.campaignUI.leaveCampaign('${c.id}')">Abandonar</button>`
+                }
+              </div>
             </div>
           `).join('')}
         </div>
@@ -211,6 +217,36 @@ export const campaignUI = {
     `;
 
     document.getElementById('step-content').innerHTML = html;
+  },
+
+  async deleteCampaign(campaignId) {
+    const { showConfirm, showAlert } = await import('./dialogModal.js');
+    showConfirm({
+      title: 'Eliminar Campaña',
+      message: '¿Estás seguro de que quieres eliminar esta campaña y borrarla para todos los jugadores? Esta acción no se puede deshacer.',
+      onConfirm: async () => {
+        const res = await apiFetch(`/api/campaigns/${campaignId}`, { method: 'DELETE' });
+        if (res.ok) {
+          showAlert({ title: 'Mesa Eliminada', message: 'La campaña ha sido borrada.', type: 'success' });
+          this.openCampaignsList(true);
+        }
+      }
+    });
+  },
+
+  async leaveCampaign(campaignId) {
+    const { showConfirm, showAlert } = await import('./dialogModal.js');
+    showConfirm({
+      title: 'Abandonar Campaña',
+      message: '¿Estás seguro de que quieres abandonar esta campaña? Tu personaje se retirará de la mesa.',
+      onConfirm: async () => {
+        const res = await apiFetch(`/api/campaigns/${campaignId}/leave`, { method: 'DELETE' });
+        if (res.ok) {
+          showAlert({ title: 'Campaña Abandonada', message: 'Has salido de la mesa exitosamente.', type: 'success' });
+          this.openCampaignsList(true);
+        }
+      }
+    });
   },
 
   async assignCharacter(campaignId) {
