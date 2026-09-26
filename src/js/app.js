@@ -14,7 +14,7 @@ export async function apiFetch(url, options = {}) {
   // Reemplazamos el backend Express por consultas directas a Supabase (BaaS)
 
   // 1. Catálogos estáticos (Reemplazan Express res.json(archivos))
-  if (url === '/api/rules') {
+  if (url === '/api/data') {
     const [species, classes, backgrounds, feats, spells, equipment] = await Promise.all([
       fetch('/data/species.json').then(r=>r.json()).catch(()=>([])),
       fetch('/data/classes.json').then(r=>r.json()).catch(()=>([])),
@@ -258,7 +258,7 @@ const app = {
 
       // Cargar catálogos y personajes guardados en paralelo
       const [catalogsRes, charactersRes, dmDataRes, dmSessionRes] = await Promise.all([
-        fetch('/api/data'),
+        apiFetch('/api/data'),
         apiFetch('/api/characters'),
         apiFetch('/api/dm-data'),
         apiFetch('/api/dm-session')
