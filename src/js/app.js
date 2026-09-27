@@ -180,18 +180,24 @@ export async function apiFetch(url, options = {}) {
   const campPlayersMatch = url.match(/^\/api\/campaigns\/([^\/]+)\/players$/);
 
   // Borrar campaña (Solo DM)
+  // Borrar campaña (Solo DM)
   const deleteCampMatch = url.match(/^\/api\/campaigns\/([^\/]+)$/);
   if (deleteCampMatch && method === 'DELETE') {
     const campaignId = deleteCampMatch[1];
     const { data: authData } = await supabase.auth.getUser();
+    if (!authData.user) return { ok: false, json: async () => ({ success: false, error: { message: 'No autenticado' } }) };
     
-    const { data: camp } = await supabase.from('campaigns').select('dm_id').eq('id', campaignId).single();
+    const { data: camp, error: campErr } = await supabase.from('campaigns').select('dm_id').eq('id', campaignId).single();
+    if (campErr) return { ok: false, json: async () => ({ success: false, error: { message: 'Campaña no encontrada en BD' } }) };
+    
     if (camp && camp.dm_id === authData.user.id) {
       const { error: err1 } = await supabase.from('campaign_players').delete().eq('campaign_id', campaignId);
       const { error: err2 } = await supabase.from('campaigns').delete().eq('id', campaignId);
       if (err1 || err2) return { ok: false, json: async () => ({ success: false, error: err1 || err2 }) };
+      return { ok: true, json: async () => ({ success: true }) };
+    } else {
+      return { ok: false, json: async () => ({ success: false, error: { message: 'No eres el Dungeon Master de esta campaña o hubo un error de permisos.' } }) };
     }
-    return { ok: true, json: async () => ({ success: true }) };
   }
 
   // Abandonar campaña (Jugador)
@@ -199,6 +205,7 @@ export async function apiFetch(url, options = {}) {
   if (leaveCampMatch && method === 'DELETE') {
     const campaignId = leaveCampMatch[1];
     const { data: authData } = await supabase.auth.getUser();
+    if (!authData.user) return { ok: false, json: async () => ({ success: false, error: { message: 'No autenticado' } }) };
     
     const { error } = await supabase.from('campaign_players').delete().eq('campaign_id', campaignId).eq('user_id', authData.user.id);
     if (error) return { ok: false, json: async () => ({ success: false, error }) };
