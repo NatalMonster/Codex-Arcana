@@ -15,7 +15,7 @@ export async function apiFetch(url, options = {}) {
 
   // 1. Catálogos estáticos (Reemplazan Express res.json(archivos))
   if (url === '/api/data') {
-    const [species, classes, subclasses, backgrounds, feats, spells, equipment, rules] = await Promise.all([
+    const [species, classes, subclasses, backgrounds, feats, spells, equipment, rules, languages] = await Promise.all([
       fetch('/data/species.json').then(r=>r.json()).catch(()=>([])),
       fetch('/data/classes.json').then(r=>r.json()).catch(()=>([])),
       fetch('/data/subclasses.json').then(r=>r.json()).catch(()=>([])),
@@ -23,9 +23,10 @@ export async function apiFetch(url, options = {}) {
       fetch('/data/feats.json').then(r=>r.json()).catch(()=>([])),
       fetch('/data/spells.json').then(r=>r.json()).catch(()=>([])),
       fetch('/data/equipment.json').then(r=>r.json()).catch(()=>([])),
-      fetch('/data/rules.json').then(r=>r.json()).catch(()=>({}))
+      fetch('/data/rules.json').then(r=>r.json()).catch(()=>({})),
+      fetch('/data/languages.json').then(r=>r.json()).catch(()=>({ standard:[], exotic:[] }))
     ]);
-    return { ok: true, json: async () => ({ species, classes, subclasses, backgrounds, feats, spells, equipment, rules }) };
+    return { ok: true, json: async () => ({ species, classes, subclasses, backgrounds, feats, spells, equipment, rules, languages }) };
   }
   if (url === '/api/dm-data') {
     const monsters = await fetch('/data/monsters.json').then(r=>r.json()).catch(()=>([]));
