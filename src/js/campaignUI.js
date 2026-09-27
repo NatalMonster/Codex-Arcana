@@ -229,7 +229,7 @@ export const campaignUI = {
         const data = await res.json().catch(()=>({}));
         if (res.ok && data.success !== false) {
           showAlert({ title: 'Mesa Eliminada', message: 'La campaña ha sido borrada.', type: 'success' });
-          this.openCampaignsList(true);
+          this.openCampaignsList();
         } else {
           showAlert({ title: 'Error', message: data.error?.message || 'No se pudo eliminar.', type: 'danger' });
         }
@@ -247,7 +247,7 @@ export const campaignUI = {
         const data = await res.json().catch(()=>({}));
         if (res.ok && data.success !== false) {
           showAlert({ title: 'Campaña Abandonada', message: 'Has salido de la mesa exitosamente.', type: 'success' });
-          this.openCampaignsList(true);
+          this.openCampaignsList();
         } else {
           showAlert({ title: 'Error', message: data.error?.message || 'No se pudo abandonar.', type: 'danger' });
         }
